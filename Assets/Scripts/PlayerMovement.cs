@@ -8,16 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
 
     public Vector3 PlayerMovmentInput;
-    public float groundDrag;
-
-    public float jumpForce;
-    public float jumpCooldown;
-    public float airMultiplier;
-    private bool readyToJump = true;
-
-    [Header("Keybinds")]
-    public KeyCode jumpKey = KeyCode.Space;
-   
+    public float groundDrag;   
 
     [Header("Ground Check")]
     public float playerHeight;
@@ -48,7 +39,6 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         GroundCheck();
-        MyInput();
         SpeedControl();
     }
 
@@ -71,22 +61,7 @@ public class PlayerMovement : MonoBehaviour
     {
         MovePlayer(); 
     }
-    // reguleirt den Sprung
-    private void MyInput()
-    {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
-
-        //when Jump
-        if(Input.GetKey(jumpKey) && readyToJump && grounded) 
-        { 
-            readyToJump = false;
-            Jump();
-            Invoke(nameof(ResetJump), jumpCooldown);
-
-        }
-
-    }
+   
 
     //Bewegt den Spieler 
     private void MovePlayer()
@@ -99,13 +74,6 @@ public class PlayerMovement : MonoBehaviour
         //calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        //on ground
-        if(grounded)
-            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
-        //in air
-        else if (!grounded)
-            rb.AddForce(moveDirection.normalized * moveSpeed * airMultiplier, ForceMode.Force);
-
     }
 
     //Regulerit die Geschwindigkeit des Spielers
@@ -116,22 +84,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 limitedVel = flatVel.normalized * moveSpeed;
         rb.velocity = new Vector3(limitedVel.x,rb.velocity.y, limitedVel.z);
     }
-
-    // lässt den Spieler springen
-    private void Jump()
-    {
-        //reset y velocity
-        rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-
-        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
-        Debug.Log("Jump");
-    }
-    //lässt den Spieler mehfach springen
-    private void ResetJump()
-    {
-        readyToJump = true;
-    }
-
     //Zeigt den GroundCheck in der Szene
     private void OnDrawGizmos()
     {

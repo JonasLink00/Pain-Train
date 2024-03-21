@@ -88,7 +88,6 @@ GameObject:
   - component: {fileID: 4487647603588939839}
   - component: {fileID: 5282894099696768356}
   - component: {fileID: 1310704182463772739}
-  - component: {fileID: 4369498026101089352}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -170,22 +169,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3557342805152710990}
   m_Enabled: 1
---- !u!114 &4369498026101089352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3557342805152710990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9419b8ac689b07f4881a434d1713f9c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sencX: 20
-  sencY: 20
-  playerTransform: {fileID: 1404063048782877829}
-  cameraholder: {fileID: 3207985645338418804}
 --- !u!1 &3577681069579126585
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,10 +419,6 @@ MonoBehaviour:
   moveSpeed: 7
   PlayerMovmentInput: {x: 0, y: 0, z: 0}
   groundDrag: 5
-  jumpForce: 12
-  jumpCooldown: 0.25
-  airMultiplier: 0.4
-  jumpKey: 32
   playerHeight: 2
   whatisGround:
     serializedVersion: 2
