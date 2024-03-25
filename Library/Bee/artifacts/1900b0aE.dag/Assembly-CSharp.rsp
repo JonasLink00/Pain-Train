@@ -361,8 +361,6 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.10f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.10f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Ouroboros/Stylized Textures - Mini Set/Demo/Sources/Rotator.cs"
-"Assets/Scripts/Interaction.cs"
-"Assets/Scripts/MoveCam.cs"
 "Assets/Scripts/PlayerCam.cs"
 "Assets/Scripts/PlayerMovement.cs"
 -langversion:9.0

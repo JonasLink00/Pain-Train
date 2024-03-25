@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,19 +29,12 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
     }
 
-    //Updated die Infos des GroundChecks, den Sprung und der Bewegunsgeschwindigkeit
+    //Bewegt den Spieler je nach Input
     private void Update()
     {
-        SpeedControl();
+        MovePlayer();
+        RotatePlayer();
     }
-
-    
-    //Bewegt den Spieler je nach Input
-    private void FixedUpdate()
-    {
-        MovePlayer(); 
-    }
-   
 
     //Bewegt den Spieler 
     private void MovePlayer()
@@ -54,14 +48,14 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
     }
-
-    //Regulerit die Geschwindigkeit des Spielers
-    private void SpeedControl()
+    
+    private void RotatePlayer()
     {
-        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        Vector3  mouseposition = Input.mousePosition;
+        mouseposition = Camera.main.ScreenToWorldPoint(mouseposition);
 
-        Vector3 limitedVel = flatVel.normalized * moveSpeed;
-        rb.velocity = new Vector3(limitedVel.x,rb.velocity.y, limitedVel.z);
+        Vector2 direction = new Vector2(mouseposition.x - transform.position.x,mouseposition.y - transform.position.y);
+
+        transform.up = direction;
     }
-
 }

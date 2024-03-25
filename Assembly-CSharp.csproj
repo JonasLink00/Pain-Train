@@ -59,8 +59,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerCam.cs" />
-    <Compile Include="Assets\Scripts\Interaction.cs" />
-    <Compile Include="Assets\Scripts\MoveCam.cs" />
     <Compile Include="Assets\Ouroboros\Stylized Textures - Mini Set\Demo\Sources\Rotator.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
   </ItemGroup>
