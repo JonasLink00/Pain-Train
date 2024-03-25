@@ -10,23 +10,16 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 PlayerMovmentInput;
     public float groundDrag;   
 
-    [Header("Ground Check")]
-    public float playerHeight;
-    public LayerMask whatisGround;
-    [SerializeField]
-    private bool grounded;
-    [SerializeField]
-    private Transform GroundCheckPosition;
-
     public Transform orientation;
 
     float horizontalInput;
     float verticalInput;
-    float SphereCheck = 0.5f;
+    
 
     Vector3 moveDirection;
 
     public Rigidbody rb;
+
 
     //Script holt sich biem Start infos über den Rigidbody und verhinter die Rotation des Rigidbodys
     private void Start()
@@ -38,24 +31,10 @@ public class PlayerMovement : MonoBehaviour
     //Updated die Infos des GroundChecks, den Sprung und der Bewegunsgeschwindigkeit
     private void Update()
     {
-        GroundCheck();
         SpeedControl();
     }
 
-    //Check ob der Spieler auf dem Boden ist und implementiert einen Drag effekt wenn es ist
-    private void GroundCheck()
-    {
-        //ground check
-        grounded = Physics.CheckSphere(GroundCheckPosition.position, SphereCheck, whatisGround);
-
-        //handel drag
-        if (grounded)
-            rb.drag = groundDrag;
-        else
-            rb.drag = 0;
-
-    }
-
+    
     //Bewegt den Spieler je nach Input
     private void FixedUpdate()
     {
@@ -83,12 +62,6 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 limitedVel = flatVel.normalized * moveSpeed;
         rb.velocity = new Vector3(limitedVel.x,rb.velocity.y, limitedVel.z);
-    }
-    //Zeigt den GroundCheck in der Szene
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(GroundCheckPosition.position, SphereCheck);
     }
 
 }
