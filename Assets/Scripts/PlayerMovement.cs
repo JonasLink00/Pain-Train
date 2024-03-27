@@ -8,19 +8,22 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed;
 
-    public Vector3 PlayerMovmentInput;
-    public float groundDrag;   
+    private Vector3 PlayerMovmentInput;
+
 
     public Transform orientation;
 
     float horizontalInput;
     float verticalInput;
-    
+
 
     Vector3 moveDirection;
 
     public Rigidbody rb;
 
+    private float rotationR = 1f;
+    private float rotationL = -1f;
+    public float rotateSpeed;
 
     //Script holt sich biem Start infos über den Rigidbody und verhinter die Rotation des Rigidbodys
     private void Start()
@@ -48,14 +51,23 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
     }
-    
+
     private void RotatePlayer()
     {
-        Vector3  mouseposition = Input.mousePosition;
-        mouseposition = Camera.main.ScreenToWorldPoint(mouseposition);
+        if(Input.GetKey(KeyCode.E)) 
+        {
+            transform.Rotate(0f, rotationR * rotateSpeed, 0f);
+        }
+        else if(Input.GetKey(KeyCode.Q))
+        {
+            transform.Rotate(0f, rotationL * rotateSpeed, 0f);
+        }
+        else if (Input.GetKey(KeyCode.R))
+        {
+            transform.rotation = Quaternion.identity ;
+        }
 
-        Vector2 direction = new Vector2(mouseposition.x - transform.position.x,mouseposition.y - transform.position.y);
-
-        transform.up = direction;
     }
+
+    
 }
