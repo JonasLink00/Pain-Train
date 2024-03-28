@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,7 +24,9 @@ public class PlayerMovement : MonoBehaviour
 
     private float rotationR = 1f;
     private float rotationL = -1f;
+    private float rotateAround = 180f;
     public float rotateSpeed;
+
 
     //Script holt sich biem Start infos über den Rigidbody und verhinter die Rotation des Rigidbodys
     private void Start()
@@ -37,7 +40,9 @@ public class PlayerMovement : MonoBehaviour
     {
         MovePlayer();
         RotatePlayer();
+        turnAround();
     }
+    
 
     //Bewegt den Spieler 
     private void MovePlayer()
@@ -51,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
     }
-
+    
     private void RotatePlayer()
     {
         if(Input.GetKey(KeyCode.E)) 
@@ -66,8 +71,17 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.identity ;
         }
-
+        
     }
 
-    
+    private void turnAround()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("180");
+            transform.Rotate(0f, rotateAround, 0f);
+        }
+       
+    }
+
 }
