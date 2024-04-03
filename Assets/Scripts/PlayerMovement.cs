@@ -11,12 +11,10 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 PlayerMovmentInput;
 
-
     public Transform orientation;
 
     float horizontalInput;
     float verticalInput;
-
 
     Vector3 moveDirection;
 
