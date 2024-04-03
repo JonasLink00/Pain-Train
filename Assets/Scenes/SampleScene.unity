@@ -4551,6 +4551,11 @@ Transform:
   - {fileID: 1615039955}
   m_Father: {fileID: 1372282183}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &411784896 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 422622018744790799, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
+  m_PrefabInstance: {fileID: 1649197817}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &424859231
 GameObject:
   m_ObjectHideFlags: 0
@@ -15788,6 +15793,22 @@ PrefabInstance:
       propertyPath: rotateSpeed
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6583192866906322280, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 411784896}
+    - target: {fileID: 6583192866906322280, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
+      propertyPath: moveSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583192866906322280, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
+      propertyPath: orientation
+      value: 
+      objectReference: {fileID: 1649197818}
+    - target: {fileID: 6583192866906322280, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
+      propertyPath: rotateSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7638262556063104716, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
       propertyPath: m_Name
       value: Augen
@@ -15796,7 +15817,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5516272669915378801, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

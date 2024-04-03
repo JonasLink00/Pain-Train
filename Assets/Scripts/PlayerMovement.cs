@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.R))
         {
-            transform.rotation = Quaternion.identity ;
+            transform.rotation = Quaternion.identity;
         }
         
     }
