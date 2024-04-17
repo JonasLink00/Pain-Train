@@ -17,7 +17,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private LayerMask _FrachtLayer;
 
 #if UNITY_EDITOR
-    [SerializeField] private string currendEnemyState;
+    [SerializeField] private string currentEnemyState;
     [SerializeField] private string previousEnemyState;
    
     
@@ -34,6 +34,8 @@ public class EnemyController : MonoBehaviour
 
     public Fracht currendFracht;
 
+    private bool GetAttack;
+
     void Start()
     {
         InitFSM();
@@ -45,7 +47,8 @@ public class EnemyController : MonoBehaviour
         EnemyWalkState walkState = new EnemyWalkState(this, agent);
         EnemySearchWorkState searchWorkState = new EnemySearchWorkState(this, agent, _FrachtLayer);
         EnemyWorkingState workingState = new EnemyWorkingState(this, agent);
-        
+        EnemyAttackState attackState = new EnemyAttackState(this, agent);
+
 
         currentState = idleState;
         currentState.Enter();
@@ -84,7 +87,9 @@ public class EnemyController : MonoBehaviour
                 {
                     {() => Work < WorkThreshHold, walkState },
                 }
-            }
+            },
+
+           
         };
     }
 
@@ -122,8 +127,8 @@ public class EnemyController : MonoBehaviour
                 currentState.Enter();
 
 #if UNITY_EDITOR
-                previousEnemyState = currendEnemyState;
-                currendEnemyState = currendEnemyState.GetType().Name;
+                previousEnemyState = currentEnemyState;
+                currentEnemyState = currentState.GetType().Name;
 #endif
                 break;
             }

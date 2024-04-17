@@ -368,6 +368,7 @@
 "Assets/Ouroboros/Stylized Textures - Mini Set/Demo/Sources/Rotator.cs"
 "Assets/Scripts/KI/EnemyController.cs"
 "Assets/Scripts/KI/Fracht.cs"
+"Assets/Scripts/KI/KIStates/EnemyAttackState.cs"
 "Assets/Scripts/KI/KIStates/EnemyBaseState.cs"
 "Assets/Scripts/KI/KIStates/EnemyIdelState.cs"
 "Assets/Scripts/KI/KIStates/EnemySearchWorkState.cs"
@@ -375,6 +376,8 @@
 "Assets/Scripts/KI/KIStates/EnemyWorkingState.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
 "Assets/Scripts/Player/PlayerRotation.cs"
+"Assets/Scripts/Wagon/WagonManager.cs"
+"Assets/Scripts/Wagon/WagonTrigger.cs"
 -langversion:9.0
 
 /deterministic
