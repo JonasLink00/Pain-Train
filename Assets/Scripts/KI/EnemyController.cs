@@ -16,6 +16,8 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float WorkThreshHold;
     [SerializeField] private LayerMask _FrachtLayer;
 
+    public WagonTrigger trigger;
+
 #if UNITY_EDITOR
     [SerializeField] private string currentEnemyState;
     [SerializeField] private string previousEnemyState;
@@ -34,7 +36,7 @@ public class EnemyController : MonoBehaviour
 
     public Fracht currendFracht;
 
-    private bool GetAttack;
+    
 
     void Start()
     {
@@ -60,7 +62,7 @@ public class EnemyController : MonoBehaviour
                 new Dictionary<StateMachineDelegate, EnemyBaseState>
                 {
                     {() => Work >= WorkThreshHold, searchWorkState },
-                    { () => CheckIdleTimer(), walkState },
+                    { CheckIdleTimer, walkState },
                 }
             },
 
@@ -68,7 +70,8 @@ public class EnemyController : MonoBehaviour
                 walkState,
                 new Dictionary<StateMachineDelegate, EnemyBaseState>
                 {
-                    { () => agent.remainingDistance <= 0.2f, idleState },
+                    {() =>  trigger.GetAttackt = true, attackState},
+                    { () => agent.remainingDistance <= 0.2f, idleState }
                 }
 
             },
@@ -76,8 +79,9 @@ public class EnemyController : MonoBehaviour
             {
                 searchWorkState,
                 new Dictionary<StateMachineDelegate, EnemyBaseState> 
-                { 
-                    {() => currendFracht != null, workingState } 
+                {
+                    {() =>  trigger.GetAttackt = true, attackState},
+                    {() => currendFracht != null, workingState }
                 }
             },
 
@@ -85,11 +89,18 @@ public class EnemyController : MonoBehaviour
                 workingState,
                 new Dictionary<StateMachineDelegate, EnemyBaseState>
                 {
-                    {() => Work < WorkThreshHold, walkState },
+                    {() => Work < WorkThreshHold, walkState }
                 }
             },
 
-           
+            {
+                attackState,
+                new Dictionary<StateMachineDelegate, EnemyBaseState>
+                {
+                    {() => Work < WorkThreshHold, walkState }
+                }
+            },
+
         };
     }
 

@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class WagonTrigger : MonoBehaviour
 {
-    public PlayerMovement Player;
-    private bool GetAttackt;
+    public bool GetAttackt = false;
     private void OnTriggerExit(Collider other)
     {
         //Deaktiviert Event bei kontakt mit Player
-        if (other.GetComponent<Rigidbody2D>() != null)
+        if (other.GetComponent<Rigidbody>() != null)
         {
             GetAttackt = true;
         }
