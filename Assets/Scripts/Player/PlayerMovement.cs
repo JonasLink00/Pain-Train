@@ -35,10 +35,7 @@ public class PlayerMovement : MonoBehaviour
         MovePlayer();
     }
 
-    private void Update()
-    {
-        
-    }
+    
 
     public void OnMove(InputAction.CallbackContext context)
     {

@@ -15,7 +15,7 @@ C:/Users/jonas/source/repos/Pain Train
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56995
+65401
 Successfully changed project path to: C:/Users/jonas/source/repos/Pain Train
 C:/Users/jonas/source/repos/Pain Train
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/jonas/source/repos/Pain Train
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [41176] Host "[IP] 10.8.39.176 [Port] 0 [Flags] 2 [Guid] 1412429230 [EditorId] 1412429230 [Version] 1048832 [Id] WindowsEditor(7,JLGPL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [95772] Host "[IP] 10.8.39.176 [Port] 0 [Flags] 2 [Guid] 93680966 [EditorId] 93680966 [Version] 1048832 [Id] WindowsEditor(7,JLGPL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [41176] Host "[IP] 10.8.39.176 [Port] 0 [Flags] 2 [Guid] 1412429230 [EditorId] 1412429230 [Version] 1048832 [Id] WindowsEditor(7,JLGPL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [95772] Host "[IP] 10.8.39.176 [Port] 0 [Flags] 2 [Guid] 93680966 [EditorId] 93680966 [Version] 1048832 [Id] WindowsEditor(7,JLGPL) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 19 workers.
-Refreshing native plugins compatible for Editor in 139.93 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 7.67 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.10f1 (ff3792e53c62)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.10f1/Editor/Data/Resources/UnitySubsystems
@@ -70,46 +70,46 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.10f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.10f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56036
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56636
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.10f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.010184 seconds.
-- Loaded All Assemblies, in  1.614 seconds
+Registered in 0.006615 seconds.
+- Loaded All Assemblies, in  0.360 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.368 seconds
-Domain Reload Profiling: 1982ms
-	BeginReloadAssembly (109ms)
+- Finished resetting the current domain, in  0.275 seconds
+Domain Reload Profiling: 633ms
+	BeginReloadAssembly (104ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (328ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (66ms)
-	LoadAllAssembliesAndSetupDomain (1098ms)
-		LoadAssemblies (108ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (57ms)
+	LoadAllAssembliesAndSetupDomain (152ms)
+		LoadAssemblies (103ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (1096ms)
-			TypeCache.Refresh (1094ms)
-				TypeCache.ScanAssembly (544ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
-			ResolveRequiredComponents (1ms)
-	FinalizeReload (369ms)
+		AnalyzeDomain (150ms)
+			TypeCache.Refresh (149ms)
+				TypeCache.ScanAssembly (136ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (275ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (277ms)
+		SetupLoadedEditorAssemblies (216ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			SetLoadedEditorAssemblies (7ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (176ms)
-			ProcessInitializeOnLoadMethodAttributes (77ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (148ms)
+			ProcessInitializeOnLoadMethodAttributes (50ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -117,8 +117,8 @@ Domain Reload Profiling: 1982ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  5.871 seconds
-Refreshing native plugins compatible for Editor in 5.34 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.803 seconds
+Refreshing native plugins compatible for Editor in 3.68 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
@@ -126,47 +126,47 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.397 seconds
-Domain Reload Profiling: 7263ms
-	BeginReloadAssembly (289ms)
+- Finished resetting the current domain, in  1.036 seconds
+Domain Reload Profiling: 1836ms
+	BeginReloadAssembly (172ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (12ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (36ms)
-	RebuildCommonClasses (71ms)
-	RebuildNativeTypeToScriptingClass (21ms)
-	initialDomainReloadingComplete (89ms)
-	LoadAllAssembliesAndSetupDomain (5395ms)
-		LoadAssemblies (5034ms)
+		CreateAndSetChildDomain (26ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (532ms)
+		LoadAssemblies (349ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (530ms)
-			TypeCache.Refresh (472ms)
-				TypeCache.ScanAssembly (337ms)
-			ScanForSourceGeneratedMonoScriptInfo (43ms)
-			ResolveRequiredComponents (12ms)
-	FinalizeReload (1398ms)
+		AnalyzeDomain (278ms)
+			TypeCache.Refresh (243ms)
+				TypeCache.ScanAssembly (224ms)
+			ScanForSourceGeneratedMonoScriptInfo (27ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1036ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1078ms)
+		SetupLoadedEditorAssemblies (809ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (15ms)
-			SetLoadedEditorAssemblies (8ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (142ms)
-			ProcessInitializeOnLoadAttributes (865ms)
-			ProcessInitializeOnLoadMethodAttributes (37ms)
-			AfterProcessingInitializeOnLoad (12ms)
+			BeforeProcessingInitializeOnLoad (119ms)
+			ProcessInitializeOnLoadAttributes (645ms)
+			ProcessInitializeOnLoadMethodAttributes (23ms)
+			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (15ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 5.84 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (7ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 2.18 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4058 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 56 unused Assets / (194.0 KB). Loaded Objects now: 4533.
-Memory consumption went from 154.3 MB to 154.2 MB.
-Total: 6.230100 ms (FindLiveObjects: 0.398300 ms CreateObjectMapping: 0.201600 ms MarkObjects: 5.324600 ms  DeleteObjects: 0.303400 ms)
+Unloading 56 unused Assets / (169.7 KB). Loaded Objects now: 4533.
+Memory consumption went from 154.1 MB to 153.9 MB.
+Total: 3.006100 ms (FindLiveObjects: 0.295600 ms CreateObjectMapping: 0.149800 ms MarkObjects: 2.420000 ms  DeleteObjects: 0.139700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -184,9 +184,119 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 519044.939091 seconds.
-  path: Assets/9t5 PBR Textures Pack Freebies/Textures/Wood 1/Wood 1.mat
-  artifactKey: Guid(0bf3fe356c6d98f49b2953168e229fe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/9t5 PBR Textures Pack Freebies/Textures/Wood 1/Wood 1.mat using Guid(0bf3fe356c6d98f49b2953168e229fe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a86917b868d3c70eb2fe8f47da68666') in 0.331070 seconds
+  Time since last request: 603563.714376 seconds.
+  path: Assets/Prefabs/Sitz.fbx
+  artifactKey: Guid(1d3f1feef65c0984ba341f1cc93b2d1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Sitz.fbx using Guid(1d3f1feef65c0984ba341f1cc93b2d1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5903a9e26a166adf8fbb70c5eb9ffe80') in 0.149309 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 6
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 833.636454 seconds.
+  path: Assets/Prefabs/Sitz2.fbx
+  artifactKey: Guid(fa1d5672864301c499b8907ba2b3ce7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Sitz2.fbx using Guid(fa1d5672864301c499b8907ba2b3ce7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d53679a5ad389ffedbb3e2fa12d846d') in 0.034264 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 266.823409 seconds.
+  path: Assets/Prefabs/Sitz.fbx
+  artifactKey: Guid(fa1d5672864301c499b8907ba2b3ce7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Sitz.fbx using Guid(fa1d5672864301c499b8907ba2b3ce7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7583e83dd80d4b2c5e6c80958b10b7c') in 0.024173 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 158.540933 seconds.
+  path: Assets/9t5 PBR Textures Pack Freebies/Scenes/Demo/LightingData.asset
+  artifactKey: Guid(9411a5ac9f176d04f965dbdd085bf82d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/9t5 PBR Textures Pack Freebies/Scenes/Demo/LightingData.asset using Guid(9411a5ac9f176d04f965dbdd085bf82d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4963a452c50526446faf7b8a55fdf89f') in 0.002454 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.003651 seconds.
+  path: Assets/9t5 PBR Textures Pack Freebies/Scenes/Demo/ReflectionProbe-0.exr
+  artifactKey: Guid(4e525d1168abeb1498021a449a77c533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/9t5 PBR Textures Pack Freebies/Scenes/Demo/ReflectionProbe-0.exr using Guid(4e525d1168abeb1498021a449a77c533) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef5bd58483130e519f56f74f7df8c3fc') in 0.039707 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 1.198620 seconds.
+  path: Assets/9t5 PBR Textures Pack Freebies/Prefabs/Brick 1.prefab
+  artifactKey: Guid(a239e0fd280faa4438d9563c407f0909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/9t5 PBR Textures Pack Freebies/Prefabs/Brick 1.prefab using Guid(a239e0fd280faa4438d9563c407f0909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '951b1f5037d37e9f916939661d157f16') in 0.020406 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/9t5 PBR Textures Pack Freebies/Prefabs/Dirt 1.prefab
+  artifactKey: Guid(a5f50d5a4755e3544b3907292cfc82f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/9t5 PBR Textures Pack Freebies/Prefabs/Dirt 1.prefab using Guid(a5f50d5a4755e3544b3907292cfc82f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '906cfb2445081f8b90a5a3b1e5030176') in 0.016150 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.003282 seconds.
+  path: Assets/9t5 PBR Textures Pack Freebies/Prefabs/Foliage 1.prefab
+  artifactKey: Guid(8d362f363b97fcd4393e38e1c8cc731d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/9t5 PBR Textures Pack Freebies/Prefabs/Foliage 1.prefab using Guid(8d362f363b97fcd4393e38e1c8cc731d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1118a9dc0f61065a0a09b6036e9e9fa') in 0.028935 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000141 seconds.
+  path: Assets/9t5 PBR Textures Pack Freebies/Prefabs/Gravel 1.prefab
+  artifactKey: Guid(54385f0d518f98c488dec65c77e82d10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/9t5 PBR Textures Pack Freebies/Prefabs/Gravel 1.prefab using Guid(54385f0d518f98c488dec65c77e82d10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fa01763ac97e5672411ccfe4625ac86') in 0.013033 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000010 seconds.
+  path: Assets/9t5 PBR Textures Pack Freebies/Prefabs/Rock 1.prefab
+  artifactKey: Guid(28d3155817a00ce40804e3098b266859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/9t5 PBR Textures Pack Freebies/Prefabs/Rock 1.prefab using Guid(28d3155817a00ce40804e3098b266859) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02837b91fd4ae9e63dced6c40d86936f') in 0.018134 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.005555 seconds.
+  path: Assets/9t5 PBR Textures Pack Freebies/Prefabs/Stones 1.prefab
+  artifactKey: Guid(6f702ccc9d9f1e740aa0c8b21d753b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/9t5 PBR Textures Pack Freebies/Prefabs/Stones 1.prefab using Guid(6f702ccc9d9f1e740aa0c8b21d753b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '965c5c09962b95ef152545a2190e837d') in 0.020131 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/9t5 PBR Textures Pack Freebies/Prefabs/Wood 1.prefab
+  artifactKey: Guid(62648415a1eed4c4eb8d0adafbd21b51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/9t5 PBR Textures Pack Freebies/Prefabs/Wood 1.prefab using Guid(62648415a1eed4c4eb8d0adafbd21b51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0feaa70c61331145a94d017839b180b5') in 0.028740 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/9t5 PBR Textures Pack Freebies/Prefabs/Metal 1.prefab
+  artifactKey: Guid(9aebf898d7de3654db25d01e0e37ad57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/9t5 PBR Textures Pack Freebies/Prefabs/Metal 1.prefab using Guid(9aebf898d7de3654db25d01e0e37ad57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d728547738316596b5d1140f2f54f2f') in 0.025930 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/9t5 PBR Textures Pack Freebies/Prefabs/Tiles 1.prefab
+  artifactKey: Guid(84ae673ac8df91449a7e351b51556202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/9t5 PBR Textures Pack Freebies/Prefabs/Tiles 1.prefab using Guid(84ae673ac8df91449a7e351b51556202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c67f1bfd8a10db3aec8f91a528b83722') in 0.017755 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

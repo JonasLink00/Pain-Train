@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\KI\KIStates\EnemyAttackState.cs" />
+    <Compile Include="Assets\Scripts\Manager\ZugManager.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemyWorkingState.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemyIdelState.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemyWalkState.cs" />

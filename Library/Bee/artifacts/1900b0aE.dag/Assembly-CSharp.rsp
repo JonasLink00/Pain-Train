@@ -374,6 +374,7 @@
 "Assets/Scripts/KI/KIStates/EnemySearchWorkState.cs"
 "Assets/Scripts/KI/KIStates/EnemyWalkState.cs"
 "Assets/Scripts/KI/KIStates/EnemyWorkingState.cs"
+"Assets/Scripts/Manager/ZugManager.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
 "Assets/Scripts/Player/PlayerRotation.cs"
 "Assets/Scripts/Wagon/WagonManager.cs"
