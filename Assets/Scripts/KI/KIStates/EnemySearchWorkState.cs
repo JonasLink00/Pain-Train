@@ -17,7 +17,7 @@ public class EnemySearchWorkState : EnemyBaseState
     public EnemySearchWorkState(EnemyController _controller, NavMeshAgent _agent, LayerMask _FrachtLayer) : base(_controller)
     {
         agent = _agent;
-        searchWalkRadius = 5;
+        searchWalkRadius = 10;
         waitTimerAtPosition = 10;
         FrachtLayer = _FrachtLayer;
     }

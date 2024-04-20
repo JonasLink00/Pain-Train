@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EnemyWorkingState : EnemyBaseState
 {
     private NavMeshAgent agent;
+    private bool doneWorking;
     public EnemyWorkingState(EnemyController _controller, NavMeshAgent _agent) : base(_controller)
     {
         agent = _agent;
@@ -24,10 +25,12 @@ public class EnemyWorkingState : EnemyBaseState
 
     public override void Update()
     {
-        if(agent.remainingDistance <= 0.2f)
+        if (agent.remainingDistance <= 0.2f)
         {
             controller.currendFracht = null;
             controller.ResetWork();
         }
     }
+
+
 }

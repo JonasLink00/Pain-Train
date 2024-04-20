@@ -15,7 +15,7 @@ public class EnemyAttackState : EnemyBaseState
 
     public override void Enter()
     {
-        agent.SetDestination(Player.transform.position);
+        //agent.SetDestination(Player.transform.position);
     }
 
     public override void Exit()
