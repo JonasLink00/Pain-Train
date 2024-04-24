@@ -5,7 +5,9 @@ using UnityEngine;
 public class ZugManager : MonoBehaviour
 {
     public static ZugManager zugmanager;
-    private PlayerMovement player;
+    public PlayerMovement player;
+    public WagonTrigger trigger;
+    public EnemyAttackState enemyAttackState;
 
     private void Awake()
     {
@@ -18,10 +20,14 @@ public class ZugManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        player = GetComponent<PlayerMovement>();
     }
 
-    
+    public void Enemyspotted()
+    {
+        enemyAttackState.agent.SetDestination(player.transform.position);
+    }
+
+
 
 
 }

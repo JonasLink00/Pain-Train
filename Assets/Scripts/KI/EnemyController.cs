@@ -70,7 +70,7 @@ public class EnemyController : MonoBehaviour
                 walkState,
                 new Dictionary<StateMachineDelegate, EnemyBaseState>
                 {
-                    //{() =>  trigger.GetAttackt = true, attackState},
+                    {() =>  trigger.GetAttackt = true, attackState},
                     { () => agent.remainingDistance <= 0.2f, idleState }
                 }
 
@@ -80,7 +80,7 @@ public class EnemyController : MonoBehaviour
                 searchWorkState,
                 new Dictionary<StateMachineDelegate, EnemyBaseState> 
                 {
-                    //{() =>  trigger.GetAttackt = true, attackState},
+                    {() =>  trigger.GetAttackt = true, attackState},
                     {() => currendFracht != null, workingState }
                 }
             },

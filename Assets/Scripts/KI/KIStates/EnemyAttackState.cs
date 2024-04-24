@@ -5,8 +5,8 @@ using UnityEngine.AI;
 
 public class EnemyAttackState : EnemyBaseState
 {
-    private NavMeshAgent agent;
-    public PlayerMovement Player;
+    public NavMeshAgent agent;
+    public ZugManager zugManager;
 
     public EnemyAttackState(EnemyController _controller, NavMeshAgent _agent) : base(_controller)
     {
@@ -16,6 +16,10 @@ public class EnemyAttackState : EnemyBaseState
     public override void Enter()
     {
         //agent.SetDestination(Player.transform.position);
+        if (zugManager.trigger.GetAttackt)
+        {
+            zugManager.Enemyspotted();
+        }
     }
 
     public override void Exit()
