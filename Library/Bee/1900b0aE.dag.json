@@ -29929,7 +29929,7 @@
         "Assets/Scripts/KI/Fracht.cs",
         "Assets/Scripts/KI/KIStates/EnemyAttackState.cs",
         "Assets/Scripts/KI/KIStates/EnemyBaseState.cs",
-        "Assets/Scripts/KI/KIStates/EnemyIdelState.cs",
+        "Assets/Scripts/KI/KIStates/EnemyIdleState.cs",
         "Assets/Scripts/KI/KIStates/EnemySearchWorkState.cs",
         "Assets/Scripts/KI/KIStates/EnemyWalkState.cs",
         "Assets/Scripts/KI/KIStates/EnemyWorkingState.cs",

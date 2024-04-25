@@ -24,6 +24,7 @@ public class EnemySearchWorkState : EnemyBaseState
 
     public override void Enter()
     {
+        Debug.Log("SearchworkStateEnter");
         startPosition = controller.transform.position;
         Vector3 newPos = startPosition + Random.insideUnitSphere * searchWalkRadius;
 

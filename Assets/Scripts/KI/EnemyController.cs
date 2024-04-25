@@ -45,7 +45,7 @@ public class EnemyController : MonoBehaviour
 
     void InitFSM()
     {
-        EnemyIdelState idleState = new EnemyIdelState(this);
+        EnemyIdleState idleState = new EnemyIdleState(this);
         EnemyWalkState walkState = new EnemyWalkState(this, agent);
         EnemySearchWorkState searchWorkState = new EnemySearchWorkState(this, agent, _FrachtLayer);
         EnemyWorkingState workingState = new EnemyWorkingState(this, agent);
@@ -70,7 +70,8 @@ public class EnemyController : MonoBehaviour
                 walkState,
                 new Dictionary<StateMachineDelegate, EnemyBaseState>
                 {
-                    {() =>  trigger.GetAttackt = true, attackState},
+                    
+                    //{() =>  trigger.GetAttackt = true, attackState},
                     { () => agent.remainingDistance <= 0.2f, idleState }
                 }
 
@@ -80,7 +81,7 @@ public class EnemyController : MonoBehaviour
                 searchWorkState,
                 new Dictionary<StateMachineDelegate, EnemyBaseState> 
                 {
-                    {() =>  trigger.GetAttackt = true, attackState},
+                    //{() =>  trigger.GetAttackt = true, attackState},
                     {() => currendFracht != null, workingState }
                 }
             },
