@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public delegate bool StateMachineDelegate();
-public class EnemyController : MonoBehaviour
+public class EnemyController : BaseController
 {
     [SerializeField]
     private float idleTimer;
@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] private float Work;
     [SerializeField] private float WorkThreshHold;
-    [SerializeField] private LayerMask _FrachtLayer;
+    [SerializeField] private LayerMask _FreightLayer;
 
     public WagonTrigger trigger;
 
@@ -32,22 +32,21 @@ public class EnemyController : MonoBehaviour
 
     private StateMachineDelegate stateMachineDelegate;
 
-    private Dictionary<EnemyBaseState, Dictionary<StateMachineDelegate, EnemyBaseState>> stateDictionary;
 
-    public Fracht currendFracht;
+    public Freight currendFreight;
 
     
 
-    void Start()
+    protected override void Start()
     {
         InitFSM();
     }
 
-    void InitFSM()
+    protected override void InitFSM()
     {
         EnemyIdleState idleState = new EnemyIdleState(this);
         EnemyWalkState walkState = new EnemyWalkState(this, agent);
-        EnemySearchWorkState searchWorkState = new EnemySearchWorkState(this, agent, _FrachtLayer);
+        EnemySearchWorkState searchWorkState = new EnemySearchWorkState(this, agent, _FreightLayer);
         EnemyWorkingState workingState = new EnemyWorkingState(this, agent);
         EnemyAttackState attackState = new EnemyAttackState(this, agent);
 
@@ -71,7 +70,7 @@ public class EnemyController : MonoBehaviour
                 new Dictionary<StateMachineDelegate, EnemyBaseState>
                 {
                     
-                    //{() =>  trigger.GetAttackt = true, attackState},
+                    //{() =>  trigger.GetAttacked = true, attackState},
                     { () => agent.remainingDistance <= 0.2f, idleState }
                 }
 
@@ -81,8 +80,8 @@ public class EnemyController : MonoBehaviour
                 searchWorkState,
                 new Dictionary<StateMachineDelegate, EnemyBaseState> 
                 {
-                    //{() =>  trigger.GetAttackt = true, attackState},
-                    {() => currendFracht != null, workingState }
+                    //{() =>  trigger.GetAttacked = true, attackState},
+                    {() => currendFreight != null, workingState }
                 }
             },
 
@@ -121,13 +120,13 @@ public class EnemyController : MonoBehaviour
     }
 
 
-    void Update()
+    protected override void Update()
     {
         UpdateFSM();
         IncreaseWork();
     }
 
-    void UpdateFSM()
+    protected override void UpdateFSM()
     {
         currentState.Update();
 

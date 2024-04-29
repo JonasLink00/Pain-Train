@@ -12,14 +12,14 @@ public class EnemySearchWorkState : EnemyBaseState
     private bool goToStart;
     private bool timerStarted;
     private float waitTimerAtPosition;
-    private LayerMask FrachtLayer;
+    private LayerMask FreightLayer;
 
-    public EnemySearchWorkState(EnemyController _controller, NavMeshAgent _agent, LayerMask _FrachtLayer) : base(_controller)
+    public EnemySearchWorkState(EnemyController _controller, NavMeshAgent _agent, LayerMask _FreightLayer) : base(_controller)
     {
         agent = _agent;
         searchWalkRadius = 10;
         waitTimerAtPosition = 10;
-        FrachtLayer = _FrachtLayer;
+        FreightLayer = _FreightLayer;
     }
 
     public override void Enter()
@@ -59,7 +59,7 @@ public class EnemySearchWorkState : EnemyBaseState
 
         if(goToStart)
         {
-            SearchFracht();
+            SearchFreight();
         }
         else
         {
@@ -70,11 +70,11 @@ public class EnemySearchWorkState : EnemyBaseState
         timerStarted = false;
     }
 
-    private void SearchFracht()
+    private void SearchFreight()
     {
-        Collider[] cols = Physics.OverlapSphere(controller.transform.position, 20, FrachtLayer);
+        Collider[] cols = Physics.OverlapSphere(controller.transform.position, 20, FreightLayer);
 
         if (!cols.Any()) return;
-        controller.currendFracht = cols[0].GetComponent<Fracht>();
+        controller.currendFreight = cols[0].GetComponent<Freight>();
     }
 }

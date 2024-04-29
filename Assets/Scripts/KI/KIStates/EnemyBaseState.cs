@@ -4,12 +4,12 @@ using UnityEngine;
 
 public abstract class EnemyBaseState 
 {
-    protected EnemyController controller;
-
-    public EnemyBaseState(EnemyController _controller)
-    {
-        controller = _controller;
-    }
+   protected EnemyController controller;
+   
+   public EnemyBaseState(EnemyController _controller)
+   {
+       controller = _controller;
+   }
 
     public abstract void Enter();
     public abstract void Update();

@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class EnemyWorkingState : EnemyBaseState
 {
     private NavMeshAgent agent;
-    private bool doneWorking;
     public EnemyWorkingState(EnemyController _controller, NavMeshAgent _agent) : base(_controller)
     {
         agent = _agent;
@@ -14,7 +13,7 @@ public class EnemyWorkingState : EnemyBaseState
 
     public override void Enter()
     {
-        agent.SetDestination(controller.currendFracht.transform.position);
+        agent.SetDestination(controller.currendFreight.transform.position);
 
     }
 
@@ -27,10 +26,17 @@ public class EnemyWorkingState : EnemyBaseState
     {
         if (agent.remainingDistance <= 0.2f)
         {
-            controller.currendFracht = null;
+            controller.currendFreight = null;
             controller.ResetWork();
+            controller.StartCoroutine(TimeOnFreight());
         }
     }
 
+    IEnumerator TimeOnFreight()
+    {
+        Debug.Log("Wait");
+        yield return new WaitForSeconds(controller.currendFreight.timeOnFreight);
 
+    }
+     
 }

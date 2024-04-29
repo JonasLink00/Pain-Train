@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyAttackState : EnemyBaseState
 {
     public NavMeshAgent agent;
-    public ZugManager zugManager;
+    public TrainManager trainManager;
 
     public EnemyAttackState(EnemyController _controller, NavMeshAgent _agent) : base(_controller)
     {
@@ -16,9 +16,9 @@ public class EnemyAttackState : EnemyBaseState
     public override void Enter()
     {
         //agent.SetDestination(Player.transform.position);
-        if (zugManager.trigger.GetAttackt)
+        if (trainManager.trigger.GetAttacked)
         {
-            zugManager.Enemyspotted();
+            trainManager.Enemyspotted();
         }
     }
 
