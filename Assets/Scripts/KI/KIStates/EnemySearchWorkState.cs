@@ -40,7 +40,7 @@ public class EnemySearchWorkState : EnemyBaseState
 
     public override void Update()
     {
-        if(agent.remainingDistance <= 0.2f)
+        if (agent.remainingDistance <= 0.2f)
         {
             if(!timerStarted)
             {
@@ -77,4 +77,5 @@ public class EnemySearchWorkState : EnemyBaseState
         controller.currendFreight = cols[0].GetComponent<Freight>();
             return true;
     }
+   
 }
