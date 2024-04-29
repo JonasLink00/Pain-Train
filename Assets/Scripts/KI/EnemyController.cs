@@ -93,13 +93,13 @@ public class EnemyController : BaseController
                 }
             },
 
-            {
-                attackState,
-                new Dictionary<StateMachineDelegate, EnemyBaseState>
-                {
-                    {() => Work < WorkThreshHold, walkState }
-                }
-            },
+            //{
+            //    attackState,
+            //    new Dictionary<StateMachineDelegate, EnemyBaseState>
+            //    {
+            //        {() => Work < WorkThreshHold, walkState }
+            //    }
+            //},
 
         };
     }

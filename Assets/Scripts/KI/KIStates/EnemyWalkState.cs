@@ -25,6 +25,6 @@ public class EnemyWalkState : EnemyBaseState
 
     public override void Update()
     {
-        
+
     }
 }

@@ -166,7 +166,7 @@ MonoBehaviour:
   currentEnemyState: 
   previousEnemyState: 
   agent: {fileID: 45079724}
-  currendFreight: {fileID: 138329611}
+  currendFreight: {fileID: 0}
 --- !u!195 &45079724
 NavMeshAgent:
   m_ObjectHideFlags: 0
