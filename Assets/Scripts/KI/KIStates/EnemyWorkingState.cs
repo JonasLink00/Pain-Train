@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -27,8 +29,8 @@ public class EnemyWorkingState : EnemyBaseState
         if (agent.remainingDistance <= 0.2f)
         {
             controller.StartCoroutine(TimeOnFreight());
-            controller.currendFreight = null;
             controller.ResetWork();
+            controller.currendFreight = null;
         }
     }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem.XR;
 
 public delegate bool StateMachineDelegate();
 public class EnemyController : BaseController
@@ -35,7 +36,6 @@ public class EnemyController : BaseController
 
     public Freight currendFreight;
 
-    
 
     protected override void Start()
     {
@@ -146,5 +146,5 @@ public class EnemyController : BaseController
             }
         }
     }
-
+   
 }

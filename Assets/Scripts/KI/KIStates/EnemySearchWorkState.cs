@@ -59,12 +59,16 @@ public class EnemySearchWorkState : EnemyBaseState
 
         FOUND = SearchFreight();
 
+        //if (!FOUND)
+        //{
+        //    Vector3 newPos = startPosition + Random.insideUnitSphere * searchWalkRadius;
+        //    agent.SetDestination(newPos);
+        //}
+
         if(!FOUND)
         {
-            Vector3 newPos = startPosition + Random.insideUnitSphere * searchWalkRadius;
-            agent.SetDestination(newPos);
+            agent.SetDestination(agent.transform.position + Random.insideUnitSphere * 5);
         }
-
         timerStarted = false;
     }
 
@@ -78,4 +82,5 @@ public class EnemySearchWorkState : EnemyBaseState
             return true;
     }
    
+    
 }

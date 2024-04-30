@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e90d5271b7b08dd45b413bfbf18b65ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleTimer: 5
+  idleTimer: 3
   Work: 0
   WorkThreshHold: 10
   _FreightLayer:
