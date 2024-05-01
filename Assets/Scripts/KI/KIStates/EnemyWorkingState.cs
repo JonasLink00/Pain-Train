@@ -22,6 +22,9 @@ public class EnemyWorkingState : EnemyBaseState
     public override void Exit()
     {
         
+        controller.currendFreight = null;
+        agent.SetDestination(controller.enterPosition);
+
     }
 
     public override void Update()
@@ -30,16 +33,13 @@ public class EnemyWorkingState : EnemyBaseState
         {
             controller.StartCoroutine(TimeOnFreight());
             controller.ResetWork();
-            controller.currendFreight = null;
         }
     }
 
     IEnumerator TimeOnFreight()
     {
         Debug.Log("Wait");
-        //yield return new WaitForSeconds(controller.currendFreight.timeOnFreight);
-        yield return new WaitForSeconds(10);
-
+        yield return new WaitForSeconds(controller.currendFreight.timeOnFreight);
     }
      
 }

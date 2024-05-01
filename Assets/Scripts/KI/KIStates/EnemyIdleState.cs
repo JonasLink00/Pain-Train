@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyIdleState : EnemyBaseState
 {
     public EnemyIdleState(EnemyController _controller) : base(_controller)
     {
-
+        
     }
 
     public override void Enter()

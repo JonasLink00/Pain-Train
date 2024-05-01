@@ -167,6 +167,7 @@ MonoBehaviour:
   previousEnemyState: 
   agent: {fileID: 45079724}
   currendFreight: {fileID: 0}
+  enterPosition: {x: 0, y: 0, z: 0}
 --- !u!195 &45079724
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -750,7 +751,7 @@ GameObject:
   - component: {fileID: 138329612}
   - component: {fileID: 138329611}
   m_Layer: 3
-  m_Name: 'Freight '
+  m_Name: Freight L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7079,7 +7080,7 @@ GameObject:
   - component: {fileID: 1192589297}
   - component: {fileID: 1192589296}
   m_Layer: 3
-  m_Name: Freight  (1)
+  m_Name: Freight R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

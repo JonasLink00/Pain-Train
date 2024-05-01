@@ -18,7 +18,7 @@ public class EnemySearchWorkState : EnemyBaseState
     {
         agent = _agent;
         searchWalkRadius = 10;
-        waitTimerAtPosition = 10;
+        waitTimerAtPosition = 1;
         FreightLayer = _FreightLayer;
     }
 

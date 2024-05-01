@@ -10,6 +10,7 @@ public abstract class BaseController : MonoBehaviour
     protected virtual void Start()
     {
         InitFSM();
+
     }
 
     protected virtual void Update()

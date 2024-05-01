@@ -36,10 +36,11 @@ public class EnemyController : BaseController
 
     public Freight currendFreight;
 
-
+    public Vector3 enterPosition;
     protected override void Start()
     {
         InitFSM();
+        enterPosition = agent.transform.position;
     }
 
     protected override void InitFSM()
