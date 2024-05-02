@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
+using System.Transactions;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem.XR;
@@ -26,21 +27,21 @@ public class EnemyController : BaseController
     
 #endif
 
-    [SerializeField]
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
 
     public EnemyBaseState currentState;
 
-    private StateMachineDelegate stateMachineDelegate;
+    //private StateMachineDelegate stateMachineDelegate;
 
 
     public Freight currendFreight;
 
-    public Vector3 enterPosition;
+
+    [SerializeField]
+    private TrainManager trainManager;
     protected override void Start()
     {
         InitFSM();
-        enterPosition = agent.transform.position;
     }
 
     protected override void InitFSM()
@@ -49,7 +50,7 @@ public class EnemyController : BaseController
         EnemyWalkState walkState = new EnemyWalkState(this, agent);
         EnemySearchWorkState searchWorkState = new EnemySearchWorkState(this, agent, _FreightLayer);
         EnemyWorkingState workingState = new EnemyWorkingState(this, agent);
-        EnemyAttackState attackState = new EnemyAttackState(this, agent);
+        EnemyAttackState attackState = new EnemyAttackState(this, agent, trainManager);
 
 
         currentState = idleState;
@@ -70,18 +71,18 @@ public class EnemyController : BaseController
                 walkState,
                 new Dictionary<StateMachineDelegate, EnemyBaseState>
                 {
-                    
-                    //{() =>  trigger.GetAttacked = true, attackState},
-                    { () => agent.remainingDistance <= 0.2f, idleState }
+
+                    //{() => trigger.GetAttacked = true, attackState},
+                    {() => agent.remainingDistance <= 0.2f, idleState }
                 }
 
             },
 
             {
                 searchWorkState,
-                new Dictionary<StateMachineDelegate, EnemyBaseState> 
+                new Dictionary<StateMachineDelegate, EnemyBaseState>
                 {
-                    //{() =>  trigger.GetAttacked = true, attackState},
+                    //{() => trigger.GetAttacked = true, attackState},
                     {() => currendFreight != null, workingState }
                 }
             },
@@ -93,14 +94,13 @@ public class EnemyController : BaseController
                     {() => Work < WorkThreshHold, walkState }
                 }
             },
-
-            //{
-            //    attackState,
-            //    new Dictionary<StateMachineDelegate, EnemyBaseState>
-            //    {
-            //        {() => Work < WorkThreshHold, walkState }
-            //    }
-            //},
+            {
+                attackState,
+                new Dictionary<StateMachineDelegate, EnemyBaseState>
+                {
+                    {() => Work < WorkThreshHold, walkState }
+                }
+            },
 
         };
     }

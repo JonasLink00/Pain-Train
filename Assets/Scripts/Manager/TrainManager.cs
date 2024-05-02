@@ -7,7 +7,7 @@ public class TrainManager : MonoBehaviour
     public static TrainManager zugmanager;
     public PlayerMovement player;
     public WagonTrigger trigger;
-    public EnemyAttackState enemyAttackState;
+    public EnemyController enemyController;
 
     private void Awake()
     {
@@ -24,7 +24,8 @@ public class TrainManager : MonoBehaviour
 
     public void Enemyspotted()
     {
-        enemyAttackState.agent.SetDestination(player.transform.position);
+        //enemyAttackState.agent.SetDestination(player.transform.position);
+        enemyController.agent.destination = player.transform.position;
     }
 
 

@@ -21,10 +21,7 @@ public class EnemyWorkingState : EnemyBaseState
 
     public override void Exit()
     {
-        
         controller.currendFreight = null;
-        agent.SetDestination(controller.enterPosition);
-
     }
 
     public override void Update()

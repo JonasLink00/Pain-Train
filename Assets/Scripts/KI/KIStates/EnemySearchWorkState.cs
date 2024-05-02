@@ -59,15 +59,10 @@ public class EnemySearchWorkState : EnemyBaseState
 
         FOUND = SearchFreight();
 
-        //if (!FOUND)
-        //{
-        //    Vector3 newPos = startPosition + Random.insideUnitSphere * searchWalkRadius;
-        //    agent.SetDestination(newPos);
-        //}
 
         if(!FOUND)
         {
-            agent.SetDestination(agent.transform.position + Random.insideUnitSphere * 5);
+            agent.SetDestination(agent.transform.position + Random.insideUnitSphere * 10);
         }
         timerStarted = false;
     }

@@ -8,9 +8,10 @@ public class EnemyAttackState : EnemyBaseState
     public NavMeshAgent agent;
     public TrainManager trainManager;
 
-    public EnemyAttackState(EnemyController _controller, NavMeshAgent _agent) : base(_controller)
+    public EnemyAttackState(EnemyController _controller, NavMeshAgent _agent, TrainManager _trainManager) : base(_controller)
     {
         agent = _agent;
+        trainManager = _trainManager;
     }
 
     public override void Enter()
