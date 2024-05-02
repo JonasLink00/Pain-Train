@@ -76,6 +76,6 @@ public class EnemySearchWorkState : EnemyBaseState
         controller.currendFreight = cols[0].GetComponent<Freight>();
             return true;
     }
-   
+
     
 }
