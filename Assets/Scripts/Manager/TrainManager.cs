@@ -22,9 +22,9 @@ public class TrainManager : MonoBehaviour
 
     }
 
-    public void Enemyspotted()
+    public void Playerspotted()
     {
-        //enemyAttackState.agent.SetDestination(player.transform.position);
+        //Enemy gets the position on the player
         enemyController.agent.destination = player.transform.position;
     }
 

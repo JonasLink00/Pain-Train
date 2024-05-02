@@ -16,11 +16,7 @@ public class EnemyAttackState : EnemyBaseState
 
     public override void Enter()
     {
-        //agent.SetDestination(Player.transform.position);
-        if (trainManager.trigger.GetAttacked)
-        {
-            trainManager.Enemyspotted();
-        }
+        
     }
 
     public override void Exit()
@@ -30,6 +26,14 @@ public class EnemyAttackState : EnemyBaseState
 
     public override void Update()
     {
-        
+       //if Savezone is wanted
+
+       //if (trainManager.trigger.GetAttacked)
+       //{
+       //    trainManager.Playerspotted();
+       //}
+
+        //trigger works only one time
+        trainManager.Playerspotted();
     }
 }

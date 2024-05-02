@@ -72,7 +72,7 @@ public class EnemyController : BaseController
                 new Dictionary<StateMachineDelegate, EnemyBaseState>
                 {
 
-                    //{() => trigger.GetAttacked = true, attackState},
+                    {() => trigger.GetAttacked == true, attackState},
                     {() => agent.remainingDistance <= 0.2f, idleState }
                 }
 
@@ -82,7 +82,7 @@ public class EnemyController : BaseController
                 searchWorkState,
                 new Dictionary<StateMachineDelegate, EnemyBaseState>
                 {
-                    //{() => trigger.GetAttacked = true, attackState},
+                    {() => trigger.GetAttacked, attackState},
                     {() => currendFreight != null, workingState }
                 }
             },

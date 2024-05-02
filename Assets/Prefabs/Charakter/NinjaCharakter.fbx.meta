@@ -3,7 +3,52 @@ guid: d6057881e314db349aef306c43de59c2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: A
+    second: {fileID: 2100000, guid: ad0258d3e9db4b544a3afade6e02540d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C
+    second: {fileID: 2100000, guid: a2851eae62d0b784e94205b172f543b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cloth
+    second: {fileID: 2100000, guid: 30921dc6a82e66348b6c5315d56ab15e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: E
+    second: {fileID: 2100000, guid: c3b3b50de17fe2b4792735029abe39f8, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: cloth_B_BaseColor
+    second: {fileID: 2800000, guid: 2f34632142d733e4e9a91b1177dfad3e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: cloth_B_Normal
+    second: {fileID: 2800000, guid: c00d0776c782b3742af1544143e4b066, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: low_2_A_BaseColor
+    second: {fileID: 2800000, guid: 4e383f706ba57aa4e880888a6c3db4d0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: low_2_C_BaseColor
+    second: {fileID: 2800000, guid: db8ac54b9a08e654eb260fc4337e9a9b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: low_2_E_BaseColor
+    second: {fileID: 2800000, guid: aecd20cec3f6829468ef7fa30c317d81, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

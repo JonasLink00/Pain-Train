@@ -29,7 +29,6 @@ public class EnemyWorkingState : EnemyBaseState
         if (agent.remainingDistance <= 0.2f)
         {
             controller.StartCoroutine(TimeOnFreight());
-            controller.ResetWork();
         }
     }
 
@@ -37,6 +36,7 @@ public class EnemyWorkingState : EnemyBaseState
     {
         Debug.Log("Wait");
         yield return new WaitForSeconds(controller.currendFreight.timeOnFreight);
+        controller.ResetWork();
     }
      
 }
