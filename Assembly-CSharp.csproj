@@ -63,16 +63,23 @@
     <Compile Include="Assets\Scripts\Manager\TrainManager.cs" />
     <Compile Include="Assets\Scripts\KI\Controller\BaseController.cs" />
     <Compile Include="Assets\Scripts\KI\Freight.cs" />
+    <Compile Include="Assets\Scripts\System\Player.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemyWorkingState.cs" />
+    <Compile Include="Assets\Scripts\System\IAttackable.cs" />
+    <Compile Include="Assets\Scripts\System\ICanDie.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemyWalkState.cs" />
     <Compile Include="Assets\Scripts\KI\Controller\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\System\Strength.cs" />
+    <Compile Include="Assets\Scripts\System\IAttacker.cs" />
+    <Compile Include="Assets\Scripts\System\Health.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemyBaseState.cs" />
-    <Compile Include="Assets\Scripts\Wagon\WagonManager.cs" />
+    <Compile Include="Assets\Scripts\System\Enemy.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRotation.cs" />
     <Compile Include="Assets\Scripts\Wagon\WagonTrigger.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemySearchWorkState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Ouroboros\Stylized Textures - Mini Set\Demo\Sources\Rotator.cs" />
+    <Compile Include="Assets\Scripts\System\HealthSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

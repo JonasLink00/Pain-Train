@@ -378,7 +378,14 @@
 "Assets/Scripts/Manager/TrainManager.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
 "Assets/Scripts/Player/PlayerRotation.cs"
-"Assets/Scripts/Wagon/WagonManager.cs"
+"Assets/Scripts/System/Enemy.cs"
+"Assets/Scripts/System/Health.cs"
+"Assets/Scripts/System/HealthSystem.cs"
+"Assets/Scripts/System/IAttackable.cs"
+"Assets/Scripts/System/IAttacker.cs"
+"Assets/Scripts/System/ICanDie.cs"
+"Assets/Scripts/System/Player.cs"
+"Assets/Scripts/System/Strength.cs"
 "Assets/Scripts/Wagon/WagonTrigger.cs"
 -langversion:9.0
 

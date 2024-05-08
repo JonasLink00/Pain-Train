@@ -6,14 +6,14 @@ public class TrainManager : MonoBehaviour
 {
     [SerializeField] private PlayerMovement player;
     [SerializeField] private WagonTrigger trigger;
-    [SerializeField] private EnemyController PassangerEnemy;
     [SerializeField] private EnemyController WorkingEnemy;
+    [SerializeField] private EnemyController PassangerEnemy;
 
     public void Playerspotted()
     {
         //Enemy gets the position on the player
-        PassangerEnemy.agent.destination = player.transform.position;
         WorkingEnemy.agent.destination = player.transform.position;
+        PassangerEnemy.agent.destination = player.transform.position;
     }
 
 
