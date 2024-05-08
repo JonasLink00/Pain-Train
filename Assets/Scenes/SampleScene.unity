@@ -614,7 +614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f0dd4d7905463a4a8d562fc20d12aa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeOnFreight: 10
+  timeOnFreight: 7
 --- !u!65 &138329612
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9911,6 +9911,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PassangerEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4443043000892279223, guid: a1a0d943a43a26e408d22eb4e117f4c2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4485333576834494768, guid: a1a0d943a43a26e408d22eb4e117f4c2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.965696
@@ -10236,7 +10240,7 @@ MonoBehaviour:
   player: {fileID: 1053401154904582019}
   trigger: {fileID: 754760267}
   PassangerEnemy: {fileID: 1840074067}
-  WorkingEnemy: {fileID: 2145559613}
+  WorkingEnemy: {fileID: 0}
 --- !u!1 &1917621369
 GameObject:
   m_ObjectHideFlags: 0
@@ -11690,17 +11694,6 @@ NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 7408607340588697612, guid: eb14b9f4fa8527a4785d67fb23671803, type: 3}
   m_PrefabInstance: {fileID: 2145559610}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2145559613 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4316424317115388798, guid: eb14b9f4fa8527a4785d67fb23671803, type: 3}
-  m_PrefabInstance: {fileID: 2145559610}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e90d5271b7b08dd45b413bfbf18b65ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1053401154904582019 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2591489716678009265, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}

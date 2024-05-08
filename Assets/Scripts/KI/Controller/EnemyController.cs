@@ -9,17 +9,24 @@ using UnityEngine.InputSystem.XR;
 
 public class EnemyController : BaseController
 {
+    [Header("Enemy")]
+    public NavMeshAgent agent;
+    public WagonTrigger trigger;
+
+    [SerializeField] private TrainManager trainManager;
+    [SerializeField] private bool isWorkingEnemy;
+
+    [Header("WorkingEnemy")]
     [SerializeField]
     private float idleTimer;
-
     public float IdleTimer { get => idleTimer; set => idleTimer = value; }
-
-    [SerializeField] private bool isWorkingEnemy;
+    
     [SerializeField] private float Work;
     [SerializeField] private float WorkThreshHold;
     [SerializeField] private LayerMask _FreightLayer;
 
-    public WagonTrigger trigger;
+    public Freight currendFreight;
+
 
 #if UNITY_EDITOR
     [SerializeField] private string currentEnemyState;
@@ -27,19 +34,10 @@ public class EnemyController : BaseController
    
     
 #endif
-
-    public NavMeshAgent agent;
-
     public EnemyBaseState currentState;
 
-    private StateMachineDelegate stateMachineDelegate;
+    //private StateMachineDelegate stateMachineDelegate;
 
-
-    public Freight currendFreight;
-
-
-    [SerializeField]
-    private TrainManager trainManager;
     protected override void Start()
     {
         InitFSM();
