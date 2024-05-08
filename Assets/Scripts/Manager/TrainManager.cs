@@ -4,28 +4,16 @@ using UnityEngine;
 
 public class TrainManager : MonoBehaviour
 {
-    public static TrainManager zugmanager;
-    public PlayerMovement player;
-    public WagonTrigger trigger;
-    public EnemyController enemyController;
-
-    private void Awake()
-    {
-        if(zugmanager ==null)
-        {
-            zugmanager = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-
-    }
+    [SerializeField] private PlayerMovement player;
+    [SerializeField] private WagonTrigger trigger;
+    [SerializeField] private EnemyController PassangerEnemy;
+    [SerializeField] private EnemyController WorkingEnemy;
 
     public void Playerspotted()
     {
         //Enemy gets the position on the player
-        enemyController.agent.destination = player.transform.position;
+        PassangerEnemy.agent.destination = player.transform.position;
+        WorkingEnemy.agent.destination = player.transform.position;
     }
 
 

@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.InputSystem.XR;
 
-public delegate bool StateMachineDelegate();
+
 public class EnemyController : BaseController
 {
     [SerializeField]
@@ -14,6 +14,7 @@ public class EnemyController : BaseController
 
     public float IdleTimer { get => idleTimer; set => idleTimer = value; }
 
+    [SerializeField] private bool isWorkingEnemy;
     [SerializeField] private float Work;
     [SerializeField] private float WorkThreshHold;
     [SerializeField] private LayerMask _FreightLayer;
@@ -62,6 +63,8 @@ public class EnemyController : BaseController
                 idleState,
                 new Dictionary<StateMachineDelegate, EnemyBaseState>
                 {
+                    {() => trigger.GetAttacked == true, attackState},
+                    {() => !isWorkingEnemy, idleState },
                     {() => Work >= WorkThreshHold, searchWorkState },
                     { CheckIdleTimer, walkState },
                 }

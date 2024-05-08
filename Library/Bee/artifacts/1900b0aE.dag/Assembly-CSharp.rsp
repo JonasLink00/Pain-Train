@@ -368,7 +368,6 @@
 "Assets/Ouroboros/Stylized Textures - Mini Set/Demo/Sources/Rotator.cs"
 "Assets/Scripts/KI/Controller/BaseController.cs"
 "Assets/Scripts/KI/Controller/EnemyController.cs"
-"Assets/Scripts/KI/Controller/PassangerController.cs"
 "Assets/Scripts/KI/Freight.cs"
 "Assets/Scripts/KI/KIStates/EnemyAttackState.cs"
 "Assets/Scripts/KI/KIStates/EnemyBaseState.cs"

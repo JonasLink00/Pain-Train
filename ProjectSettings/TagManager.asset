@@ -14,8 +14,8 @@ TagManager:
   - Player
   - NavMesh
   - Object
-  - Enemy
-  - 
+  - PassangerEnemy
+  - WorkingEnemy
   - 
   - 
   - 

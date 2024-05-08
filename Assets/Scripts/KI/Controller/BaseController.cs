@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+public delegate bool StateMachineDelegate();
 public abstract class BaseController : MonoBehaviour
 {
     protected Dictionary<EnemyBaseState, Dictionary<StateMachineDelegate, EnemyBaseState>> stateDictionary;
