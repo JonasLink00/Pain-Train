@@ -386,6 +386,8 @@
 "Assets/Scripts/System/ICanDie.cs"
 "Assets/Scripts/System/Player.cs"
 "Assets/Scripts/System/Strength.cs"
+"Assets/Scripts/Wagon/ExplodingBox.cs"
+"Assets/Scripts/Wagon/shatteredBox.cs"
 "Assets/Scripts/Wagon/WagonTrigger.cs"
 -langversion:9.0
 

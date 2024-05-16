@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
         rb.AddForce(new Vector3(velChange.x, 0f, velChange.z),ForceMode.VelocityChange);
     }
-    
+
    
 
 }
