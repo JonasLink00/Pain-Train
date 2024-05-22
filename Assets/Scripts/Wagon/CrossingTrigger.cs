@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CrossingTrigger : MonoBehaviour
 {
-    [SerializeField] GameObject SideWallL, SideWallR;
+    [SerializeField] private GameObject SideWallL, SideWallR;
+    public LayerMask player;
 
     private void OnTriggerEnter(Collider other)
     {

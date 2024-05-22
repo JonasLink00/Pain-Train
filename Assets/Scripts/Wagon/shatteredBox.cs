@@ -7,7 +7,7 @@ public class shatteredBox : MonoBehaviour
     public GameObject box;
     public GameObject shattered;
 
-    
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<Rigidbody>() != null)
@@ -21,5 +21,7 @@ public class shatteredBox : MonoBehaviour
         Instantiate(shattered, this.gameObject.transform);
         box.SetActive(false);
         GetComponent<BoxCollider>().enabled = false;
+
     }
-}
+
+} 
