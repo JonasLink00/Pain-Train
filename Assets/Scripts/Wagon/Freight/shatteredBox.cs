@@ -6,16 +6,17 @@ using UnityEngine.UIElements;
 
 public class shatteredBox : MonoBehaviour
 {
+    [Header("Destroy")]
     [SerializeField] private GameObject box;
     [SerializeField] private GameObject shattered;
-    [SerializeField] private float time = 0.3f;
-    private shatteredPartList partList;
-    private List<MeshRenderer> shatteredRendererList;
-    [SerializeField] private float DespawnTime = 5f;
-    private bool Despawned;
+    [SerializeField] float contactForce = 10;
+    [Header("Despawn")]
+    [SerializeField] private float timebeforDespawn = 3f;
+    [SerializeField] private float DespawnTime = 3f;
     private float despawnTimer;
-    [SerializeField]
-    float contactForce = 10;
+    private bool Despawned;
+
+    private shatteredPartList partList;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -52,7 +53,7 @@ public class shatteredBox : MonoBehaviour
         GetComponent<BoxCollider>().enabled = false;
         partList = shattered.GetComponent<shatteredPartList>();
         List<MeshRenderer> List = partList.GetPartList;
-       foreach(var part in List)
+        foreach (var part in List)
        {
             Rigidbody rb =part.GetComponent<Rigidbody>();
 
@@ -67,7 +68,7 @@ public class shatteredBox : MonoBehaviour
 
        }
 
-        StartCoroutine(Blink(shattered, time));
+        StartCoroutine(Blink(shattered, timebeforDespawn));
     }
 
     IEnumerator Blink(GameObject despawnGO, float time)
@@ -86,12 +87,7 @@ public class shatteredBox : MonoBehaviour
             }
         }
 
-        //for (int i = 0; i <= 10; i++)
-        //  {
-        //      meshRenderer.enabled = false;
-        //      yield return new WaitForSeconds(time);
-        //      meshRenderer.enabled = true;
-        //  }
+        
     }
     
 

@@ -77,8 +77,6 @@
     <Compile Include="Assets\Scripts\System\Health.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemyBaseState.cs" />
     <Compile Include="Assets\Scripts\System\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Wagon\Freight\ExplodingBox.cs" />
-    <Compile Include="Assets\Scripts\Wagon\Freight\AddFroce.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRotation.cs" />
     <Compile Include="Assets\Scripts\Wagon\WagonTrigger.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemySearchWorkState.cs" />
