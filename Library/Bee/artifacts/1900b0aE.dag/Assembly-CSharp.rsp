@@ -393,9 +393,10 @@
 "Assets/Scripts/System/Player.cs"
 "Assets/Scripts/System/Strength.cs"
 "Assets/Scripts/Wagon/CrossingTrigger.cs"
-"Assets/Scripts/Wagon/ExplodingBox.cs"
-"Assets/Scripts/Wagon/shatteredBox.cs"
-"Assets/Scripts/Wagon/shatteredPartList.cs"
+"Assets/Scripts/Wagon/Freight/AddFroce.cs"
+"Assets/Scripts/Wagon/Freight/ExplodingBox.cs"
+"Assets/Scripts/Wagon/Freight/shatteredBox.cs"
+"Assets/Scripts/Wagon/Freight/shatteredPartList.cs"
 "Assets/Scripts/Wagon/WagonTrigger.cs"
 -langversion:9.0
 

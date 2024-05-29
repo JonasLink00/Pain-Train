@@ -68,16 +68,17 @@
     <Compile Include="Assets\Scripts\System\IAttackable.cs" />
     <Compile Include="Assets\Scripts\System\ICanDie.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemyWalkState.cs" />
-    <Compile Include="Assets\Scripts\Wagon\shatteredPartList.cs" />
+    <Compile Include="Assets\Scripts\Wagon\Freight\shatteredBox.cs" />
     <Compile Include="Assets\Scripts\KI\Controller\EnemyController.cs" />
     <Compile Include="Assets\Scripts\System\Strength.cs" />
     <Compile Include="Assets\Scripts\System\IAttacker.cs" />
+    <Compile Include="Assets\Scripts\Wagon\Freight\shatteredPartList.cs" />
     <Compile Include="Assets\Scripts\Wagon\CrossingTrigger.cs" />
     <Compile Include="Assets\Scripts\System\Health.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemyBaseState.cs" />
-    <Compile Include="Assets\Scripts\Wagon\shatteredBox.cs" />
     <Compile Include="Assets\Scripts\System\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Wagon\ExplodingBox.cs" />
+    <Compile Include="Assets\Scripts\Wagon\Freight\ExplodingBox.cs" />
+    <Compile Include="Assets\Scripts\Wagon\Freight\AddFroce.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRotation.cs" />
     <Compile Include="Assets\Scripts\Wagon\WagonTrigger.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemySearchWorkState.cs" />
@@ -788,8 +789,8 @@
     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
@@ -797,8 +798,8 @@
     <Reference Include="Unity.AI.Navigation.Updater">
       <HintPath>Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
