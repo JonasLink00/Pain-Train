@@ -9,7 +9,20 @@ public class shatteredBox : MonoBehaviour
 
     [SerializeField] private GameObject box;
     [SerializeField] private GameObject shattered;
+<<<<<<< HEAD
     [SerializeField] private float time = 0.3f;
+=======
+    [SerializeField] float contactForce = 10;
+    [Header("Despawn")]
+    [SerializeField] private float timebeforDespawn = 3f;
+    [SerializeField] private int DespawnTime = 4;
+    [SerializeField] private float BlinkIntervall = 4;
+
+
+    private float despawnTimer;
+    private bool Despawned;
+
+>>>>>>> inarbeit
     private shatteredPartList partList;
     private List<MeshRenderer> shatteredRendererList;
     [SerializeField] private float DespawnTime = 5f;
@@ -68,7 +81,10 @@ public class shatteredBox : MonoBehaviour
 
        }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> inarbeit
         StartCoroutine(Blink());
     }
 
@@ -76,7 +92,9 @@ public class shatteredBox : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         //für jedes Mesh in der List renderer Aktivieren/Deaktivieren
+        yield return new WaitForSeconds(timebeforDespawn);
 
+<<<<<<< HEAD
         for (int i = 0; i < 5; i++)
         {
             HandelRenderaktivation(false);
@@ -110,5 +128,31 @@ public class shatteredBox : MonoBehaviour
             renderer.enabled = aktivParameter;
         }
 
+=======
+        for (int i = 0; i < 4; i++)
+        {
+
+            ItterateShatterdObjects(false);
+
+            yield return new WaitForSeconds(BlinkIntervall);
+
+            ItterateShatterdObjects(true);
+
+            yield return new WaitForSeconds(BlinkIntervall);
+
+        }
+
+        ItterateShatterdObjects(false);
+
+    }
+
+
+    private void ItterateShatterdObjects(bool SetaktivPerameta)
+    {
+        foreach (MeshRenderer renderer in partList.GetPartList)
+        {
+            renderer.enabled = SetaktivPerameta;
+        }
+>>>>>>> inarbeit
     }
 } 
