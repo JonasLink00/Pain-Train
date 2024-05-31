@@ -12,7 +12,7 @@ public class shatteredBox : MonoBehaviour
     private shatteredPartList partList;
     private List<MeshRenderer> shatteredRendererList;
     [SerializeField] private float DespawnTime = 5f;
-    private bool Despawned;
+    private bool Despawned = false;
     private float despawnTimer;
     [SerializeField]
     float contactForce = 10;
@@ -63,7 +63,7 @@ public class shatteredBox : MonoBehaviour
 
             rb.AddForce(directionVector * contactForce, ForceMode.Impulse);
             //rb.velocity = directionVector * contactForce;
-            Debug.Log("AddForce" + rb.transform.position);
+            //Debug.Log("AddForce" + rb.transform.position);
 
        }
 
@@ -78,8 +78,12 @@ public class shatteredBox : MonoBehaviour
 
         foreach (MeshRenderer renderer in partList.GetPartList)
         {
+            Debug.Log("Foreach");
+
             while (!Despawned)
             {
+                Debug.Log("while");
+
                 renderer.enabled = false;
                 yield return new WaitForSeconds(time);
                 renderer.enabled = true;
