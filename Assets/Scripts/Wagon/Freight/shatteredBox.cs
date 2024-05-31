@@ -6,13 +6,14 @@ using UnityEngine.UIElements;
 
 public class shatteredBox : MonoBehaviour
 {
+
     [SerializeField] private GameObject box;
     [SerializeField] private GameObject shattered;
     [SerializeField] private float time = 0.3f;
     private shatteredPartList partList;
     private List<MeshRenderer> shatteredRendererList;
     [SerializeField] private float DespawnTime = 5f;
-    private bool Despawned = false;
+    private bool Despawned;
     private float despawnTimer;
     [SerializeField]
     float contactForce = 10;
@@ -21,7 +22,7 @@ public class shatteredBox : MonoBehaviour
     {
         despawnTimer = DespawnTime;
 
-        if (other.GetComponent<Rigidbody>() != null)
+        if (other.GetComponent<Rigidbody>() != null && other.gameObject.GetComponent<PlayerMovement>())
         {
             BreakTheThing(other.transform.position);
         }
@@ -67,28 +68,30 @@ public class shatteredBox : MonoBehaviour
 
        }
 
-        StartCoroutine(Blink(shattered, time));
+
+        StartCoroutine(Blink());
     }
 
-    IEnumerator Blink(GameObject despawnGO, float time)
+    IEnumerator Blink()
     {
+        yield return new WaitForSeconds(1f);
         //für jedes Mesh in der List renderer Aktivieren/Deaktivieren
 
-
-
-        foreach (MeshRenderer renderer in partList.GetPartList)
+        for (int i = 0; i < 5; i++)
         {
-            Debug.Log("Foreach");
+            HandelRenderaktivation(false);
 
-            while (!Despawned)
-            {
-                Debug.Log("while");
 
-                renderer.enabled = false;
-                yield return new WaitForSeconds(time);
-                renderer.enabled = true;
-            }
+            yield return new WaitForSeconds(0.2f);
+
+            HandelRenderaktivation(true);
+
+            yield return new WaitForSeconds(0.2f);
         }
+
+            HandelRenderaktivation(false);
+
+
 
         //for (int i = 0; i <= 10; i++)
         //  {
@@ -97,11 +100,15 @@ public class shatteredBox : MonoBehaviour
         //      meshRenderer.enabled = true;
         //  }
     }
-    
 
-    private void Despawn(GameObject spawnedGO)
+
+
+    private void HandelRenderaktivation(bool aktivParameter)
     {
-        spawnedGO.SetActive(false);
+        foreach (MeshRenderer renderer in partList.GetPartList)
+        {
+            renderer.enabled = aktivParameter;
+        }
 
     }
 } 

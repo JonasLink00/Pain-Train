@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1706.6667
     height: 976
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 1839
+  controlID: 108
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 1840
+  controlID: 50
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 1841
+  controlID: 51
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -243,14 +243,14 @@ MonoBehaviour:
     y: 646.6667
     width: 1436.6666
     height: 279.3333
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -413,9 +413,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: f0faffffa46c00005e6e0000046f0000
+      m_SelectedIDs: cef9ffff
+      m_LastClickedID: -1586
+      m_ExpandedIDs: 0efbffffb06a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -860,9 +860,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 10.064494, y: 2.176736, z: 28.615768}
+    m_Target: {x: 10.583096, y: 2.3771582, z: 15.231226}
     speed: 2
-    m_Value: {x: 10.064494, y: 2.176736, z: 28.615768}
+    m_Value: {x: 10.583096, y: 2.3771582, z: 15.231226}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -908,9 +908,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.24143296, y: 0.07880548, z: -0.023508193, w: -0.9677044}
+    m_Target: {x: -0.18587726, y: -0.033441845, z: 0.002552967, w: -0.98276883}
     speed: 2
-    m_Value: {x: -0.2398356, y: 0.07733041, z: -0.023012305, w: -0.967455}
+    m_Value: {x: -0.1857371, y: -0.03341663, z: 0.002551042, w: -0.9820278}
   m_Size:
     m_Target: 2.9745138
     speed: 2
@@ -1294,7 +1294,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Material
+    - Assets/Scripts/Wagon/Freight
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1302,16 +1302,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Material
+  - Assets/Scripts/Wagon/Freight
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\jonas\source\repos\Pain Train
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 65.66669}
-    m_SelectedIDs: ee260100
-    m_LastClickedID: 75502
-    m_ExpandedIDs: 00000000b4720000b6720000b8720000ba720000bc720000be72000000ca9a3b
+    m_SelectedIDs: 1a730000
+    m_LastClickedID: 29466
+    m_ExpandedIDs: 000000005a7100005c7100005e71000060710000627100006471000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1339,7 +1339,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b4720000b6720000b8720000ba720000bc720000be720000
+    m_ExpandedIDs: 000000005a7100005c7100005e710000607100006271000064710000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1364,8 +1364,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: b06a0000
+    m_LastClickedInstanceID: 27312
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000280e0100586600000000000044260000
     m_RenameOverlay:

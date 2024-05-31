@@ -9,7 +9,7 @@ public class CrossingTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<Rigidbody>() != null)
+        if (other.GetComponent<Rigidbody>() != null && other.gameObject.GetComponent<PlayerMovement>())
         {
             SideWallL.SetActive(false);
             SideWallR.SetActive(false);
