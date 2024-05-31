@@ -5,14 +5,20 @@ using UnityEngine;
 public class CrossingTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject SideWallL, SideWallR;
-    public LayerMask player;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<Rigidbody>() != null)
+        if (other.GetComponent<Rigidbody>() != null && other.gameObject.GetComponent<PlayerMovement>())
         {
-            SideWallL.SetActive(false);
-            SideWallR.SetActive(false);
+           
+            diaktivateWall(SideWallL);
+            diaktivateWall(SideWallR);
+
         }
+    }
+
+    private void diaktivateWall(GameObject Wall)
+    {
+        Wall.GetComponent<MeshRenderer>().enabled = false;
     }
 }

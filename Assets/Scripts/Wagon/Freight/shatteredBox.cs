@@ -12,7 +12,10 @@ public class shatteredBox : MonoBehaviour
     [SerializeField] float contactForce = 10;
     [Header("Despawn")]
     [SerializeField] private float timebeforDespawn = 3f;
-    [SerializeField] private float DespawnTime = 3f;
+    [SerializeField] private int DespawnTime = 4;
+    [SerializeField] private float BlinkIntervall = 4;
+
+
     private float despawnTimer;
     private bool Despawned;
 
@@ -22,7 +25,7 @@ public class shatteredBox : MonoBehaviour
     {
         despawnTimer = DespawnTime;
 
-        if (other.GetComponent<Rigidbody>() != null)
+        if (other.GetComponent<Rigidbody>() != null && other.gameObject.GetComponent<PlayerMovement>())
         {
             BreakTheThing(other.transform.position);
         }
@@ -68,32 +71,37 @@ public class shatteredBox : MonoBehaviour
 
        }
 
-        StartCoroutine(Blink(shattered, timebeforDespawn));
+        StartCoroutine(Blink());
     }
 
-    IEnumerator Blink(GameObject despawnGO, float time)
+    IEnumerator Blink()
     {
         //für jedes Mesh in der List renderer Aktivieren/Deaktivieren
+        yield return new WaitForSeconds(timebeforDespawn);
 
-
-
-        foreach (MeshRenderer renderer in partList.GetPartList)
+        for (int i = 0; i < 4; i++)
         {
-            while (!Despawned)
-            {
-                renderer.enabled = false;
-                yield return new WaitForSeconds(time);
-                renderer.enabled = true;
-            }
+
+            ItterateShatterdObjects(false);
+
+            yield return new WaitForSeconds(BlinkIntervall);
+
+            ItterateShatterdObjects(true);
+
+            yield return new WaitForSeconds(BlinkIntervall);
+
         }
 
-        
+        ItterateShatterdObjects(false);
+
     }
-    
 
-    private void Despawn(GameObject spawnedGO)
+
+    private void ItterateShatterdObjects(bool SetaktivPerameta)
     {
-        spawnedGO.SetActive(false);
-
+        foreach (MeshRenderer renderer in partList.GetPartList)
+        {
+            renderer.enabled = SetaktivPerameta;
+        }
     }
 } 

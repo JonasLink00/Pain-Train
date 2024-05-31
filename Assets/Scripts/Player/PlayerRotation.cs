@@ -17,7 +17,7 @@ public class PlayerRotation : MonoBehaviour
 
     private void RotatePlayer()
     {
-        transform.Rotate(0f, rotation * rotateSpeed, 0f);
+        transform.Rotate(0f, rotation * rotateSpeed * Time.deltaTime, 0f);
     }
 
     public void ResetRotation(InputAction.CallbackContext context)
