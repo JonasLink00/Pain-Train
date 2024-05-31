@@ -48,7 +48,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1706.6666
+    width: 1706.6667
     height: 976
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -73,7 +73,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1706.6666
+    width: 1706.6667
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -95,7 +95,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 956
-    width: 1706.6666
+    width: 1706.6667
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -118,7 +118,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1706.6666
+    width: 1706.6667
     height: 926
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
@@ -277,10 +277,14 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1436.6666
     y: 0
+<<<<<<< HEAD
     width: 270
+=======
+    width: 448.66675
+>>>>>>> inarbeit
     height: 926
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -870,6 +874,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 10.583096, y: 2.3771582, z: 15.231226}
     speed: 2
     m_Value: {x: 10.583096, y: 2.3771582, z: 15.231226}
@@ -877,6 +882,11 @@ MonoBehaviour:
     m_Target: {x: 11.0113125, y: 3.22685, z: -1.1675451}
     speed: 2
     m_Value: {x: 11.0113125, y: 3.22685, z: -1.1675451}
+>>>>>>> inarbeit
+=======
+    m_Target: {x: 9.010674, y: 2.6949189, z: 5.297512}
+    speed: 2
+    m_Value: {x: 9.010674, y: 2.6949189, z: 5.297512}
 >>>>>>> inarbeit
   m_RenderMode: 0
   m_CameraMode:
@@ -924,6 +934,7 @@ MonoBehaviour:
     m_gridOpacity: 0.5
   m_Rotation:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -0.18587726, y: -0.033441845, z: 0.002552967, w: -0.98276883}
     speed: 2
     m_Value: {x: -0.1857371, y: -0.03341663, z: 0.002551042, w: -0.9820278}
@@ -936,6 +947,15 @@ MonoBehaviour:
     m_Target: 2.9745138
     speed: 2
     m_Value: 2.9745138
+=======
+    m_Target: {x: -0.15218683, y: 0.023313336, z: -0.0078032743, w: -0.98885155}
+    speed: 2
+    m_Value: {x: -0.15206578, y: 0.023294793, z: -0.007797068, w: -0.98806506}
+  m_Size:
+    m_Target: 1.662769
+    speed: 2
+    m_Value: 1.662769
+>>>>>>> inarbeit
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -999,23 +1019,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9e6a0000
-      m_LastClickedID: 27294
-      m_ExpandedIDs: 0efbffff266d0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 0efbffff9e6a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: RadianiteCrate_Inside_low_cell
+        m_OriginalName: RadianiteCrate_Inside_low_cell
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -21650
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 4
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -1479,7 +1499,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Wagon/Freight
+    - Assets
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1487,12 +1507,13 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Wagon/Freight
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\jonas\source\repos\Pain Train
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
 <<<<<<< HEAD
     scrollPos: {x: 0, y: 65.66669}
     m_SelectedIDs: 1a730000
@@ -1503,6 +1524,12 @@ MonoBehaviour:
     m_SelectedIDs: 82730000
     m_LastClickedID: 29570
     m_ExpandedIDs: 00000000c8710000ca710000cc710000ce710000d07100007e7300008473000000ca9a3b
+>>>>>>> inarbeit
+=======
+    scrollPos: {x: 0, y: 41.666687}
+    m_SelectedIDs: ca710000
+    m_LastClickedID: 29130
+    m_ExpandedIDs: 00000000c8710000ca710000cc710000ce710000d0710000767300007a7300007e7300008473000000ca9a3b
 >>>>>>> inarbeit
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1618,9 +1645,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 719.3334
     width: 1435.6666
     height: 258.3333
+=======
+    y: 755.3334
+    width: 1257
+    height: 222.33331
+>>>>>>> inarbeit
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1653,7 +1686,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1436.6667
     y: 72.66667
+<<<<<<< HEAD
     width: 269
+=======
+    width: 447.66675
+>>>>>>> inarbeit
     height: 905
   m_SerializedDataModeController:
     m_DataMode: 0
