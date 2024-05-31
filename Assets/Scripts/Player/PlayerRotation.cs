@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerRotation : MonoBehaviour
 {
-    private float rotation;
+    private float rotationDirectionInput;
     private float rotateAround = 180f;
     public float rotateSpeed;
 
@@ -17,7 +17,7 @@ public class PlayerRotation : MonoBehaviour
 
     private void RotatePlayer()
     {
-        transform.Rotate(0f, rotation * rotateSpeed, 0f);
+        transform.Rotate(0f, rotationDirectionInput * rotateSpeed * Time.deltaTime, 0f);
     }
 
     public void ResetRotation(InputAction.CallbackContext context)
@@ -38,7 +38,7 @@ public class PlayerRotation : MonoBehaviour
     }
     public void OnRotate(InputAction.CallbackContext context)
     {
-        rotation = context.ReadValue<float>();
+        rotationDirectionInput = context.ReadValue<float>();
     }
 
     public void OnTurn(InputAction.CallbackContext context)
