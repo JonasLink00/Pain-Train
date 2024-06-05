@@ -11,9 +11,15 @@ public class TrainManager : MonoBehaviour
 
     public void Playerspotted()
     {
+        if (WorkingEnemy.gameObject.active == true)
+        {
+            WorkingEnemy.agent.destination = player.transform.position;
+        }
+        if (PassangerEnemy.gameObject.active == true)
+        {
+            PassangerEnemy.agent.destination = player.transform.position;
+        }
         //Enemy gets the position on the player
-        WorkingEnemy.agent.destination = player.transform.position;
-        PassangerEnemy.agent.destination = player.transform.position;
     }
 
 

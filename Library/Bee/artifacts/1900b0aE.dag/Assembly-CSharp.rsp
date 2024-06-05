@@ -392,10 +392,10 @@
 "Assets/Scripts/System/ICanDie.cs"
 "Assets/Scripts/System/Player.cs"
 "Assets/Scripts/System/Strength.cs"
-"Assets/Scripts/Wagon/CrossingTrigger.cs"
 "Assets/Scripts/Wagon/Freight/shatteredBox.cs"
 "Assets/Scripts/Wagon/Freight/shatteredPartList.cs"
-"Assets/Scripts/Wagon/WagonTrigger.cs"
+"Assets/Scripts/Wagon/Trigger/CrossingTrigger.cs"
+"Assets/Scripts/Wagon/Trigger/WagonTrigger.cs"
 -langversion:9.0
 
 /deterministic
