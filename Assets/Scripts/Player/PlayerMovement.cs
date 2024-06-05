@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float moveSpeed;
     [SerializeField] private float maxForce;
-
+    [SerializeField] private float rotationSpeed;
 
 
     //public Transform orientation;
@@ -32,7 +32,10 @@ public class PlayerMovement : MonoBehaviour
     //Bewegt den Spieler je nach Input
     private void FixedUpdate()
     {
+        
+
         MovePlayer();
+
     }
 
     
@@ -58,8 +61,10 @@ public class PlayerMovement : MonoBehaviour
         velChange = Vector3.ClampMagnitude(velChange, maxForce);
 
         rb.AddForce(new Vector3(velChange.x, 0f, velChange.z),ForceMode.VelocityChange);
+
+        
     }
+}
 
    
 
-}

@@ -67,7 +67,7 @@ public class shatteredBox : MonoBehaviour
 
             rb.AddForce(directionVector * contactForce, ForceMode.Impulse);
             //rb.velocity = directionVector * contactForce;
-            Debug.Log("AddForce" + rb.transform.position);
+            //Debug.Log("AddForce" + rb.transform.position);
 
        }
 
@@ -92,7 +92,8 @@ public class shatteredBox : MonoBehaviour
 
         }
 
-        ItterateShatterdObjects(false);
+        //ItterateShatterdObjects(false);
+        shattered.SetActive(false);
 
     }
 
