@@ -142,7 +142,8 @@ public class shatteredBox : MonoBehaviour
 
         }
 
-        ItterateShatterdObjects(false);
+        //ItterateShatterdObjects(false);
+        shattered.SetActive(false);
 
     }
 

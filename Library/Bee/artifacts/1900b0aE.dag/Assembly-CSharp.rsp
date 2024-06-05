@@ -382,6 +382,8 @@
 "Assets/Scripts/KI/KIStates/EnemyWalkState.cs"
 "Assets/Scripts/KI/KIStates/EnemyWorkingState.cs"
 "Assets/Scripts/Manager/TrainManager.cs"
+"Assets/Scripts/Player/MovePlayer.cs"
+"Assets/Scripts/Player/PlayerInput.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
 "Assets/Scripts/Player/PlayerRotation.cs"
 "Assets/Scripts/System/Enemy.cs"
