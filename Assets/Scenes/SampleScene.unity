@@ -717,6 +717,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2591489716678009265, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2591489716678009265, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -767,6 +771,10 @@ PrefabInstance:
     - target: {fileID: 2617271775439790125, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2666027557017840153, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2666027557017840153, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -824,6 +832,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6142666684392665355, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8862648668895029974, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -841,8 +853,8 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 2591489716678009265, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
     - {fileID: 8933769526330478388, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
+    - {fileID: 2591489716678009265, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
     - {fileID: 4268217679527358104, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5265483471403567560, guid: 9e2d91edfda04564e8819e9748810b6a, type: 3}
@@ -13797,6 +13809,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smoothTime: 0.05
   speed: 5
+  gravityMultiplier: 3
 --- !u!143 &1966391446
 CharacterController:
   m_ObjectHideFlags: 0

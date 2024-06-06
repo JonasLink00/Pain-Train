@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\Wagon\Trigger\WagonTrigger.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRotation.cs" />
+    <Compile Include="Assets\Scripts\Player\RBPlayerMove.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemySearchWorkState.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Ouroboros\Stylized Textures - Mini Set\Demo\Sources\Rotator.cs" />

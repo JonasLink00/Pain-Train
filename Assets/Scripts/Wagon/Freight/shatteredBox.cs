@@ -35,7 +35,7 @@ public class shatteredBox : MonoBehaviour
     {
         despawnTimer = DespawnTime;
 
-        if (other.GetComponent<Rigidbody>() != null && other.gameObject.GetComponent<PlayerMovement>())
+        if (other.gameObject.GetComponent<PlayerInput>())
         {
             BreakTheThing(other.transform.position);
         }
