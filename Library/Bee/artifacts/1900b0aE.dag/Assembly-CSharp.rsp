@@ -386,6 +386,7 @@
 "Assets/Scripts/Player/PlayerInput.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
 "Assets/Scripts/Player/PlayerRotation.cs"
+"Assets/Scripts/Player/RBPlayerMove.cs"
 "Assets/Scripts/System/Enemy.cs"
 "Assets/Scripts/System/Health.cs"
 "Assets/Scripts/System/HealthSystem.cs"
