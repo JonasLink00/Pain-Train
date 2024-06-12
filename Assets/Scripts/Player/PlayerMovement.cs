@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     [SerializeField] private float moveSpeed;
     [SerializeField] private float maxForce;
-    [SerializeField] private float rotationSpeed;
 
 
     //public Transform orientation;
@@ -35,14 +35,26 @@ public class PlayerMovement : MonoBehaviour
         
 
         MovePlayer();
+        //Rotat();
+        Roatetion();
+
+
+
 
     }
 
-    
+    private void Roatetion()
+    {
+        Debug.Log("Rotate?");
+        Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
+
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, 10 * Time.deltaTime);
+    }
 
     public void OnMove(InputAction.CallbackContext context)
     {
         moveDirection = context.ReadValue<Vector2>();
+        Debug.Log(moveDirection);
     }
 
 
@@ -64,6 +76,13 @@ public class PlayerMovement : MonoBehaviour
 
         
     }
+
+    //private void  Rotat()
+    //{
+    //    Vector3 dir = new Vector3(moveDirection.x, 0f, moveDirection.y);
+    //    Quaternion lookRotation = Quaternion.LookRotation(new Vector3(dir.x,0,dir.z));
+    //    transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, 5 * Time.deltaTime);
+    //}
 }
 
    
