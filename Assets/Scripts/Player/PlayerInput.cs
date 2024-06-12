@@ -44,6 +44,8 @@ public class PlayerInput : MonoBehaviour
         }
 
         _direction.y = _velocity;
+
+
     }
 
     private void ApplyRotation()
