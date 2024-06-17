@@ -8,7 +8,7 @@ public class CrossingTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<Rigidbody>() != null && other.gameObject.GetComponent<PlayerMovement>())
+        if (other.gameObject.GetComponent<PlayerInput>())
         {
            
             diaktivateWall(SideWallL);

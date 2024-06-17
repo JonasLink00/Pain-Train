@@ -6,30 +6,20 @@ using UnityEngine.UIElements;
 
 public class shatteredBox : MonoBehaviour
 {
-
+    [Header("Destroy")]
     [SerializeField] private GameObject box;
     [SerializeField] private GameObject shattered;
-<<<<<<< HEAD
-    [SerializeField] private float time = 0.3f;
-=======
-    [SerializeField] float contactForce = 10;
+    [SerializeField] float contactForce = 2.5f;
     [Header("Despawn")]
     [SerializeField] private float timebeforDespawn = 3f;
-    [SerializeField] private int DespawnTime = 4;
-    [SerializeField] private float BlinkIntervall = 4;
+    [SerializeField] private int DespawnTime = 5;
+    [SerializeField] private float BlinkIntervall = 0.1f;
 
 
     private float despawnTimer;
     private bool Despawned;
 
->>>>>>> inarbeit
     private shatteredPartList partList;
-    private List<MeshRenderer> shatteredRendererList;
-    [SerializeField] private float DespawnTime = 5f;
-    private bool Despawned;
-    private float despawnTimer;
-    [SerializeField]
-    float contactForce = 10;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -66,7 +56,7 @@ public class shatteredBox : MonoBehaviour
         GetComponent<BoxCollider>().enabled = false;
         partList = shattered.GetComponent<shatteredPartList>();
         List<MeshRenderer> List = partList.GetPartList;
-       foreach(var part in List)
+        foreach (var part in List)
        {
             Rigidbody rb =part.GetComponent<Rigidbody>();
 
@@ -81,54 +71,14 @@ public class shatteredBox : MonoBehaviour
 
        }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> inarbeit
         StartCoroutine(Blink());
     }
 
     IEnumerator Blink()
     {
-        yield return new WaitForSeconds(1f);
         //für jedes Mesh in der List renderer Aktivieren/Deaktivieren
         yield return new WaitForSeconds(timebeforDespawn);
 
-<<<<<<< HEAD
-        for (int i = 0; i < 5; i++)
-        {
-            HandelRenderaktivation(false);
-
-
-            yield return new WaitForSeconds(0.2f);
-
-            HandelRenderaktivation(true);
-
-            yield return new WaitForSeconds(0.2f);
-        }
-
-            HandelRenderaktivation(false);
-
-
-
-        //for (int i = 0; i <= 10; i++)
-        //  {
-        //      meshRenderer.enabled = false;
-        //      yield return new WaitForSeconds(time);
-        //      meshRenderer.enabled = true;
-        //  }
-    }
-
-
-
-    private void HandelRenderaktivation(bool aktivParameter)
-    {
-        foreach (MeshRenderer renderer in partList.GetPartList)
-        {
-            renderer.enabled = aktivParameter;
-        }
-
-=======
         for (int i = 0; i < 4; i++)
         {
 
@@ -154,6 +104,5 @@ public class shatteredBox : MonoBehaviour
         {
             renderer.enabled = SetaktivPerameta;
         }
->>>>>>> inarbeit
     }
 } 
