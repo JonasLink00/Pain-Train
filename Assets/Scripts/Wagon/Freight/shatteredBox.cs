@@ -9,11 +9,11 @@ public class shatteredBox : MonoBehaviour
     [Header("Destroy")]
     [SerializeField] private GameObject box;
     [SerializeField] private GameObject shattered;
-    [SerializeField] float contactForce = 10;
+    [SerializeField] float contactForce = 2.5f;
     [Header("Despawn")]
     [SerializeField] private float timebeforDespawn = 3f;
-    [SerializeField] private int DespawnTime = 4;
-    [SerializeField] private float BlinkIntervall = 4;
+    [SerializeField] private int DespawnTime = 5;
+    [SerializeField] private float BlinkIntervall = 0.1f;
 
 
     private float despawnTimer;

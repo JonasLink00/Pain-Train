@@ -8,7 +8,7 @@ public class WagonTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.GetComponent<Rigidbody>() != null)
+        if (other.gameObject.GetComponent<PlayerInput>())
         {
             GetAttacked = true;
         }
