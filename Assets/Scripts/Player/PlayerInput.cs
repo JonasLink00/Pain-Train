@@ -20,6 +20,8 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private float gravityMultiplier = 3.0f;
     private float _velocity;
 
+    [SerializeField]
+    Animator animator;
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
@@ -30,6 +32,8 @@ public class PlayerInput : MonoBehaviour
         ApllyGravity();
         ApplyRotation();
         ApplyMovement();
+        ApplyAnimation();
+
     }
 
     private void ApllyGravity()
@@ -60,11 +64,26 @@ public class PlayerInput : MonoBehaviour
 
     private void ApplyMovement()
     {
+
         _characterController.Move(_direction * speed * Time.deltaTime);
+
     }
     public void Move(InputAction.CallbackContext context)
     {
         _input = context.ReadValue<Vector2>();
         _direction = new Vector3(_input.x, 0.0f, _input.y);
+    }
+
+    private void ApplyAnimation()
+    {
+        if(_direction == null)
+        {
+            animator.SetBool("Move", false);
+        }
+        else
+        {
+            animator.SetBool("Move", true);
+
+        }
     }
 }
