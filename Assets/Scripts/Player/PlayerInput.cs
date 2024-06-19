@@ -17,7 +17,7 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private float speed;
 
     private float _gravity = -9.81f;
-    [SerializeField] private float gravityMultiplier = 18.0f;
+    [SerializeField] private float gravityMultiplier = 3.0f;
     private float _velocity;
 
     private void Awake()
@@ -34,19 +34,18 @@ public class PlayerInput : MonoBehaviour
 
     private void ApllyGravity()
     {
-        if (_characterController.isGrounded && _velocity < 0.0f) 
+        if (_characterController.isGrounded && _velocity < 0.0f)
         {
             _velocity = -1.0f;
         }
         else
         {
-            _velocity *= _gravity * gravityMultiplier * Time.deltaTime;
+            _velocity += _gravity * gravityMultiplier * Time.deltaTime;
         }
 
-        //_direction.y = _velocity;
+        _direction.y = _velocity;
 
-        //_velocity *= _gravity * gravityMultiplier * Time.deltaTime;
-        //_direction.y = _velocity;
+
     }
 
     private void ApplyRotation()
