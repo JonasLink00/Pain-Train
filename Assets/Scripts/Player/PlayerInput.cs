@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Rendering.LookDev;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerInput : MonoBehaviour
@@ -76,14 +78,16 @@ public class PlayerInput : MonoBehaviour
 
     private void ApplyAnimation()
     {
-        if(_direction == null)
+        if (_direction.x == 0 && _direction.z == 0)
         {
             animator.SetBool("Move", false);
         }
         else
         {
+            //Debug.Log(_direction);
             animator.SetBool("Move", true);
 
         }
+
     }
 }
