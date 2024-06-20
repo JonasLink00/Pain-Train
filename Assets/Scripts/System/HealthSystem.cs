@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public abstract class HealthSystem : MonoBehaviour
 {
-    public UnityEvent OnZeroHealth;
+    //public UnityEvent OnZeroHealth;
 
     public int currendHealth;
 
@@ -19,7 +19,8 @@ public abstract class HealthSystem : MonoBehaviour
 
         if (currendHealth <= 0) 
         {
-            OnZeroHealth.Invoke();
+            Debug.Log("You Died");
+            //OnZeroHealth.Invoke();
         }
     }
 

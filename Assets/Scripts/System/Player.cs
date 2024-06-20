@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Player : MonoBehaviour, IAttackable
+[RequireComponent(typeof(Health), typeof(Strength))]
+public class Player : MonoBehaviour
 {
     public Strength strength;
     public Health health;
@@ -16,8 +17,13 @@ public class Player : MonoBehaviour, IAttackable
         if (attackable == null)
             return;
 
+        Debug.Log($"{gameObject.name} attacked {collision.gameObject.name}");
+
         strength.Attack(attackable);
+
     }
+
+   
     public void GetAttacked(int damange)
     {
         health.DecreaseHealth(damange);
