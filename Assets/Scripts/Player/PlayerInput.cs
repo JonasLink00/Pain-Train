@@ -4,11 +4,13 @@ using UnityEditor.Rendering.LookDev;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.ProBuilder.Shapes;
 using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerInput : MonoBehaviour
 {
+    
     private Vector2 _input;
     private CharacterController _characterController;
     private Vector3 _direction;
@@ -22,8 +24,16 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private float gravityMultiplier = 3.0f;
     private float _velocity;
 
+
     [SerializeField]
     Animator animator;
+    private const string RightPunchSting = "RightPunch";
+    private const string LeftPunchSting = "LeftPunch";
+    private const string MoveSting = "Move";
+
+    bool rightpunch = false;
+    bool leftpunch = false;
+
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
@@ -34,8 +44,10 @@ public class PlayerInput : MonoBehaviour
         ApllyGravity();
         ApplyRotation();
         ApplyMovement();
-        ApplyAnimation();
+        ApplyMoveAnimation();
+        ManagePunchAnimation();
 
+        //Debug.Log(leftpunch + " : " + rightpunch);
     }
 
     private void ApllyGravity()
@@ -76,18 +88,71 @@ public class PlayerInput : MonoBehaviour
         _direction = new Vector3(_input.x, 0.0f, _input.y);
     }
 
-    private void ApplyAnimation()
+    private void ApplyMoveAnimation()
     {
         if (_direction.x == 0 && _direction.z == 0)
         {
-            animator.SetBool("Move", false);
+            animator.SetBool(MoveSting, false);
         }
         else
         {
             //Debug.Log(_direction);
-            animator.SetBool("Move", true);
+            animator.SetBool(MoveSting, true);
 
         }
+
+    }
+
+    public void RightPunch(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            rightpunch = true;
+        }
+
+    }
+
+    public void LeftPunch(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            leftpunch = true;
+        }
+    }
+
+    private void SetPunchAnimation(bool _rightpunch)
+    {
+        if (_rightpunch)
+        {
+            animator.SetBool(RightPunchSting, true);
+        }
+        else
+        {
+            animator.SetBool(LeftPunchSting, true);
+        }
+
+    }
+
+    private void ManagePunchAnimation()
+    {
+        if(rightpunch)
+        {
+            SetPunchAnimation(true);
+
+        }
+        else if(leftpunch)
+        {
+            SetPunchAnimation(false);
+        }
+    }
+
+    private void ResetPunchAnimation()
+    {
+        animator.SetBool(RightPunchSting, false);
+        rightpunch = false;
+
+        animator.SetBool(LeftPunchSting, false);
+        leftpunch = false;
 
     }
 }

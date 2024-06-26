@@ -15,27 +15,18 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Rotate",
+                    "name": "Right Punch",
                     "type": "Button",
-                    "id": "5ec072d8-8b3c-4495-81f2-fc0ddbec9fc6",
+                    "id": "2a88e0cd-38a7-41d2-b62c-34bbd50ef6ab",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "TurnAround",
+                    "name": "Left Punch",
                     "type": "Button",
-                    "id": "5585bc17-6c71-4c71-8c4e-fdf52db2857a",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "RestRotation",
-                    "type": "Button",
-                    "id": "36c7f2d4-579a-4111-9385-e973594624a2",
+                    "id": "e0d407e6-4ae7-4346-b6d1-36d4a73d457c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -143,57 +134,24 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "1D Axis",
-                    "id": "fee27864-6737-45b0-89aa-1e15182c05bd",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Rotate",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "b39f5738-b129-4a31-8ad5-88ca2f87cdd1",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Rotate",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "692e5ac1-224d-442e-9444-c9d4e3e09f97",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Rotate",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "",
-                    "id": "ae146f5b-2f13-4b0f-90b7-79a81df8ed23",
-                    "path": "<Keyboard>/f",
+                    "id": "a3bf5879-385c-4147-a2a8-8f9cf2fcda14",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "TurnAround",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Right Punch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "42cabcd7-9bf2-41de-a1f7-d7cefd23d349",
-                    "path": "<Keyboard>/r",
+                    "id": "89db6455-da27-4e7c-ae35-12953f6de533",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "RestRotation",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Left Punch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour, IAttackable, ICanDie
 
     private void OnTriggerEnter(Collider collision)
     {
+        return;
         var attackable = collision.GetComponent<IAttackable>();
         if (attackable == null)
             return;
