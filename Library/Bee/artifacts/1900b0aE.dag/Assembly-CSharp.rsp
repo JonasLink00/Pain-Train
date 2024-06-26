@@ -395,6 +395,7 @@
 "Assets/Scripts/System/ICanDie.cs"
 "Assets/Scripts/System/Player.cs"
 "Assets/Scripts/System/Strength.cs"
+"Assets/Scripts/Wagon/Freight/BoxColliderList.cs"
 "Assets/Scripts/Wagon/Freight/shatteredBox.cs"
 "Assets/Scripts/Wagon/Freight/shatteredPartList.cs"
 "Assets/Scripts/Wagon/Trigger/CrossingTrigger.cs"

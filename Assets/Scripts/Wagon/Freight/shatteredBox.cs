@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.UIElements;
 
 public class shatteredBox : MonoBehaviour
@@ -20,18 +22,20 @@ public class shatteredBox : MonoBehaviour
     private bool Despawned;
 
     private shatteredPartList partList;
+    private BoxColliderList colliderList;
 
     private void OnTriggerEnter(Collider other)
     {
         despawnTimer = DespawnTime;
 
-        if (other.gameObject.GetComponent<PlayerInput>())
+        if (other.gameObject.GetComponent<CapsuleCollider>())
         {
             BreakTheThing(other.transform.position);
         }
     }
 
-   
+    
+
     private void Update()
     {
         if (shattered.activeSelf)
@@ -53,12 +57,12 @@ public class shatteredBox : MonoBehaviour
        
         shattered.SetActive(true);
         box.SetActive(false);
-        GetComponent<BoxCollider>().enabled = false;
+        //GetComponent<BoxCollider>().enabled = false;
         partList = shattered.GetComponent<shatteredPartList>();
-        List<MeshRenderer> List = partList.GetPartList;
-        foreach (var part in List)
+        List<MeshRenderer> shatteredList = partList.GetPartList;
+       foreach (var part in shatteredList)
        {
-            Rigidbody rb =part.GetComponent<Rigidbody>();
+            Rigidbody rb = part.GetComponent<Rigidbody>();
 
             //diffrenceVector = target - origin
 
@@ -70,6 +74,14 @@ public class shatteredBox : MonoBehaviour
             //Debug.Log("AddForce" + rb.transform.position);
 
        }
+
+        colliderList = GetComponent<BoxColliderList>();
+        List<BoxCollider> collidersList = colliderList.GetColliderList;
+
+        foreach(var collider in collidersList)
+        {
+            collider.enabled = false;
+        }
 
         StartCoroutine(Blink());
     }
@@ -105,4 +117,5 @@ public class shatteredBox : MonoBehaviour
             renderer.enabled = SetaktivPerameta;
         }
     }
+
 } 

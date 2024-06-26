@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEditor.Rendering.LookDev;
 using UnityEditorInternal;
 using UnityEngine;
@@ -18,7 +19,8 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private float smoothTime = 0.05f;
     private float _currentVelocity;
 
-    [SerializeField] private float speed;
+    [SerializeField] private float baseSpeed;
+    private float currentSpeed;
 
     private float _gravity = -9.81f;
     [SerializeField] private float gravityMultiplier = 3.0f;
@@ -34,9 +36,12 @@ public class PlayerInput : MonoBehaviour
     bool rightpunch = false;
     bool leftpunch = false;
 
+    [SerializeField] Collider rightHandCollider, leftHandCollider;
+
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
+        ResetSpeed();
     }
 
     private void Update()
@@ -79,7 +84,7 @@ public class PlayerInput : MonoBehaviour
     private void ApplyMovement()
     {
 
-        _characterController.Move(_direction * speed * Time.deltaTime);
+        _characterController.Move(_direction * currentSpeed * Time.deltaTime);
 
     }
     public void Move(InputAction.CallbackContext context)
@@ -124,11 +129,15 @@ public class PlayerInput : MonoBehaviour
     {
         if (_rightpunch)
         {
+            rightHandCollider.enabled = true;
             animator.SetBool(RightPunchSting, true);
+            currentSpeed = 0;
         }
         else
         {
+            leftHandCollider.enabled = true;
             animator.SetBool(LeftPunchSting, true);
+            currentSpeed = 0;
         }
 
     }
@@ -150,9 +159,19 @@ public class PlayerInput : MonoBehaviour
     {
         animator.SetBool(RightPunchSting, false);
         rightpunch = false;
+        rightHandCollider.enabled = false;
 
         animator.SetBool(LeftPunchSting, false);
         leftpunch = false;
+        leftHandCollider.enabled = false;
 
+        ResetSpeed();
     }
+
+    private void ResetSpeed()
+    {
+        currentSpeed = baseSpeed;
+    }
+
+
 }
