@@ -2,22 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour, IAttackable, IAttacker, ICanDie
+[RequireComponent(typeof(Health), typeof(Strength))]
+public class Enemy : MonoBehaviour, IAttackable, ICanDie
 {
-    public Health Health;
+    public Health health;
     public Strength strength;
 
     private void OnTriggerEnter(Collider collision)
     {
-        var attackable = collision.GetComponent <IAttackable>();
+        return;
+        var attackable = collision.GetComponent<IAttackable>();
         if (attackable == null)
             return;
 
-        Attack(attackable);
+        Debug.Log($"{gameObject.name} attacked {collision.gameObject.name}");
+
+        strength.Attack(attackable);
+
     }
+
+   
     public void GetAttacked(int damange)
     {
-        Health.DecreaseHealth(damange);
+        health.DecreaseHealth(damange);
     }
     public void Attack(IAttackable attackable)
     {
