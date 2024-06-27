@@ -2294,6 +2294,7 @@ MonoBehaviour:
   timebeforDespawn: 3
   DespawnTime: 5
   BlinkIntervall: 0.1
+  isBox: 1
 --- !u!4 &237715511
 Transform:
   m_ObjectHideFlags: 0
@@ -7177,6 +7178,7 @@ MonoBehaviour:
   timebeforDespawn: 3
   DespawnTime: 5
   BlinkIntervall: 0.2
+  isBox: 1
 --- !u!65 &669637744
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10167,6 +10169,7 @@ MonoBehaviour:
   timebeforDespawn: 1
   DespawnTime: 3
   BlinkIntervall: 0.1
+  isBox: 0
 --- !u!1 &889361430
 GameObject:
   m_ObjectHideFlags: 0
@@ -14217,6 +14220,7 @@ MonoBehaviour:
   timebeforDespawn: 1
   DespawnTime: 3
   BlinkIntervall: 0.1
+  isBox: 0
 --- !u!1 &1144573603
 GameObject:
   m_ObjectHideFlags: 0
@@ -15083,6 +15087,7 @@ MonoBehaviour:
   timebeforDespawn: 3
   DespawnTime: 5
   BlinkIntervall: 0.1
+  isBox: 1
 --- !u!208 &1211597496
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -17949,6 +17954,7 @@ MonoBehaviour:
   timebeforDespawn: 3
   DespawnTime: 5
   BlinkIntervall: 0.2
+  isBox: 1
 --- !u!208 &1425506326
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -19614,6 +19620,7 @@ MonoBehaviour:
   timebeforDespawn: 3
   DespawnTime: 5
   BlinkIntervall: 0.2
+  isBox: 1
 --- !u!208 &1643754034
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -21095,6 +21102,7 @@ MonoBehaviour:
   timebeforDespawn: 3
   DespawnTime: 5
   BlinkIntervall: 0.1
+  isBox: 1
 --- !u!208 &1791077238
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -24853,6 +24861,7 @@ MonoBehaviour:
   timebeforDespawn: 3
   DespawnTime: 5
   BlinkIntervall: 0.1
+  isBox: 1
 --- !u!208 &2112472843
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -26476,6 +26485,7 @@ MonoBehaviour:
   timebeforDespawn: 1
   DespawnTime: 3
   BlinkIntervall: 0.1
+  isBox: 0
 --- !u!64 &1616867828393348388
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -27137,6 +27147,7 @@ MonoBehaviour:
   timebeforDespawn: 1
   DespawnTime: 3
   BlinkIntervall: 0.1
+  isBox: 0
 --- !u!64 &4769935997421937815
 MeshCollider:
   m_ObjectHideFlags: 0

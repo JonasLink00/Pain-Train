@@ -21,8 +21,9 @@ public class shatteredBox : MonoBehaviour
     private float despawnTimer;
     private bool Despawned;
 
+    [SerializeField] private bool isBox = true;
     private shatteredPartList partList;
-    private BoxColliderList colliderList;
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -75,13 +76,19 @@ public class shatteredBox : MonoBehaviour
 
        }
 
-        colliderList = GetComponent<BoxColliderList>();
-        List<BoxCollider> collidersList = colliderList.GetColliderList;
-
-        foreach(var collider in collidersList)
+        if(isBox)
         {
-            collider.enabled = false;
+             BoxColliderList colliderList;
+
+            colliderList = GetComponent<BoxColliderList>();
+            List<BoxCollider> collidersList = colliderList.GetColliderList;
+
+            foreach (var collider in collidersList)
+            {
+                collider.enabled = false;
+            }
         }
+        
 
         StartCoroutine(Blink());
     }
