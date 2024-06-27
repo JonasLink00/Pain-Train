@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4929681780947730635
 Transform:
   m_ObjectHideFlags: 0
@@ -296,9 +296,12 @@ GameObject:
   - component: {fileID: 5548495939276261209}
   - component: {fileID: 8088807744518120992}
   - component: {fileID: 4620620042322526887}
-  - component: {fileID: 8190309413866300535}
   - component: {fileID: 3693001076921395804}
   - component: {fileID: 9080999068975323489}
+  - component: {fileID: 8691961795246646348}
+  - component: {fileID: 7200775798921831019}
+  - component: {fileID: 7621916802573448835}
+  - component: {fileID: 1539325795410924573}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -314,11 +317,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5097391547066152189}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.386, y: 1.25, z: 2.2020493}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5337302051498434087}
   - {fileID: 4929681780947730635}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -364,54 +368,6 @@ MonoBehaviour:
     m_ActionId: d41491b3-47de-4847-aaf4-b7d86230e7f9
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerRotation, Assembly-CSharp
-        m_MethodName: OnRotate
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 5ec072d8-8b3c-4495-81f2-fc0ddbec9fc6
-    m_ActionName: Player/Rotate[/Keyboard/q,/Keyboard/e]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerRotation, Assembly-CSharp
-        m_MethodName: OnTurn
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 5585bc17-6c71-4c71-8c4e-fdf52db2857a
-    m_ActionName: Player/TurnAround[/Keyboard/f]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerRotation, Assembly-CSharp
-        m_MethodName: ResetRotation
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 36c7f2d4-579a-4111-9385-e973594624a2
-    m_ActionName: Player/RestRotation[/Keyboard/r]
-  - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 93eae4d2-12a5-400a-b99f-23bcc80e1684
     m_ActionName: UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
@@ -451,6 +407,38 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: dc58e137-f9db-4e50-b890-2b39d615e132
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9080999068975323489}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+        m_MethodName: RightPunch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 2a88e0cd-38a7-41d2-b62c-34bbd50ef6ab
+    m_ActionName: Player/Right Punch[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9080999068975323489}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+        m_MethodName: LeftPunch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e0d407e6-4ae7-4346-b6d1-36d4a73d457c
+    m_ActionName: Player/Left Punch
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -481,31 +469,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 3
---- !u!136 &8190309413866300535
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5097391547066152189}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
 --- !u!143 &3693001076921395804
 CharacterController:
   m_ObjectHideFlags: 0
@@ -546,7 +511,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smoothTime: 0.05
   speed: 5
-  gravityMultiplier: 18
+  gravityMultiplier: 8
+  animator: {fileID: 8691961795246646348}
+--- !u!95 &8691961795246646348
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5097391547066152189}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 6872eaa6178dba34ab25b75d3134f633, type: 3}
+  m_Controller: {fileID: 9100000, guid: a35af9869b3b9004c8fb42cf0517e771, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7200775798921831019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5097391547066152189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 189ce12030216534b82719994cd5d639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: {fileID: 1539325795410924573}
+  health: {fileID: 7621916802573448835}
+--- !u!114 &7621916802573448835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5097391547066152189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2827e535b9b48d74b95e05ba805a5166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currendHealth: 5
+  MaxHealth: 5
+--- !u!114 &1539325795410924573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5097391547066152189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120a636ba6f641b4588201e0dd1e8b11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  strength: 1
 --- !u!1 &6685390703002751872
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,3 +741,73 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &5592167324011100620
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5548495939276261209}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6872eaa6178dba34ab25b75d3134f633, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6872eaa6178dba34ab25b75d3134f633, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6872eaa6178dba34ab25b75d3134f633, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6872eaa6178dba34ab25b75d3134f633, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6872eaa6178dba34ab25b75d3134f633, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6872eaa6178dba34ab25b75d3134f633, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6872eaa6178dba34ab25b75d3134f633, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6872eaa6178dba34ab25b75d3134f633, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6872eaa6178dba34ab25b75d3134f633, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6872eaa6178dba34ab25b75d3134f633, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6872eaa6178dba34ab25b75d3134f633, type: 3}
+      propertyPath: m_Name
+      value: Player(Animated)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 6872eaa6178dba34ab25b75d3134f633, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 6872eaa6178dba34ab25b75d3134f633, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a35af9869b3b9004c8fb42cf0517e771, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6872eaa6178dba34ab25b75d3134f633, type: 3}
+--- !u!4 &5337302051498434087 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6872eaa6178dba34ab25b75d3134f633, type: 3}
+  m_PrefabInstance: {fileID: 5592167324011100620}
+  m_PrefabAsset: {fileID: 0}

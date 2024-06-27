@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -24,7 +25,7 @@ public class EnemySearchWorkState : EnemyBaseState
 
     public override void Enter()
     {
-        Debug.Log("SearchworkStateEnter");
+        //Debug.Log("SearchworkStateEnter");
         startPosition = controller.transform.position;
         Vector3 newPos = startPosition + Random.insideUnitSphere * searchWalkRadius;
 
@@ -69,7 +70,8 @@ public class EnemySearchWorkState : EnemyBaseState
 
     private bool SearchFreight()
     {
-        Collider[] cols = Physics.OverlapSphere(controller.transform.position, 20, FreightLayer);
+
+        Collider[] cols = Physics.OverlapSphere(controller.transform.position, 5, FreightLayer);
 
         if (!cols.Any()) 
             return false;

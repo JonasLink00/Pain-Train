@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEditor.Rendering.LookDev;
 using UnityEditorInternal;
 using UnityEngine;
@@ -18,7 +19,8 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] private float smoothTime = 0.05f;
     private float _currentVelocity;
 
-    [SerializeField] private float speed;
+    [SerializeField] private float baseSpeed;
+    private float currentSpeed;
 
     private float _gravity = -9.81f;
     [SerializeField] private float gravityMultiplier = 3.0f;
@@ -27,16 +29,19 @@ public class PlayerInput : MonoBehaviour
 
     [SerializeField]
     Animator animator;
-    private const string RightPunchSting = "RightPunch";
-    private const string LeftPunchSting = "LeftPunch";
-    private const string MoveSting = "Move";
+    private const string RightPunchString = "RightPunch";
+    private const string LeftPunchString = "LeftPunch";
+    private const string MoveString = "Move";
 
     bool rightpunch = false;
     bool leftpunch = false;
 
+    [SerializeField] Collider rightHandCollider, leftHandCollider;
+
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
+        ResetSpeed();
     }
 
     private void Update()
@@ -79,7 +84,7 @@ public class PlayerInput : MonoBehaviour
     private void ApplyMovement()
     {
 
-        _characterController.Move(_direction * speed * Time.deltaTime);
+        _characterController.Move(_direction * currentSpeed * Time.deltaTime);
 
     }
     public void Move(InputAction.CallbackContext context)
@@ -92,12 +97,12 @@ public class PlayerInput : MonoBehaviour
     {
         if (_direction.x == 0 && _direction.z == 0)
         {
-            animator.SetBool(MoveSting, false);
+            animator.SetBool(MoveString, false);
         }
         else
         {
             //Debug.Log(_direction);
-            animator.SetBool(MoveSting, true);
+            animator.SetBool(MoveString, true);
 
         }
 
@@ -124,11 +129,15 @@ public class PlayerInput : MonoBehaviour
     {
         if (_rightpunch)
         {
-            animator.SetBool(RightPunchSting, true);
+            rightHandCollider.enabled = true;
+            animator.SetBool(RightPunchString, true);
+            currentSpeed = 0;
         }
         else
         {
-            animator.SetBool(LeftPunchSting, true);
+            leftHandCollider.enabled = true;
+            animator.SetBool(LeftPunchString, true);
+            currentSpeed = 0;
         }
 
     }
@@ -148,11 +157,21 @@ public class PlayerInput : MonoBehaviour
 
     private void ResetPunchAnimation()
     {
-        animator.SetBool(RightPunchSting, false);
+        animator.SetBool(RightPunchString, false);
         rightpunch = false;
+        rightHandCollider.enabled = false;
 
-        animator.SetBool(LeftPunchSting, false);
+        animator.SetBool(LeftPunchString, false);
         leftpunch = false;
+        leftHandCollider.enabled = false;
 
+        ResetSpeed();
     }
+
+    private void ResetSpeed()
+    {
+        currentSpeed = baseSpeed;
+    }
+
+
 }
