@@ -27,6 +27,11 @@ public class EnemyController : BaseController
 
     public Freight currendFreight;
 
+    [SerializeField]
+    Animator enemyAnimator;
+    private const string WalkString = "isWalking";
+    private const string WorkString = "isWorking";
+
 
 #if UNITY_EDITOR
     [SerializeField] private string currentEnemyState;
@@ -37,6 +42,8 @@ public class EnemyController : BaseController
     public EnemyBaseState currentState;
 
     //private StateMachineDelegate stateMachineDelegate;
+
+    private bool freightCheck;
 
     protected override void Start()
     {
@@ -108,6 +115,7 @@ public class EnemyController : BaseController
 
     public bool CheckIdleTimer()
     {
+        ApplyWalkAnimation();
         return idleTimer <= 0;
     }
 
@@ -118,6 +126,7 @@ public class EnemyController : BaseController
 
     public void ResetWork()
     {
+        CancelWorkAnimation();
         Work = 0;
     }
 
@@ -126,6 +135,8 @@ public class EnemyController : BaseController
     {
         UpdateFSM();
         IncreaseWork();
+        ApplyWorkAnimation();
+
     }
 
     protected override void UpdateFSM()
@@ -148,5 +159,59 @@ public class EnemyController : BaseController
             }
         }
     }
-   
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.red;
+
+    //    Gizmos.DrawWireSphere(transform.position, 5);
+    //}
+
+    private void ApplyWalkAnimation()
+    {
+        if (idleTimer <=0)
+        {
+            Debug.Log("Animation true");
+
+            enemyAnimator.SetBool(WalkString, true);
+        }
+        else
+        {
+            Debug.Log("Animation false");
+
+            enemyAnimator.SetBool(WalkString, false);
+        }
+
+    }
+
+    private void ApplyWorkAnimation()
+    {
+        if (!freightCheck && currendFreight != null)
+        {
+            StopCoroutine(nameof(FreightCheck));
+            StartCoroutine(nameof(FreightCheck));
+        }
+    }
+
+    private void CancelWorkAnimation()
+    {
+        if(Work == 0)
+        {
+            Debug.Log("Working false");
+
+            enemyAnimator.SetBool(WorkString, false);
+        }
+       
+    }
+    
+
+    //verhindert das mehrere Gegner gleichzeitig spawnen
+    private IEnumerator FreightCheck()
+    {
+        freightCheck = true;
+        Debug.Log("Working true");
+
+        enemyAnimator.SetBool(WorkString, true);
+        yield return new WaitForSeconds(2);
+        freightCheck = false;
+    }
 }

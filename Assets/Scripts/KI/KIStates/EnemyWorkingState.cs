@@ -34,7 +34,7 @@ public class EnemyWorkingState : EnemyBaseState
 
     IEnumerator TimeOnFreight()
     {
-        Debug.Log("Wait");
+       // Debug.Log("Wait");
         yield return new WaitForSeconds(controller.currendFreight.timeOnFreight);
         controller.ResetWork();
     }

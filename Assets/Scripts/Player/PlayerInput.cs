@@ -29,9 +29,9 @@ public class PlayerInput : MonoBehaviour
 
     [SerializeField]
     Animator animator;
-    private const string RightPunchSting = "RightPunch";
-    private const string LeftPunchSting = "LeftPunch";
-    private const string MoveSting = "Move";
+    private const string RightPunchString = "RightPunch";
+    private const string LeftPunchString = "LeftPunch";
+    private const string MoveString = "Move";
 
     bool rightpunch = false;
     bool leftpunch = false;
@@ -97,12 +97,12 @@ public class PlayerInput : MonoBehaviour
     {
         if (_direction.x == 0 && _direction.z == 0)
         {
-            animator.SetBool(MoveSting, false);
+            animator.SetBool(MoveString, false);
         }
         else
         {
             //Debug.Log(_direction);
-            animator.SetBool(MoveSting, true);
+            animator.SetBool(MoveString, true);
 
         }
 
@@ -130,13 +130,13 @@ public class PlayerInput : MonoBehaviour
         if (_rightpunch)
         {
             rightHandCollider.enabled = true;
-            animator.SetBool(RightPunchSting, true);
+            animator.SetBool(RightPunchString, true);
             currentSpeed = 0;
         }
         else
         {
             leftHandCollider.enabled = true;
-            animator.SetBool(LeftPunchSting, true);
+            animator.SetBool(LeftPunchString, true);
             currentSpeed = 0;
         }
 
@@ -157,11 +157,11 @@ public class PlayerInput : MonoBehaviour
 
     private void ResetPunchAnimation()
     {
-        animator.SetBool(RightPunchSting, false);
+        animator.SetBool(RightPunchString, false);
         rightpunch = false;
         rightHandCollider.enabled = false;
 
-        animator.SetBool(LeftPunchSting, false);
+        animator.SetBool(LeftPunchString, false);
         leftpunch = false;
         leftHandCollider.enabled = false;
 

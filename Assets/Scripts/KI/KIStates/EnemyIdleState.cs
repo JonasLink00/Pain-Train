@@ -13,8 +13,7 @@ public class EnemyIdleState : EnemyBaseState
 
     public override void Enter()
     {
-        Debug.Log("IdleEnter");
-
+        //Debug.Log("IdleEnter");
     }
 
     public override void Exit()

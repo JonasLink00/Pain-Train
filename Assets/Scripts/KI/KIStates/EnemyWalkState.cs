@@ -14,7 +14,7 @@ public class EnemyWalkState : EnemyBaseState
 
     public override void Enter()
     {
-        Debug.Log("WalkStateEnter");
+        //Debug.Log("WalkStateEnter");
         agent.SetDestination(agent.transform.position + Random.insideUnitSphere * 5);
     }
 
