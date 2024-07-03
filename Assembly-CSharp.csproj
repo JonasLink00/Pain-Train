@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\System\Enemy.cs" />
     <Compile Include="Assets\Scripts\Wagon\Trigger\WagonTrigger.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\Player\Animations.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerRotation.cs" />
     <Compile Include="Assets\Scripts\Player\RBPlayerMove.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemySearchWorkState.cs" />

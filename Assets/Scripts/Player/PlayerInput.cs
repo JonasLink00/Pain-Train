@@ -16,32 +16,26 @@ public class PlayerInput : MonoBehaviour
     private CharacterController _characterController;
     private Vector3 _direction;
 
+    public Vector3 Direction {  get { return _direction; } }
+
     [SerializeField] private float smoothTime = 0.05f;
     private float _currentVelocity;
 
-    [SerializeField] private float baseSpeed;
-    private float currentSpeed;
+    [SerializeField] public float baseSpeed;
+    public float currentSpeed;
 
     private float _gravity = -9.81f;
     [SerializeField] private float gravityMultiplier = 3.0f;
     private float _velocity;
 
+    public bool rightpunch = false;
+    public bool leftpunch = false;
 
-    [SerializeField]
-    Animator animator;
-    private const string RightPunchString = "RightPunch";
-    private const string LeftPunchString = "LeftPunch";
-    private const string MoveString = "Move";
-
-    bool rightpunch = false;
-    bool leftpunch = false;
-
-    [SerializeField] Collider rightHandCollider, leftHandCollider;
 
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
-        ResetSpeed();
+        
     }
 
     private void Update()
@@ -49,10 +43,7 @@ public class PlayerInput : MonoBehaviour
         ApllyGravity();
         ApplyRotation();
         ApplyMovement();
-        ApplyMoveAnimation();
-        ManagePunchAnimation();
-
-        //Debug.Log(leftpunch + " : " + rightpunch);
+       
     }
 
     private void ApllyGravity()
@@ -93,20 +84,7 @@ public class PlayerInput : MonoBehaviour
         _direction = new Vector3(_input.x, 0.0f, _input.y);
     }
 
-    private void ApplyMoveAnimation()
-    {
-        if (_direction.x == 0 && _direction.z == 0)
-        {
-            animator.SetBool(MoveString, false);
-        }
-        else
-        {
-            //Debug.Log(_direction);
-            animator.SetBool(MoveString, true);
-
-        }
-
-    }
+    
 
     public void RightPunch(InputAction.CallbackContext context)
     {
@@ -125,86 +103,7 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
-    //depending on Animation
-
-    private void SetPunchAnimation(bool _rightpunch)
-    {
-        if (_rightpunch)
-        {
-            rightHandCollider.enabled = true;
-            animator.SetBool(RightPunchString, true);
-            currentSpeed = 0;
-        }
-        else
-        {
-            leftHandCollider.enabled = true;
-            animator.SetBool(LeftPunchString, true);
-            currentSpeed = 0;
-        }
-
-    }
-
-    //not depending on Animations 1
-    //private void SetPunchAnimation(bool _rightpunch)
-    //{
-    //    if (_rightpunch)
-    //    {
-    //        animator.SetBool(RightPunchString, true);
-    //        currentSpeed = 0;
-    //    }
-    //    else
-    //    {
-    //        animator.SetBool(LeftPunchString, true);
-    //        currentSpeed = 0;
-    //    }
-
-    //}
-
-
-
-    private void ManagePunchAnimation()
-    {
-        if(rightpunch)
-        {
-            SetPunchAnimation(true);
-
-        }
-        else if(leftpunch)
-        {
-            SetPunchAnimation(false);
-        }
-    }
-
-    //Animation Event
-    private void ResetPunchAnimation()
-    {
-        animator.SetBool(RightPunchString, false);
-        rightpunch = false;
-        rightHandCollider.enabled = false;
-
-        animator.SetBool(LeftPunchString, false);
-        leftpunch = false;
-        leftHandCollider.enabled = false;
-
-        ResetSpeed();
-    }
-
-    private void ResetSpeed()
-    {
-        currentSpeed = baseSpeed;
-    }
-
-    //Animation Event
-    private void AktivateRightPunch()
-    {
-        rightHandCollider.enabled = true;
-    }
-
-    //Animation Event
-    private void AktivateLeftPunch()
-    {
-        leftHandCollider.enabled = true;
-    }
+   
 
 
 }

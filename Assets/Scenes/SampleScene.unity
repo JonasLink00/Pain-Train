@@ -4558,7 +4558,7 @@ GameObject:
   - component: {fileID: 419705445}
   - component: {fileID: 419705446}
   m_Layer: 6
-  m_Name: AttackRange
+  m_Name: AttackRangeField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4579,8 +4579,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2617271775562839571}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &419705446
-BoxCollider:
+--- !u!136 &419705446
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4594,11 +4594,13 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &424859231
 GameObject:
@@ -5228,6 +5230,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &494098882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5097391547066152189, guid: 72f87426a9d3bb1449cc0486b170554c, type: 3}
+  m_PrefabInstance: {fileID: 248456718327370861}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &499768654
 GameObject:
   m_ObjectHideFlags: 0
@@ -27166,6 +27173,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9080999068975323489, guid: 72f87426a9d3bb1449cc0486b170554c, type: 3}
+      propertyPath: currentSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080999068975323489, guid: 72f87426a9d3bb1449cc0486b170554c, type: 3}
       propertyPath: leftHandCollider
       value: 
       objectReference: {fileID: 449285253}
@@ -27210,6 +27221,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 419705445}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5097391547066152189, guid: 72f87426a9d3bb1449cc0486b170554c, type: 3}
+      insertIndex: 6
+      addedObject: {fileID: 2617271775562839572}
     - targetCorrespondingSourceObject: {fileID: 8357026936395984896, guid: 72f87426a9d3bb1449cc0486b170554c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1133162855}
@@ -27679,6 +27693,25 @@ GameObject:
 --- !u!4 &2617271775562839571 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5548495939276261209, guid: 72f87426a9d3bb1449cc0486b170554c, type: 3}
+  m_PrefabInstance: {fileID: 248456718327370861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2617271775562839572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494098882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9540d125149a204fa58642f9a25e777, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 2617271775562839576}
+  attackRangefield: {fileID: 419705446}
+--- !u!95 &2617271775562839576 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8691961795246646348, guid: 72f87426a9d3bb1449cc0486b170554c, type: 3}
   m_PrefabInstance: {fileID: 248456718327370861}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &2852726556573697012
