@@ -125,6 +125,8 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
+    //depending on Animation
+
     private void SetPunchAnimation(bool _rightpunch)
     {
         if (_rightpunch)
@@ -142,6 +144,24 @@ public class PlayerInput : MonoBehaviour
 
     }
 
+    //not depending on Animations 1
+    //private void SetPunchAnimation(bool _rightpunch)
+    //{
+    //    if (_rightpunch)
+    //    {
+    //        animator.SetBool(RightPunchString, true);
+    //        currentSpeed = 0;
+    //    }
+    //    else
+    //    {
+    //        animator.SetBool(LeftPunchString, true);
+    //        currentSpeed = 0;
+    //    }
+
+    //}
+
+
+
     private void ManagePunchAnimation()
     {
         if(rightpunch)
@@ -155,6 +175,7 @@ public class PlayerInput : MonoBehaviour
         }
     }
 
+    //Animation Event
     private void ResetPunchAnimation()
     {
         animator.SetBool(RightPunchString, false);
@@ -171,6 +192,18 @@ public class PlayerInput : MonoBehaviour
     private void ResetSpeed()
     {
         currentSpeed = baseSpeed;
+    }
+
+    //Animation Event
+    private void AktivateRightPunch()
+    {
+        rightHandCollider.enabled = true;
+    }
+
+    //Animation Event
+    private void AktivateLeftPunch()
+    {
+        leftHandCollider.enabled = true;
     }
 
 
