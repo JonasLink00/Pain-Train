@@ -4,8 +4,9 @@ using System.Threading;
 using System.Transactions;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.XR;
-
+using UnityEngine.Jobs;
 
 public class EnemyController : BaseController
 {
@@ -29,8 +30,15 @@ public class EnemyController : BaseController
 
     [SerializeField]
     Animator enemyAnimator;
+
+    bool AttackAnimation = false;
+
     private const string WalkString = "isWalking";
     private const string WorkString = "isWorking";
+
+    private const string Attacking = "isAttacking";
+    private const string rightPunch = "RightPunch";
+    private const string leftPunch = "LeftPunch";
 
 
 #if UNITY_EDITOR
@@ -56,7 +64,7 @@ public class EnemyController : BaseController
         EnemyWalkState walkState = new EnemyWalkState(this, agent);
         EnemySearchWorkState searchWorkState = new EnemySearchWorkState(this, agent, _FreightLayer);
         EnemyWorkingState workingState = new EnemyWorkingState(this, agent);
-        EnemyAttackState attackState = new EnemyAttackState(this, agent, trainManager);
+        EnemyAttackState attackState = new EnemyAttackState(this, agent, trainManager, enemyAnimator);
 
 
         currentState = idleState;
@@ -136,6 +144,7 @@ public class EnemyController : BaseController
         UpdateFSM();
         IncreaseWork();
         ApplyWorkAnimation();
+        ApplyAttackAnimation();
 
     }
 
@@ -213,5 +222,61 @@ public class EnemyController : BaseController
         enemyAnimator.SetBool(WorkString, true);
         yield return new WaitForSeconds(2);
         freightCheck = false;
+    }
+
+    private void ApplyAttackAnimation()
+    {
+        if (trigger.GetAttacked)
+        {
+            if(!AttackAnimation)
+            {
+                Debug.Log("Attacking true");
+                enemyAnimator.SetBool(Attacking, true);
+                AttackAnimation = true;
+            }
+            
+        }
+    }
+    public void EnemyAttackAnimation()
+    {
+        if (agent.remainingDistance <= 0.2f)
+        {
+            enemyAnimator.SetBool(Attacking, false);
+            StopCoroutine(nameof(EnenmyAttacking));
+            StartCoroutine(nameof(EnenmyAttacking));
+        }
+        else if (agent.remainingDistance >= 0.2f)
+        {
+            Debug.Log("Attacking false");
+
+            enemyAnimator.SetBool(Attacking, false);
+            AttackAnimation = false;
+        }
+    }
+
+    private IEnumerator EnenmyAttacking()
+    {
+
+
+        if(Random.Range(0,2) >= 1)
+        {
+            Debug.Log("RightAttack true");
+            enemyAnimator.SetBool(rightPunch, true);
+
+        }
+        else
+        {
+            Debug.Log("LeftAttack true");
+            enemyAnimator.SetBool(leftPunch, true);
+        }
+
+        yield return new WaitForSeconds(10);
+    }
+
+    private void ResetPunchAnimation()
+    {
+        enemyAnimator.SetBool(rightPunch, false);
+
+        enemyAnimator.SetBool(leftPunch, false);
     }
 }
