@@ -12,9 +12,9 @@ public class Animations : MonoBehaviour
 
     
 
-    //[SerializeField] Collider rightHandCollider, leftHandCollider;
+    [SerializeField] Collider rightHandCollider, leftHandCollider;
 
-    [SerializeField] Collider attackRangefield;
+    //[SerializeField] Collider attackRangefield;
 
     PlayerInput playerInput;
 
@@ -65,27 +65,8 @@ public class Animations : MonoBehaviour
     //}
 
     //not depending on Animations 1
-    //private void SetPunchAnimation(bool _rightpunch)
-    //{
-    //    if (_rightpunch)
-    //    {
-    //        animator.SetBool(RightPunchString, true);
-    //        playerInput.currentSpeed = 0;
-    //    }
-    //    else
-    //    {
-    //        animator.SetBool(LeftPunchString, true);
-    //        playerInput.currentSpeed = 0;
-    //    }
-
-    //}
-
-    //not depending on Animations 2
-
     private void SetPunchAnimation(bool _rightpunch)
     {
-        
-
         if (_rightpunch)
         {
             animator.SetBool(RightPunchString, true);
@@ -98,6 +79,25 @@ public class Animations : MonoBehaviour
         }
 
     }
+
+    //not depending on Animations 2
+
+    //private void SetPunchAnimation(bool _rightpunch)
+    //{
+        
+
+    //    if (_rightpunch)
+    //    {
+    //        animator.SetBool(RightPunchString, true);
+    //        playerInput.currentSpeed = 0;
+    //    }
+    //    else
+    //    {
+    //        animator.SetBool(LeftPunchString, true);
+    //        playerInput.currentSpeed = 0;
+    //    }
+
+    //}
 
     private void ManagePunchAnimation()
     {
@@ -115,15 +115,15 @@ public class Animations : MonoBehaviour
     //Animation Event
     private void ResetPunchAnimation()
     {
-        attackRangefield.enabled = false;
+        //attackRangefield.enabled = false;
 
         animator.SetBool(RightPunchString, false);
         playerInput.rightpunch = false;
-        //rightHandCollider.enabled = false;
+        rightHandCollider.enabled = false;
 
         animator.SetBool(LeftPunchString, false);
         playerInput.leftpunch = false;
-        //leftHandCollider.enabled = false;
+        leftHandCollider.enabled = false;
 
         ResetSpeed();
     }
@@ -134,19 +134,19 @@ public class Animations : MonoBehaviour
     }
 
     //Animation Event
-    //private void AktivateRightPunch()
-    //{
-    //    rightHandCollider.enabled = true;
-    //}
-
-    ////Animation Event
-    //private void AktivateLeftPunch()
-    //{
-    //    leftHandCollider.enabled = true;
-    //}
-
-    private void SpawnAttackRangeField()
+    private void AktivateRightPunch()
     {
-        attackRangefield.enabled = true;
+        rightHandCollider.enabled = true;
     }
+
+    //Animation Event
+    private void AktivateLeftPunch()
+    {
+        leftHandCollider.enabled = true;
+    }
+
+    //private void SpawnAttackRangeField()
+    //{
+    //    attackRangefield.enabled = true;
+    //}
 }
