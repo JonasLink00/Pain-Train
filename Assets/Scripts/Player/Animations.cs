@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Animations : MonoBehaviour
 {
+    [Header("Animation")]
     [SerializeField]
     Animator animator;
     private const string RightPunchString = "RightPunch";
@@ -18,6 +19,10 @@ public class Animations : MonoBehaviour
 
     PlayerInput playerInput;
 
+    [SerializeField]
+    private ParticleSystem ParticleLeftPunch;
+    [SerializeField]
+    private ParticleSystem ParticleRightPunch;
 
     private void Awake()
     {
@@ -128,6 +133,7 @@ public class Animations : MonoBehaviour
         ResetSpeed();
     }
 
+    //Stops Player from Moving while Punching
     private void ResetSpeed()
     {
         playerInput.currentSpeed = playerInput.baseSpeed;
@@ -145,8 +151,22 @@ public class Animations : MonoBehaviour
         leftHandCollider.enabled = true;
     }
 
+    //not depending on Animations 2 (Collider Spawn
+
     //private void SpawnAttackRangeField()
     //{
     //    attackRangefield.enabled = true;
     //}
+
+    //Animation Event
+    private void PlayParticalLeftPunch()
+    {
+        ParticleLeftPunch.Play();
+    }
+
+    //Animation Event
+    private void PlayParticleRightPunch()
+    {
+        ParticleRightPunch.Play();
+    }
 }

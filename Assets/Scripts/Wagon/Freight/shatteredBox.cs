@@ -9,8 +9,9 @@ using UnityEngine.UIElements;
 public class shatteredBox : MonoBehaviour
 {
     [Header("Destroy")]
-    [SerializeField] private GameObject box;
+    [SerializeField] private GameObject Object;
     [SerializeField] private GameObject shattered;
+    [SerializeField] private bool isBox = true;
     [SerializeField] float contactForce = 2.5f;
     [Header("Despawn")]
     [SerializeField] private float timebeforDespawn = 3f;
@@ -19,9 +20,7 @@ public class shatteredBox : MonoBehaviour
 
 
     private float despawnTimer;
-    private bool Despawned;
 
-    [SerializeField] private bool isBox = true;
     private shatteredPartList partList;
     
 
@@ -35,29 +34,13 @@ public class shatteredBox : MonoBehaviour
         }
     }
 
-    
-
-    private void Update()
-    {
-        if (shattered.activeSelf)
-        {
-            despawnTimer -= Time.deltaTime;
-
-            if (despawnTimer <= 0)
-            {
-                despawnTimer = 0;
-                Despawned = true;
-                //Despawn(shattered);
-                shattered.SetActive(false);
-            }
-        }
-    }
 
     public void BreakTheThing(Vector3 position)
     {
-       
+       //swapt normal Onject with shattered Parts
+
         shattered.SetActive(true);
-        box.SetActive(false);
+        Object.SetActive(false);
         //GetComponent<BoxCollider>().enabled = false;
         partList = shattered.GetComponent<shatteredPartList>();
         List<MeshRenderer> shatteredList = partList.GetPartList;
@@ -114,6 +97,7 @@ public class shatteredBox : MonoBehaviour
         //ItterateShatterdObjects(false);
         shattered.SetActive(false);
 
+        Destroy(gameObject);
     }
 
 

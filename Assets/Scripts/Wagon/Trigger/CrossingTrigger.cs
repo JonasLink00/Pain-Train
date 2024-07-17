@@ -6,6 +6,8 @@ public class CrossingTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject SideWallL, SideWallR, FrontWall;
 
+    [SerializeField] private TrainManager TrainManager;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<PlayerInput>())
@@ -14,6 +16,7 @@ public class CrossingTrigger : MonoBehaviour
             diaktivateWall(SideWallL);
             diaktivateWall(SideWallR);
             aktivateWall(FrontWall);
+            TrainManager.IncreaseTrainSound();
         }
     }
 
