@@ -7,14 +7,13 @@ using System.Linq;
 
 public class ObjectSpawner : EditorWindow
 {
-    private GameObject ObjectToSpawn;
     private Vector2 _position;
 
     private List<GameObject> ObjectToSpawnList = new();
 
-    private List<GameObject> FreightPositionList = new() /*{ null, null, null, null, null, null } */;
+    private List<GameObject> FreightPositionList = new();
 
-    private GameObject FreightPositions;
+    private List<GameObject> PlacedFreightList = new();
 
     [MenuItem("Tools/ObjectSpawner")]
 
@@ -60,6 +59,11 @@ public class ObjectSpawner : EditorWindow
             PlaceFreightRandom();
         }
 
+        if(GUILayout.Button("Destroy"))
+        {
+            RemovePlacedFreight();
+        }
+
         
     }
 
@@ -97,20 +101,45 @@ public class ObjectSpawner : EditorWindow
 
     private void PlaceFreightRandom()
     {
-        for(int i = 0; i < FreightPositionList.Count; i++)
-        {
+        RemovePlacedFreight();
 
-             int ranFreinum = Random.Range(0, ObjectToSpawnList.Count);
+        
+            for (int i = 0; i < FreightPositionList.Count; i++)
+            {
+
+                int ranFreinum = Random.Range(0, ObjectToSpawnList.Count);
 
 
-             GameObject spawnPosition = FreightPositionList[i];
+                GameObject spawnPosition = FreightPositionList[i];
 
-             GameObject randomFreight = ObjectToSpawnList[ranFreinum];
+                GameObject randomFreight = ObjectToSpawnList[ranFreinum];
 
-             Instantiate(randomFreight, spawnPosition.transform.position, Quaternion.identity);
-        }
+                GameObject placedFreight = Instantiate(randomFreight, spawnPosition.transform.position, Quaternion.identity);
+
+                PlacedFreightList.Add(placedFreight);
+
+            }
+        
+        
 
 
 
     }
+
+    private void RemovePlacedFreight()
+    {
+        if(PlacedFreightList != null)
+        {
+            for(int i = 0;i < PlacedFreightList.Count;i++)
+            {
+                DestroyImmediate(PlacedFreightList[i]);
+            }
+            PlacedFreightList.Clear();
+        }
+        else
+        {
+            Debug.Log("Nothing to Distroy");
+        }
+    }
+    
 }
