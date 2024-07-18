@@ -177,15 +177,21 @@ public class EnemyController : BaseController
 
     private void ApplyWalkAnimation()
     {
-        if (idleTimer <=0)
+        if (isWorkingEnemy && idleTimer <=0)
         {
-            Debug.Log("Animation true");
+            Debug.Log("Walking true");
+
+            enemyAnimator.SetBool(WalkString, true);
+        }
+        else if (!isWorkingEnemy && trigger.GetAttacked)
+        {
+            Debug.Log("Walking true");
 
             enemyAnimator.SetBool(WalkString, true);
         }
         else
         {
-            Debug.Log("Animation false");
+            Debug.Log("Walking false");
 
             enemyAnimator.SetBool(WalkString, false);
         }

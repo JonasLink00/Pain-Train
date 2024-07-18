@@ -11,7 +11,7 @@ using static UnityEditor.Timeline.TimelinePlaybackControls;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerInput : MonoBehaviour
 {
-    
+    [Header("Movement")]
     private Vector2 _input;
     private CharacterController _characterController;
     private Vector3 _direction;
@@ -24,10 +24,12 @@ public class PlayerInput : MonoBehaviour
     [SerializeField] public float baseSpeed;
     public float currentSpeed;
 
+    [Header("Gravity")]
     private float _gravity = -9.81f;
     [SerializeField] private float gravityMultiplier = 3.0f;
     private float _velocity;
 
+    [Header("Animations")]
     public bool rightpunch = false;
     public bool leftpunch = false;
 

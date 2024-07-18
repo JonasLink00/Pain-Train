@@ -8,6 +8,7 @@ public class TrainManager : MonoBehaviour
     [SerializeField] private WagonTrigger trigger;
     [SerializeField] private EnemyController WorkingEnemy;
     [SerializeField] private EnemyController PassangerEnemy;
+    [SerializeField] private AudioSource TrainSound;
 
     public void Playerspotted()
     {
@@ -23,6 +24,14 @@ public class TrainManager : MonoBehaviour
     }
 
 
+    public void IncreaseTrainSound()
+    {
+        TrainSound.volume = 1f;
+    }
 
+    public void NormalTrainSound()
+    {
+        TrainSound.volume = 0.15f;
+    }
 
 }
