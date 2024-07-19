@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2988758999039240539}
   m_Layer: 3
   m_Name: Freight(Tall)
-  m_TagString: Untagged
+  m_TagString: SpawnedFreight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

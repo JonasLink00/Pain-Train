@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - FreightPosition
+  - SpawnedFreight
   layers:
   - Default
   - TransparentFX
