@@ -104,9 +104,13 @@ public class ObjectSpawner : EditorWindow
         RemovePlacedFreight();
 
         
-            for (int i = 0; i < FreightPositionList.Count; i++)
-            {
+        
+        for (int i = 0; i < FreightPositionList.Count; i++)
+        {
+            int Cointoss = Random.Range(0, 4);
 
+            if (Cointoss <= 2)
+            {
                 int ranFreinum = Random.Range(0, ObjectToSpawnList.Count);
 
 
@@ -117,8 +121,12 @@ public class ObjectSpawner : EditorWindow
                 GameObject placedFreight = Instantiate(randomFreight, spawnPosition.transform.position, Quaternion.identity);
 
                 PlacedFreightList.Add(placedFreight);
-
             }
+
+            Debug.Log(Cointoss);
+            
+
+        }
         
         
 
