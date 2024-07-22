@@ -1,9 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using System.Web;
-using System.Linq;
+
 
 public class ObjectSpawner : EditorWindow
 {
@@ -15,6 +13,8 @@ public class ObjectSpawner : EditorWindow
 
     private List<GameObject> PlacedFreightList = new();
 
+    private string spawnChance;
+
     [MenuItem("Tools/ObjectSpawner")]
 
     public static void ShowWindow()
@@ -22,10 +22,10 @@ public class ObjectSpawner : EditorWindow
         GetWindow(typeof(ObjectSpawner));
     }
 
+    //Controller
     private void OnGUI()
     {
-        //ObjectToSpawn = EditorGUILayout.ObjectField("Freight", ObjectToSpawn, typeof(GameObject), false) as GameObject;
-
+        //Get´s Prefabs out of Resources ordner
 
         GUILayout.Label("List of Freight", EditorStyles.boldLabel);
 
@@ -38,8 +38,8 @@ public class ObjectSpawner : EditorWindow
             ObjectToSpawnList[i] = (GameObject)EditorGUILayout.ObjectField(ObjectToSpawnList[i], typeof(GameObject), false);
         }
 
-        
 
+        //Get´s Prefabs out of Resources ordner
 
         GUILayout.Label("List of Positions", EditorStyles.boldLabel);
 
@@ -67,7 +67,7 @@ public class ObjectSpawner : EditorWindow
         
     }
 
-    
+    //Model
 
     private void LoadAllObjects()
     {
@@ -80,15 +80,12 @@ public class ObjectSpawner : EditorWindow
             ObjectToSpawnList.Add(item);
         }
 
-        
-
     }
 
     private void LoadAllPositions()
     {
         FreightPositionList.Clear();
 
-        //GameObject[] FrPos = Resources.LoadAll<GameObject>("FreightPositions");
 
         GameObject[] FrPos = GameObject.FindGameObjectsWithTag("FreightPosition");
 
@@ -98,18 +95,19 @@ public class ObjectSpawner : EditorWindow
         }
     }
 
-
+    //View
     private void PlaceFreightRandom()
     {
         RemovePlacedFreight();
 
-        
+        //spawn 1 of 6 Freights on position 
+        //has a 25% of not spawn anything 
         
         for (int i = 0; i < FreightPositionList.Count; i++)
         {
-            int Cointoss = Random.Range(0, 4);
+            int Coin_Toss = Random.Range(0, 100);
 
-            if (Cointoss <= 2)
+            if (Coin_Toss <= 75)
             {
                 int ranFreinum = Random.Range(0, ObjectToSpawnList.Count);
 
@@ -123,20 +121,17 @@ public class ObjectSpawner : EditorWindow
                 PlacedFreightList.Add(placedFreight);
             }
 
-            Debug.Log(Cointoss);
+            //Debug.Log(Coin_Toss);
             
-
         }
         
-        
-
-
-
     }
 
     private void RemovePlacedFreight()
     {
-        if(PlacedFreightList != null)
+        //Destroys Object in List
+
+        if(PlacedFreightList.Count != 0)
         {
             for(int i = 0;i < PlacedFreightList.Count;i++)
             {
