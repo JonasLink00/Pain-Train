@@ -15,6 +15,8 @@ public class ObjectSpawner : EditorWindow
 
     private string spawnChance;
 
+    private int procentChance;
+
     [MenuItem("Tools/ObjectSpawner")]
 
     public static void ShowWindow()
@@ -50,6 +52,12 @@ public class ObjectSpawner : EditorWindow
         {
             FreightPositionList[i] = (GameObject)EditorGUILayout.ObjectField(FreightPositionList[i], typeof(GameObject), false);
         }
+
+        GUILayout.Label("Spawn Chance %");
+
+        spawnChance = GUILayout.TextField(spawnChance, 25);
+
+        int.TryParse(spawnChance, out procentChance);
 
         EditorGUILayout.EndScrollView();
 
@@ -101,13 +109,13 @@ public class ObjectSpawner : EditorWindow
         RemovePlacedFreight();
 
         //spawn 1 of 6 Freights on position 
-        //has a 25% of not spawn anything 
+        //has a variable chance to spawn objects
         
         for (int i = 0; i < FreightPositionList.Count; i++)
         {
             int Coin_Toss = Random.Range(0, 100);
 
-            if (Coin_Toss <= 75)
+            if (Coin_Toss <= procentChance)
             {
                 int ranFreinum = Random.Range(0, ObjectToSpawnList.Count);
 
@@ -121,7 +129,7 @@ public class ObjectSpawner : EditorWindow
                 PlacedFreightList.Add(placedFreight);
             }
 
-            //Debug.Log(Coin_Toss);
+            Debug.Log(procentChance);
             
         }
         
