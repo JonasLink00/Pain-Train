@@ -55,7 +55,7 @@ public class ObjectSpawner : EditorWindow
 
         GUILayout.Label("Spawn Chance %");
 
-        spawnChance = GUILayout.TextField(spawnChance, 25);
+        spawnChance = GUILayout.TextField(spawnChance, EditorStyles.boldLabel);
 
         int.TryParse(spawnChance, out procentChance);
 
@@ -115,7 +115,7 @@ public class ObjectSpawner : EditorWindow
         {
             int Coin_Toss = Random.Range(0, 100);
 
-            if (Coin_Toss <= procentChance)
+            if (Coin_Toss <= 75)
             {
                 int ranFreinum = Random.Range(0, ObjectToSpawnList.Count);
 
