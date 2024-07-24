@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-
+using Unity.VisualScripting;
 
 public class ObjectSpawner : EditorWindow
 {
@@ -10,6 +10,8 @@ public class ObjectSpawner : EditorWindow
     private List<GameObject> ObjectToSpawnList = new();
 
     private List<GameObject> FreightPositionList = new();
+
+    private GameObject SpawnObject;
 
     private List<GameObject> PlacedFreightList = new();
 
@@ -32,12 +34,24 @@ public class ObjectSpawner : EditorWindow
         GUILayout.Label("List of Freight", EditorStyles.boldLabel);
 
         EditorGUILayout.BeginScrollView(_position);
-        LoadAllObjects();
 
-
-        for(int i = 0; i < ObjectToSpawnList.Count; i++)
+        if (GUILayout.Button("Locate Objects"))
         {
+            LoadAllObjects();
+        }
+
+
+        for (int i = 0; i < ObjectToSpawnList.Count; i++)
+        {
+            GUILayout.BeginHorizontal();
+
             ObjectToSpawnList[i] = (GameObject)EditorGUILayout.ObjectField(ObjectToSpawnList[i], typeof(GameObject), false);
+
+            if (GUILayout.Button("Delete"))
+            {
+                ObjectToSpawnList.RemoveAt(i);
+            }
+            GUILayout.EndHorizontal();
         }
 
 
@@ -45,12 +59,23 @@ public class ObjectSpawner : EditorWindow
 
         GUILayout.Label("List of Positions", EditorStyles.boldLabel);
 
-        LoadAllPositions();
+        if (GUILayout.Button("Locate Position"))
+        {
+            LoadAllPositions();
+        }
 
 
         for (int i = 0; i < FreightPositionList.Count; i++)
         {
+            GUILayout.BeginHorizontal();
+
             FreightPositionList[i] = (GameObject)EditorGUILayout.ObjectField(FreightPositionList[i], typeof(GameObject), false);
+
+            if(GUILayout.Button("Delete"))
+            {
+                FreightPositionList.RemoveAt(i);
+            }
+            GUILayout.EndHorizontal();
         }
 
         GUILayout.Label("Spawn Chance %");
