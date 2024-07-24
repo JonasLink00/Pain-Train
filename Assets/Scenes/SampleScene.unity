@@ -3707,6 +3707,7 @@ GameObject:
   m_Component:
   - component: {fileID: 289308365}
   - component: {fileID: 289308364}
+  - component: {fileID: 289308366}
   m_Layer: 0
   m_Name: Sound
   m_TagString: Untagged
@@ -3819,12 +3820,36 @@ Transform:
   m_GameObject: {fileID: 289308363}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.414806, y: 4.722023, z: 10.126386}
+  m_LocalPosition: {x: 10.41, y: 0.93, z: 22.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!167 &289308366
+AudioReverbZone:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289308363}
+  m_Enabled: 1
+  m_MinDistance: 0.4
+  m_MaxDistance: 19
+  m_ReverbPreset: 20
+  m_Room: -1000
+  m_RoomHF: -2000
+  m_DecayTime: 1.49
+  m_DecayHFRatio: 0.5
+  m_Reflections: -2466
+  m_ReflectionsDelay: 0.179
+  m_Reverb: -1926
+  m_ReverbDelay: 0.1
+  m_HFReference: 5000
+  m_Diffusion: 21
+  m_Density: 100
+  m_LFReference: 250
+  m_RoomLF: 0
 --- !u!1 &293585948
 GameObject:
   m_ObjectHideFlags: 0
