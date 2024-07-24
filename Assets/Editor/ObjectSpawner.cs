@@ -13,7 +13,7 @@ public class ObjectSpawner : EditorWindow
 
     private List<GameObject> PlacedFreightList = new();
 
-    private string spawnChance;
+    public string spawnChance = "75";
 
     private int procentChance;
 
@@ -55,7 +55,7 @@ public class ObjectSpawner : EditorWindow
 
         GUILayout.Label("Spawn Chance %");
 
-        spawnChance = GUILayout.TextField(spawnChance, EditorStyles.boldLabel);
+        spawnChance = GUILayout.TextField(spawnChance, 25);
 
         int.TryParse(spawnChance, out procentChance);
 
@@ -115,7 +115,7 @@ public class ObjectSpawner : EditorWindow
         {
             int Coin_Toss = Random.Range(0, 100);
 
-            if (Coin_Toss <= 75)
+            if (Coin_Toss <= procentChance)
             {
                 int ranFreinum = Random.Range(0, ObjectToSpawnList.Count);
 
