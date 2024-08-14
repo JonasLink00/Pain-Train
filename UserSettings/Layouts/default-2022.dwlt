@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 99
+  controlID: 120
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 41
+  controlID: 54
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 42
+  controlID: 55
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -956,9 +956,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 9.112868, y: 5.561419, z: 14.978689}
+    m_Target: {x: 51.950653, y: -6.544011, z: 61.233456}
     speed: 2
-    m_Value: {x: 9.112868, y: 5.561419, z: 14.978689}
+    m_Value: {x: 51.950653, y: -6.544011, z: 61.233456}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1004,13 +1004,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.32806024, y: -0.16516417, z: 0.047302112, w: -0.93019515}
+    m_Target: {x: -0.23944022, y: -0.03714132, z: -0.001550778, w: -0.97143817}
     speed: 2
-    m_Value: {x: -0.32766673, y: -0.16496606, z: 0.047245376, w: -0.9290794}
+    m_Value: {x: -0.23944022, y: -0.03714132, z: -0.001550778, w: -0.97143817}
   m_Size:
-    m_Target: 3.0199044
+    m_Target: 28.399567
     speed: 2
-    m_Value: 3.0199044
+    m_Value: 28.399567
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1072,23 +1072,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 922f0000
+      m_SelectedIDs: fa8d0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 6ee6ffffd8e8ffff00f9ffff0cfbffff22960000d6970000
+      m_ExpandedIDs: c0e8ffff82e9ffffd0e9ffff0cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Passenger  Wagon
-        m_OriginalName: Passenger  Wagon
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 38644
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -1655,7 +1655,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Editor
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1663,16 +1663,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Editor
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\jonas\source\repos\Pain Train
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 5.666687}
-    m_SelectedIDs: 646f0000
-    m_LastClickedID: 28516
-    m_ExpandedIDs: 00000000c26d0000c46d0000c66d0000c86d0000ca6d0000cc6d0000ce6d0000d06d0000d26d0000d46d000000ca9a3b
+    scrollPos: {x: 0, y: 73.66669}
+    m_SelectedIDs: ec8d0000
+    m_LastClickedID: 36332
+    m_ExpandedIDs: 00000000288c00002a8c00002c8c00002e8c0000308c0000328c0000348c0000368c0000388c00003a8c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1700,7 +1700,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c26d0000c46d0000c66d0000c86d0000ca6d0000cc6d0000ce6d0000d06d0000d26d0000d46d0000
+    m_ExpandedIDs: 00000000288c00002a8c00002c8c00002e8c0000308c0000328c0000348c0000368c0000388c00003a8c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
