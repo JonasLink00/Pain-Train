@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\jonas\\source\\repos\\Pain Train\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|C:\\Users\\jonas\\source\\repos\\Pain Train\\assets\\scripts\\terrain\\terrainmeshgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|c:\\users\\jonas\\source\\repos\\pain train\\assets\\scripts\\terrain\\terrainmeshgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\terrain\\terrainmeshgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7935600-7750-4C9D-B940-F87D65BA5872}|Assembly-CSharp-Editor.csproj|c:\\users\\jonas\\source\\repos\\pain train\\assets\\editor\\objectspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A7935600-7750-4C9D-B940-F87D65BA5872}|Assembly-CSharp-Editor.csproj|C:\\Users\\jonas\\source\\repos\\Pain Train\\assets\\editor\\objectspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7935600-7750-4C9D-B940-F87D65BA5872}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\objectspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Terrain\\TerrainMeshGenerator.cs",
               "ToolTip": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Terrain\\TerrainMeshGenerator.cs",
               "RelativeToolTip": "Assets\\Scripts\\Terrain\\TerrainMeshGenerator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAMgAAAAOAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAPIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-31T16:21:55.988Z",
               "EditorCaption": ""
@@ -43,8 +43,7 @@
               "RelativeToolTip": "Assets\\Editor\\ObjectSpawner.cs",
               "ViewState": "AQIAABQAAAAAAAAAAAAAwH4AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T13:36:24.348Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-18T13:36:24.348Z"
             }
           ]
         }
