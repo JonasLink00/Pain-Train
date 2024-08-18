@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638580376862854862
-    m_Hash: 3003910839
+      ticks: 638594135411507284
+    m_Hash: 3444188267
   m_LockFileStatus:
     m_FilePath: C:/Users/jonas/source/repos/Pain Train/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638580376862947841
-    m_Hash: 1911768765
+      ticks: 638594135411582652
+    m_Hash: 717695140
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -998,13 +998,16 @@ m_ResolvedPackages:
     - 5.1.1
     - 5.2.0
     - 5.2.2
+    - 5.2.3
     - 6.0.1-pre.1
     - 6.0.1-pre.2
     - 6.0.1
+    - 6.0.2
     compatible:
     - 5.1.1
     - 5.2.0
     - 5.2.2
+    - 5.2.3
     recommended: 5.1.1
     deprecated: []
   dependencies:

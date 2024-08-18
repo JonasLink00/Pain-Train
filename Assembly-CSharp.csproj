@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\System\IAttacker.cs" />
     <Compile Include="Assets\Scripts\Player\Alternativ Controller\MovePlayer.cs" />
     <Compile Include="Assets\Scripts\Wagon\Freight\BoxColliderList.cs" />
+    <Compile Include="Assets\Scripts\Terrain\MeshGenerator.cs" />
     <Compile Include="Assets\Scripts\Wagon\Freight\shatteredPartList.cs" />
     <Compile Include="Assets\Scripts\System\Health.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemyBaseState.cs" />
