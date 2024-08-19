@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(MeshFilter))]
+[RequireComponent(typeof(MeshRenderer))]
+
 public class MeshGenerator : MonoBehaviour
 {
     Mesh mesh;
@@ -11,14 +14,22 @@ public class MeshGenerator : MonoBehaviour
 
     public int xSize = 20;
     public int zSize = 20;
-    
-    void Start()
+
+    public float NoiseX = 0.3f;
+    public float NoiseZ = 0.3f;
+    public float NoiseY = 2f;
+
+    private float OffsetY = 0f;
+
+    void Update()
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
 
         CreateShape();
         UpdateMesh();
+
+        //OffsetY = OffsetY+= 0.01f;
     }
 
     void CreateShape()
@@ -30,7 +41,7 @@ public class MeshGenerator : MonoBehaviour
         {
             for(int x = 0; x <= xSize; x++)
             {
-                float y = Mathf.PerlinNoise(x * 0.3f, z * 0.3f) * 2f;
+                float y = Mathf.PerlinNoise(x * NoiseX, z * NoiseZ + OffsetY) * NoiseY;
                 vertices[i] = new Vector3(x, y, z);
                 i++;
             }
@@ -79,4 +90,9 @@ public class MeshGenerator : MonoBehaviour
     //        Gizmos.DrawSphere(vertices[i], 0.1f);
     //    }
     //}
+
+   
+
+   
+    
 }
