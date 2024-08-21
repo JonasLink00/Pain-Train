@@ -342,6 +342,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xSize: 20
   zSize: 20
+  NoiseX: 0.3
+  NoiseZ: 0.3
+  NoiseY: 2
 --- !u!33 &1814000557
 MeshFilter:
   m_ObjectHideFlags: 0
