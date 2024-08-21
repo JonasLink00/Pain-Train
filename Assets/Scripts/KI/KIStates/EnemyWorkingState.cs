@@ -19,6 +19,7 @@ public class EnemyWorkingState : EnemyBaseState
 
     }
 
+
     public override void Exit()
     {
         controller.currendFreight = null;
@@ -26,7 +27,7 @@ public class EnemyWorkingState : EnemyBaseState
 
     public override void Update()
     {
-        if (agent.remainingDistance <= 0.2f)
+        if (agent.remainingDistance <= 0f)
         {
             controller.StartCoroutine(TimeOnFreight());
         }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TrainManager : MonoBehaviour
 {
-    [SerializeField] private PlayerMovement player;
+    [SerializeField] private PlayerInput player;
     [SerializeField] private WagonTrigger trigger;
     [SerializeField] private EnemyController WorkingEnemy;
     [SerializeField] private EnemyController PassangerEnemy;
