@@ -12,12 +12,12 @@ public class MeshGenerator : MonoBehaviour
     Vector3[] vertices;
     int[] triangles;
 
-    public int xSize = 20;
-    public int zSize = 20;
-
-    public float NoiseX = 0.3f;
-    public float NoiseZ = 0.3f;
-    public float NoiseY = 2f;
+    [SerializeField]private int xSize = 20;
+    [SerializeField] private int zSize = 20;
+    
+    [SerializeField] private float NoiseX = 0.3f;
+    [SerializeField] private float NoiseZ = 0.3f;
+    [SerializeField] private float NoiseY = 2f;
 
     private float OffsetY = 0f;
 
@@ -29,7 +29,7 @@ public class MeshGenerator : MonoBehaviour
         CreateShape();
         UpdateMesh();
 
-        //OffsetY = OffsetY+= 0.01f;
+        OffsetY = OffsetY+= 0.05f;
     }
 
     void CreateShape()

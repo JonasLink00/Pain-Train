@@ -40258,7 +40258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4443043000892279223, guid: eb14b9f4fa8527a4785d67fb23671803, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4485333576834494768, guid: eb14b9f4fa8527a4785d67fb23671803, type: 3}
       propertyPath: m_LocalPosition.x
@@ -40332,6 +40332,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5893005279540653835, guid: eb14b9f4fa8527a4785d67fb23671803, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -40342,6 +40346,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4443043000892279223, guid: eb14b9f4fa8527a4785d67fb23671803, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2145559615}
+    - targetCorrespondingSourceObject: {fileID: 4443043000892279223, guid: eb14b9f4fa8527a4785d67fb23671803, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2145559620}
   m_SourcePrefab: {fileID: 100100000, guid: eb14b9f4fa8527a4785d67fb23671803, type: 3}
 --- !u!114 &2145559613 stripped
 MonoBehaviour:
@@ -40380,6 +40387,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4485333576834494768, guid: eb14b9f4fa8527a4785d67fb23671803, type: 3}
   m_PrefabInstance: {fileID: 2145559610}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &2145559620
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10656481}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.81, z: 1}
+  m_Center: {x: 0, y: 0.78, z: 0}
 --- !u!64 &124702700242509734
 MeshCollider:
   m_ObjectHideFlags: 0

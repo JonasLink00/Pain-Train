@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\jonas\\source\\repos\\Pain Train\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|c:\\users\\jonas\\source\\repos\\pain train\\assets\\scripts\\wagon\\freight\\shatteredbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wagon\\freight\\shatteredbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|c:\\users\\jonas\\source\\repos\\pain train\\assets\\scripts\\terrain\\meshgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\terrain\\meshgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,12 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "shatteredBox.cs",
+              "DocumentMoniker": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Wagon\\Freight\\shatteredBox.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Wagon\\Freight\\shatteredBox.cs",
+              "ToolTip": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Wagon\\Freight\\shatteredBox.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Wagon\\Freight\\shatteredBox.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T09:56:34.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MeshGenerator.cs",
               "DocumentMoniker": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Terrain\\MeshGenerator.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Terrain\\MeshGenerator.cs",
               "ToolTip": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Terrain\\MeshGenerator.cs",
               "RelativeToolTip": "Assets\\Scripts\\Terrain\\MeshGenerator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAhAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwB8AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-18T10:26:58.35Z",
               "EditorCaption": ""
