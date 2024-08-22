@@ -1,10 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
-using UnityEngine.UIElements;
 
 public class shatteredBox : MonoBehaviour
 {
@@ -28,7 +24,7 @@ public class shatteredBox : MonoBehaviour
     {
         despawnTimer = DespawnTime;
 
-        if (other.gameObject.GetComponent<CharacterController>())
+        if (other.gameObject.GetComponent<CapsuleCollider>())
         {
             BreakTheThing(other.transform.position);
         }

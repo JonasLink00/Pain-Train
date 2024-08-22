@@ -1,12 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
-using System.Transactions;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.InputSystem;
-using UnityEngine.InputSystem.XR;
-using UnityEngine.Jobs;
 
 public class EnemyController : BaseController
 {
@@ -49,7 +44,6 @@ public class EnemyController : BaseController
 #endif
     public EnemyBaseState currentState;
 
-    //private StateMachineDelegate stateMachineDelegate;
 
     private bool freightCheck;
 

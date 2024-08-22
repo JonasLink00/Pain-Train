@@ -62,13 +62,13 @@
     <Compile Include="Assets\Scripts\KI\KIStates\EnemyIdleState.cs" />
     <Compile Include="Assets\Scripts\Manager\TrainManager.cs" />
     <Compile Include="Assets\Scripts\KI\Controller\BaseController.cs" />
-    <Compile Include="Assets\Scripts\KI\Freight.cs" />
     <Compile Include="Assets\Scripts\System\Player.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemyWorkingState.cs" />
     <Compile Include="Assets\Scripts\System\IAttackable.cs" />
     <Compile Include="Assets\Scripts\System\ICanDie.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemyWalkState.cs" />
     <Compile Include="Assets\Scripts\Wagon\Freight\shatteredBox.cs" />
+    <Compile Include="Assets\Scripts\Wagon\Freight\Freight.cs" />
     <Compile Include="Assets\Scripts\KI\Controller\EnemyController.cs" />
     <Compile Include="Assets\Scripts\System\Strength.cs" />
     <Compile Include="Assets\Scripts\System\IAttacker.cs" />
