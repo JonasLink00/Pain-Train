@@ -12,19 +12,20 @@ public class CrossingTrigger : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerInput>())
         {
-           
-            diaktivateWall(SideWallL);
-            diaktivateWall(SideWallR);
-            aktivateWall(FrontWall);
+           //gives a better view on the wagon
+            deactivateWall(SideWallL);
+            deactivateWall(SideWallR);
+            //prevents backtracking 
+            activateWall(FrontWall);
             TrainManager.IncreaseTrainSound();
         }
     }
 
-    private void diaktivateWall(GameObject Wall)
+    private void deactivateWall(GameObject Wall)
     {
         Wall.GetComponent<MeshRenderer>().enabled = false;
     }
-    private void aktivateWall(GameObject Wall)
+    private void activateWall(GameObject Wall)
     {
         Wall.GetComponent<BoxCollider>().enabled = true;
     }

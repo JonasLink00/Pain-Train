@@ -20,6 +20,7 @@ public class MeshGenerator : MonoBehaviour
     [SerializeField] private float NoiseY = 2f;
 
     private float OffsetY = 0f;
+    [SerializeField] private float OffsetSpeed = 0.05f;
 
     void Update()
     {
@@ -29,7 +30,8 @@ public class MeshGenerator : MonoBehaviour
         CreateShape();
         UpdateMesh();
 
-        OffsetY = OffsetY+= 0.05f;
+        //moves the Noise over the mesh
+        OffsetY = OffsetY+= OffsetSpeed;
     }
 
     void CreateShape()
