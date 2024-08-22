@@ -219,14 +219,14 @@ public class EnemyController : BaseController
     }
     
 
-    //verhindert das mehrere Gegner gleichzeitig spawnen
+    
     private IEnumerator FreightCheck()
     {
         freightCheck = true;
         Debug.Log("Working true");
 
         enemyAnimator.SetBool(WorkString, true);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
         freightCheck = false;
     }
 

@@ -28,7 +28,7 @@ public class shatteredBox : MonoBehaviour
     {
         despawnTimer = DespawnTime;
 
-        if (other.gameObject.GetComponent<PlayerInput>())
+        if (other.gameObject.GetComponent<CharacterController>())
         {
             BreakTheThing(other.transform.position);
         }
@@ -41,7 +41,7 @@ public class shatteredBox : MonoBehaviour
 
         shattered.SetActive(true);
         Object.SetActive(false);
-        //GetComponent<BoxCollider>().enabled = false;
+        
         partList = shattered.GetComponent<shatteredPartList>();
         List<MeshRenderer> shatteredList = partList.GetPartList;
        foreach (var part in shatteredList)
@@ -54,7 +54,7 @@ public class shatteredBox : MonoBehaviour
             Vector3 directionVector = diffrenceVector.normalized;
 
             rb.AddForce(directionVector * contactForce, ForceMode.Impulse);
-            //rb.velocity = directionVector * contactForce;
+           
             //Debug.Log("AddForce" + rb.transform.position);
 
        }
@@ -94,7 +94,7 @@ public class shatteredBox : MonoBehaviour
 
         }
 
-        //ItterateShatterdObjects(false);
+        
         shattered.SetActive(false);
 
         Destroy(gameObject);
