@@ -1,12 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Rendering;
-using UnityEditor.Rendering.LookDev;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.ProBuilder.Shapes;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerInput : MonoBehaviour
