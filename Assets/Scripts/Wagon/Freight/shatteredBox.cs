@@ -18,7 +18,10 @@ public class shatteredBox : MonoBehaviour
     private float despawnTimer;
 
     private shatteredPartList partList;
+
+    [SerializeField] AudioSource destroysound;
     
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -33,11 +36,11 @@ public class shatteredBox : MonoBehaviour
 
     public void BreakTheThing(Vector3 position)
     {
-       //swapt normal Onject with shattered Parts
-
+        //swapt normal Onject with shattered Parts
         shattered.SetActive(true);
         Object.SetActive(false);
-        
+        destroysound.Play();
+
         partList = shattered.GetComponent<shatteredPartList>();
         List<MeshRenderer> shatteredList = partList.GetPartList;
        foreach (var part in shatteredList)

@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\jonas\\source\\repos\\Pain Train\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|c:\\users\\jonas\\source\\repos\\pain train\\assets\\scripts\\wagon\\freight\\shatteredbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|C:\\Users\\jonas\\source\\repos\\Pain Train\\assets\\scripts\\player\\animations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\animations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|c:\\users\\jonas\\source\\repos\\pain train\\assets\\scripts\\camerashake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camerashake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|C:\\Users\\jonas\\source\\repos\\Pain Train\\assets\\scripts\\player\\playerinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|C:\\Users\\jonas\\source\\repos\\Pain Train\\assets\\scripts\\wagon\\freight\\shatteredbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wagon\\freight\\shatteredbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|c:\\users\\jonas\\source\\repos\\pain train\\assets\\scripts\\player\\alternativ controller\\rbplayermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\alternativ controller\\rbplayermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|C:\\Users\\jonas\\source\\repos\\Pain Train\\assets\\scripts\\player\\alternativ controller\\playerrotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\alternativ controller\\playerrotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|C:\\Users\\jonas\\source\\repos\\Pain Train\\assets\\scripts\\player\\alternativ controller\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\alternativ controller\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|C:\\Users\\jonas\\source\\repos\\Pain Train\\assets\\scripts\\player\\alternativ controller\\moveplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\alternativ controller\\moveplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,64 +31,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "shatteredBox.cs",
-              "DocumentMoniker": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Wagon\\Freight\\shatteredBox.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Wagon\\Freight\\shatteredBox.cs",
-              "ToolTip": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Wagon\\Freight\\shatteredBox.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Wagon\\Freight\\shatteredBox.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBoAAAA5AAAA",
+              "Title": "Animations.cs",
+              "DocumentMoniker": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\Animations.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Animations.cs",
+              "ToolTip": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\Animations.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\Animations.cs",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAuwIYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T12:31:13.178Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RBPlayerMove.cs",
-              "DocumentMoniker": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\Alternativ Controller\\RBPlayerMove.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Alternativ Controller\\RBPlayerMove.cs",
-              "ToolTip": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\Alternativ Controller\\RBPlayerMove.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\Alternativ Controller\\RBPlayerMove.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T12:28:02.072Z",
+              "WhenOpened": "2024-09-04T13:55:10.818Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PlayerRotation.cs",
-              "DocumentMoniker": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\Alternativ Controller\\PlayerRotation.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Alternativ Controller\\PlayerRotation.cs",
-              "ToolTip": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\Alternativ Controller\\PlayerRotation.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\Alternativ Controller\\PlayerRotation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Title": "PlayerInput.cs",
+              "DocumentMoniker": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\PlayerInput.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerInput.cs",
+              "ToolTip": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\PlayerInput.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerInput.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAkwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T12:27:57.456Z"
+              "WhenOpened": "2024-09-04T13:54:44.856Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MovePlayer.cs",
-              "DocumentMoniker": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\Alternativ Controller\\MovePlayer.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Alternativ Controller\\MovePlayer.cs",
-              "ToolTip": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\Alternativ Controller\\MovePlayer.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\Alternativ Controller\\MovePlayer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "DocumentIndex": 1,
+              "Title": "CameraShake.cs",
+              "DocumentMoniker": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\CameraShake.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraShake.cs",
+              "ToolTip": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\CameraShake.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CameraShake.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwCYAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T12:27:52.524Z"
+              "WhenOpened": "2024-09-04T13:49:41.082Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PlayerMovement.cs",
-              "DocumentMoniker": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\Alternativ Controller\\PlayerMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Alternativ Controller\\PlayerMovement.cs",
-              "ToolTip": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\Alternativ Controller\\PlayerMovement.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\Alternativ Controller\\PlayerMovement.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAASAAAA",
+              "Title": "shatteredBox.cs",
+              "DocumentMoniker": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Wagon\\Freight\\shatteredBox.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Wagon\\Freight\\shatteredBox.cs",
+              "ToolTip": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Wagon\\Freight\\shatteredBox.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Wagon\\Freight\\shatteredBox.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAwCkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-22T12:27:37.944Z"
+              "WhenOpened": "2024-08-22T12:31:13.178Z"
             }
           ]
         }

@@ -22,6 +22,8 @@ public class Animations : MonoBehaviour
     [SerializeField]
     private ParticleSystem ParticleRightPunch;
 
+    [SerializeField] CameraShake camerashake;
+
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -74,11 +76,13 @@ public class Animations : MonoBehaviour
         {
             animator.SetBool(RightPunchString, true);
             playerInput.currentSpeed = 0;
+            //StartCoroutine(camerashake.Shake(0.25f,0.1f));
         }
         else
         {
             animator.SetBool(LeftPunchString, true);
             playerInput.currentSpeed = 0;
+            //StartCoroutine(camerashake.Shake(0.25f, 0.1f));
         }
 
     }
@@ -127,6 +131,7 @@ public class Animations : MonoBehaviour
         animator.SetBool(LeftPunchString, false);
         playerInput.leftpunch = false;
         leftHandCollider.enabled = false;
+        CameraShake.Shake(0.5f, 0.5f);
 
         ResetSpeed();
     }
