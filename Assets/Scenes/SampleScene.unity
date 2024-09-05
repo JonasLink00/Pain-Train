@@ -27286,6 +27286,7 @@ MonoBehaviour:
   WorkingEnemy: {fileID: 2145559613}
   PassangerEnemy: {fileID: 1840074067}
   TrainSound: {fileID: 289308364}
+  camerashake: {fileID: 1105247203}
 --- !u!1 &1895069976 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2358948803279180780, guid: 92c1f1ac56f2c1c4cae3e13e93b80850, type: 3}
