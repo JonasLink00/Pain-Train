@@ -12,12 +12,15 @@ public class TrainManager : MonoBehaviour
     [SerializeField] CameraShake camerashake;
 
     bool checkShake = false;
+
+    [SerializeField] private float Shake_duration = 2f;
+    [SerializeField] private float Shake_strength = 3f;
     private void Update()
     {
         //Reduce the aktivation of the coroutine 
         if (!checkShake)
         {
-            StartCoroutine(TrainShake());
+            //StartCoroutine(TrainShake());
         }
     }
 
@@ -53,16 +56,20 @@ public class TrainManager : MonoBehaviour
         Debug.Log("Shake?");
 
         int ShakeChance = Random.Range(0, 5);
-        Debug.Log(ShakeChance);
+        
+
+        //Debug.Log(ShakeChance);
 
         if (ShakeChance == 4)
         {
             Debug.Log("Shake!");
-            CameraShake.Shake(2f, 1f);
+            Shake_duration = Random.Range(1, 4);
+            Shake_strength = Random.Range(1, 5);
+            CameraShake.Shake(Shake_duration, Shake_strength);
             yield return new WaitForSeconds(5f);
             checkShake = false;
         }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         checkShake = false;
     }
     
