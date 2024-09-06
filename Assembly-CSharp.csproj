@@ -84,7 +84,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\Player\Animations.cs" />
     <Compile Include="Assets\Scripts\Player\Alternativ Controller\PlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\Wagon\CameraShake.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemySearchWorkState.cs" />
     <Compile Include="Assets\Scripts\Player\Alternativ Controller\PlayerRotation.cs" />
     <Compile Include="Assets\Ouroboros\Stylized Textures - Mini Set\Demo\Sources\Rotator.cs" />

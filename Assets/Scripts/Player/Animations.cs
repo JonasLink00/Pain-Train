@@ -24,6 +24,7 @@ public class Animations : MonoBehaviour
 
     [SerializeField] CameraShake camerashake;
 
+    private float strenght = 0.7f;
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -131,7 +132,8 @@ public class Animations : MonoBehaviour
         animator.SetBool(LeftPunchString, false);
         playerInput.leftpunch = false;
         leftHandCollider.enabled = false;
-        CameraShake.Shake(0.5f, 0.5f);
+
+        CameraShake.Shake(0.5f, strenght);
 
         ResetSpeed();
     }
