@@ -20,7 +20,7 @@ public class TrainManager : MonoBehaviour
         //Reduce the aktivation of the coroutine 
         if (!checkShake)
         {
-            //StartCoroutine(TrainShake());
+            StartCoroutine(TrainShake());
         }
     }
 
@@ -65,7 +65,9 @@ public class TrainManager : MonoBehaviour
             Debug.Log("Shake!");
             Shake_duration = Random.Range(1, 4);
             Shake_strength = Random.Range(1, 5);
+
             CameraShake.Shake(Shake_duration, Shake_strength);
+
             yield return new WaitForSeconds(5f);
             checkShake = false;
         }
