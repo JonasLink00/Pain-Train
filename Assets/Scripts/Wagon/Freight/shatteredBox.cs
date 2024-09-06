@@ -20,8 +20,9 @@ public class shatteredBox : MonoBehaviour
     private shatteredPartList partList;
 
     [SerializeField] AudioSource destroysound;
-    
 
+
+    [SerializeField] private ParticleSystem shatterParticle;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -30,6 +31,7 @@ public class shatteredBox : MonoBehaviour
         if (other.gameObject.GetComponent<CapsuleCollider>())
         {
             BreakTheThing(other.transform.position);
+            shatterParticle.Play();
         }
     }
 
