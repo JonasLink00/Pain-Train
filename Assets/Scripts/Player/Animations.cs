@@ -3,8 +3,8 @@ using UnityEngine;
 public class Animations : MonoBehaviour
 {
     [Header("Animation")]
-    [SerializeField]
-    Animator animator;
+
+    [SerializeField] Animator animator;
     private const string RightPunchString = "RightPunch";
     private const string LeftPunchString = "LeftPunch";
     private const string MoveString = "Move";
@@ -17,12 +17,18 @@ public class Animations : MonoBehaviour
 
     PlayerInput playerInput;
 
-    [SerializeField]
-    private ParticleSystem ParticleLeftPunch;
-    [SerializeField]
-    private ParticleSystem ParticleRightPunch;
+
+    [SerializeField] private ParticleSystem ParticleLeftPunch;
+    [SerializeField] private ParticleSystem ParticleRightPunch;
+
 
     [SerializeField] CameraShake camerashake;
+
+    [Header("Sounds")]
+
+    [SerializeField] AudioSource rightPunchSound;
+    [SerializeField] AudioSource leftPunchSound;
+
 
     private float strenght = 0.7f;
     private void Awake()
@@ -164,14 +170,23 @@ public class Animations : MonoBehaviour
     //}
 
     //Animation Event
-    private void PlayParticalLeftPunch()
+    private void PlayLeftPunchParticle()
     {
         ParticleLeftPunch.Play();
     }
 
     //Animation Event
-    private void PlayParticleRightPunch()
+    private void PlayRightPunchParticle()
     {
         ParticleRightPunch.Play();
+    }
+
+    private void PlayLeftPunchSound()
+    {
+        leftPunchSound.Play();
+    }
+    private void PlayRightPunchSound()
+    {
+        rightPunchSound.Play();
     }
 }
