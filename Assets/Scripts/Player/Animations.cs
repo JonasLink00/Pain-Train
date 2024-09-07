@@ -170,16 +170,23 @@ public class Animations : MonoBehaviour
     //}
 
     //Animation Event
-    private void SimulateLeftPunch()
+    private void PlayLeftPunchParticle()
     {
         ParticleLeftPunch.Play();
-        leftPunchSound.Play();
     }
 
     //Animation Event
-    private void SimulateRightPunch()
+    private void PlayRightPunchParticle()
     {
         ParticleRightPunch.Play();
+    }
+
+    private void PlayLeftPunchSound()
+    {
+        leftPunchSound.Play();
+    }
+    private void PlayRightPunchSound()
+    {
         rightPunchSound.Play();
     }
 }
