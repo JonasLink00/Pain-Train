@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1706.6667
     height: 976
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 52
+  controlID: 94
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -537,7 +537,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 1
+      displayed: 0
       snapOffset: {x: 0, y: 25.333334}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -700,9 +700,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 9.702055, y: 2.0541751, z: 1.4540383}
+    m_Target: {x: 10.578323, y: 2.9199553, z: 0.73101634}
     speed: 2
-    m_Value: {x: 9.702055, y: 2.0541751, z: 1.4540383}
+    m_Value: {x: 10.578323, y: 2.9199553, z: 0.73101634}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -748,13 +748,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.30805558, y: -0.09654919, z: 0.052052494, w: 0.9464402}
+    m_Target: {x: -0.25302434, y: -0.08071805, z: 0.0010570089, w: -0.96548903}
     speed: 2
-    m_Value: {x: 0.30756554, y: -0.0978378, z: 0.05244433, w: 0.94502956}
+    m_Value: {x: -0.25268257, y: -0.08060902, z: 0.0010555811, w: -0.96418494}
   m_Size:
-    m_Target: 1.2247449
+    m_Target: 0.48765546
     speed: 2
-    m_Value: 1.2247461
+    m_Value: 0.48765546
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -816,8 +816,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: f0f2ffff
-      m_LastClickedID: -3344
+      m_SelectedIDs: 72f4ffff
+      m_LastClickedID: -2958
       m_ExpandedIDs: 72f4ffff0cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -1106,7 +1106,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 104.33331}
     m_SelectedIDs: ce8d0000
     m_LastClickedID: 36302
-    m_ExpandedIDs: 000000000a8c00000c8c00000e8c000000ca9a3b
+    m_ExpandedIDs: 000000000a8c00000c8c00000e8c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

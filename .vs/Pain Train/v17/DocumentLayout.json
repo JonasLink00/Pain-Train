@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\jonas\\source\\repos\\Pain Train\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|c:\\users\\jonas\\source\\repos\\pain train\\assets\\infinit terrain\\inifiniteterraingenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\infinit terrain\\inifiniteterraingenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|C:\\Users\\jonas\\source\\repos\\Pain Train\\assets\\scripts\\player\\animations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\animations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|c:\\users\\jonas\\source\\repos\\pain train\\assets\\scripts\\player\\animations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\animations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|c:\\users\\jonas\\source\\repos\\pain train\\assets\\infinit terrain\\inifiniteterraingenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\infinit terrain\\inifiniteterraingenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "InifiniteTerrainGenerator.cs",
               "DocumentMoniker": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Infinit Terrain\\InifiniteTerrainGenerator.cs",
               "RelativeDocumentMoniker": "Assets\\Infinit Terrain\\InifiniteTerrainGenerator.cs",
@@ -35,13 +35,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Animations.cs",
               "DocumentMoniker": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\Animations.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Animations.cs",
               "ToolTip": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\Animations.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\Animations.cs",
-              "ViewState": "AQIAAKIAAAAAAAAAAAAIwLUAAAAFAAAA",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAwwJEAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-04T13:55:10.818Z",
               "EditorCaption": ""

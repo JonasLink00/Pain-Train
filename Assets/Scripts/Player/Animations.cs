@@ -29,6 +29,7 @@ public class Animations : MonoBehaviour
     [SerializeField] AudioSource rightPunchSound;
     [SerializeField] AudioSource leftPunchSound;
 
+    [SerializeField] private ParticleSystem ParticleDropp;
 
     private float strenght = 0.7f;
     private void Awake()
@@ -142,6 +143,7 @@ public class Animations : MonoBehaviour
         CameraShake.Shake(0.5f, strenght);
 
         ResetSpeed();
+        PlayParticleDropp();
     }
 
     //Stops Player from Moving while Punching
@@ -180,13 +182,19 @@ public class Animations : MonoBehaviour
     {
         ParticleRightPunch.Play();
     }
-
+    //Animation Event
     private void PlayLeftPunchSound()
     {
         leftPunchSound.Play();
     }
+    //Animation Event
     private void PlayRightPunchSound()
     {
         rightPunchSound.Play();
+    }
+
+    private void PlayParticleDropp()
+    {
+        ParticleDropp.Play();
     }
 }
