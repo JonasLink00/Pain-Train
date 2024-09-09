@@ -21,6 +21,7 @@ public class Animations : MonoBehaviour
     [SerializeField] private ParticleSystem ParticleLeftPunch;
     [SerializeField] private ParticleSystem ParticleRightPunch;
 
+    [SerializeField] private ParticleSystem ParticleDropp;
 
     [SerializeField] CameraShake camerashake;
 
@@ -29,7 +30,7 @@ public class Animations : MonoBehaviour
     [SerializeField] AudioSource rightPunchSound;
     [SerializeField] AudioSource leftPunchSound;
 
-    [SerializeField] private ParticleSystem ParticleDropp;
+    
 
     private float strenght = 0.7f;
     private void Awake()
