@@ -3670,7 +3670,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1.6
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -8638,7 +8638,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 80
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -8676,7 +8676,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.6
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -32864,7 +32864,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1.6
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -32920,7 +32920,7 @@ ParticleSystem:
     type: 15
     angle: 25
     length: 5
-    boxThickness: {x: 0, y: 1, z: 1}
+    boxThickness: {x: 1, y: 1, z: 1}
     radiusThickness: 1
     donutRadius: 0.0001
     m_Position: {x: 0, y: 0, z: 0}
