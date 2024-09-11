@@ -8,6 +8,8 @@ public class TrainManager : MonoBehaviour
     [SerializeField] private EnemyController WorkingEnemy;
     [SerializeField] private EnemyController PassangerEnemy;
     [SerializeField] private AudioSource TrainSound;
+    [SerializeField] private AudioSource TrainShakeSound;
+
 
     [SerializeField] CameraShake camerashake;
 
@@ -66,13 +68,20 @@ public class TrainManager : MonoBehaviour
             Shake_duration = Random.Range(1, 4);
             Shake_strength = Random.Range(1, 5);
 
+            MakeTrainShakeSound();
             CameraShake.Shake(Shake_duration, Shake_strength);
 
             yield return new WaitForSeconds(5f);
             checkShake = false;
         }
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         checkShake = false;
     }
-    
+
+    public void MakeTrainShakeSound()
+    {
+        TrainShakeSound.Play();
+    }
+
+
 }
