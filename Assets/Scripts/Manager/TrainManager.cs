@@ -74,7 +74,7 @@ public class TrainManager : MonoBehaviour
             yield return new WaitForSeconds(5f);
             checkShake = false;
         }
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         checkShake = false;
     }
 
