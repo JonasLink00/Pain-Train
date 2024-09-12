@@ -345,6 +345,7 @@ MonoBehaviour:
   NoiseX: 0.3
   NoiseZ: 0.3
   NoiseY: 2
+  OffsetSpeed: 0
 --- !u!33 &1814000557
 MeshFilter:
   m_ObjectHideFlags: 0
