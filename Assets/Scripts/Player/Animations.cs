@@ -21,7 +21,6 @@ public class Animations : MonoBehaviour
     [SerializeField] private ParticleSystem ParticleLeftPunch;
     [SerializeField] private ParticleSystem ParticleRightPunch;
 
-    [SerializeField] private ParticleSystem ParticleDropp;
 
     [SerializeField] CameraShake camerashake;
 
@@ -144,7 +143,6 @@ public class Animations : MonoBehaviour
         CameraShake.Shake(0.5f, strenght);
 
         ResetSpeed();
-        PlayParticleDropp();
     }
 
     //Stops Player from Moving while Punching
@@ -194,8 +192,4 @@ public class Animations : MonoBehaviour
         rightPunchSound.Play();
     }
 
-    private void PlayParticleDropp()
-    {
-        ParticleDropp.Play();
-    }
 }

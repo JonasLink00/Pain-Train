@@ -31782,7 +31782,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.46666667
+  - time: 0.43333334
     functionName: PlayLeftPunchParticle
     data: 
     objectReferenceParameter: {fileID: 0}

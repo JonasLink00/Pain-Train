@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\Wagon\CameraShake.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemySearchWorkState.cs" />
     <Compile Include="Assets\Scripts\Player\Alternativ Controller\PlayerRotation.cs" />
+    <Compile Include="Assets\Scripts\Player\MashMechanic.cs" />
     <Compile Include="Assets\Ouroboros\Stylized Textures - Mini Set\Demo\Sources\Rotator.cs" />
     <Compile Include="Assets\Scripts\Wagon\Trigger\CrossingTrigger.cs" />
     <Compile Include="Assets\Scripts\System\HealthSystem.cs" />
