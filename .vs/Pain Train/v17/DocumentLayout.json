@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\jonas\\source\\repos\\Pain Train\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|c:\\users\\jonas\\source\\repos\\pain train\\assets\\scripts\\manager\\trainmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|c:\\users\\jonas\\source\\repos\\pain train\\assets\\scripts\\player\\mashmechanic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\mashmechanic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|C:\\Users\\jonas\\source\\repos\\Pain Train\\assets\\scripts\\player\\animations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\animations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|C:\\Users\\jonas\\source\\repos\\Pain Train\\assets\\scripts\\player\\playerinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|C:\\Users\\jonas\\source\\repos\\Pain Train\\assets\\scripts\\manager\\trainmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\manager\\trainmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|C:\\Users\\jonas\\source\\repos\\Pain Train\\assets\\scripts\\wagon\\freight\\shatteredbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\wagon\\freight\\shatteredbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|C:\\Users\\jonas\\source\\repos\\Pain Train\\assets\\scripts\\player\\animations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B425B2D4-8A25-D79A-1E34-3F0AFE813A2E}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\animations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,6 +35,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MashMechanic.cs",
+              "DocumentMoniker": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\MashMechanic.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\MashMechanic.cs",
+              "ToolTip": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\MashMechanic.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\MashMechanic.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABoAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T12:36:52.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerInput.cs",
+              "DocumentMoniker": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\PlayerInput.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerInput.cs",
+              "ToolTip": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\PlayerInput.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerInput.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T12:22:32.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "TrainManager.cs",
               "DocumentMoniker": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Manager\\TrainManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Manager\\TrainManager.cs",
@@ -34,12 +68,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Manager\\TrainManager.cs",
               "ViewState": "AQIAADEAAAAAAAAAAAAkwEwAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T11:23:52.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-11T11:23:52.844Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "shatteredBox.cs",
               "DocumentMoniker": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Wagon\\Freight\\shatteredBox.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Wagon\\Freight\\shatteredBox.cs",
@@ -51,15 +84,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Animations.cs",
               "DocumentMoniker": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\Animations.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Animations.cs",
               "ToolTip": "C:\\Users\\jonas\\source\\repos\\Pain Train\\Assets\\Scripts\\Player\\Animations.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\Animations.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAA6AAAA",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAEwJEAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-04T13:55:10.818Z"
+              "WhenOpened": "2024-09-04T13:55:10.818Z",
+              "EditorCaption": ""
             }
           ]
         }
