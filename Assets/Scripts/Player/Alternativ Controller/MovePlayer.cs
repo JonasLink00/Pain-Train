@@ -3,10 +3,9 @@ using UnityEngine;
 public class MovePlayer : MonoBehaviour
 {
     [SerializeField] private float speed;
-    [SerializeField] private float rotationSpeed;
+    //[SerializeField] private float rotationSpeed;
 
-
-    // Update is called once per frame
+    
     void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -17,12 +16,12 @@ public class MovePlayer : MonoBehaviour
 
         transform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
 
-        if(moveDirection != Vector3.zero)
-        {
-            Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
+        //if(moveDirection != Vector3.zero)
+        //{
+        //    Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
 
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+        //    transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
 
-        }
+        //}
     }
 }

@@ -227,7 +227,6 @@ GameObject:
   m_Component:
   - component: {fileID: 370394470}
   - component: {fileID: 370394469}
-  - component: {fileID: 370394468}
   - component: {fileID: 370394471}
   m_Layer: 0
   m_Name: Main Camera
@@ -236,14 +235,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &370394468
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 370394467}
-  m_Enabled: 1
 --- !u!20 &370394469
 Camera:
   m_ObjectHideFlags: 0
@@ -323,7 +314,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
-  rotationSpeed: 0
+--- !u!1 &1436852924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6296545221812911394, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
+  m_PrefabInstance: {fileID: 280676726549307491}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1706118710
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terrainTiles:
-  - {fileID: 6296545221812911394, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
+  - {fileID: 1436852924}
   player: {fileID: 370394470}
   tileSize: 1
   tileVisibleInView: 4
@@ -384,6 +379,10 @@ PrefabInstance:
     - target: {fileID: 6296545221812911394, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
       propertyPath: m_Name
       value: Plane
+      objectReference: {fileID: 0}
+    - target: {fileID: 6296545221812911394, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6978071777868333262, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -425,6 +424,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8166020969223922970, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8cb6de36ebd0bbc428dcfb235c12de2a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

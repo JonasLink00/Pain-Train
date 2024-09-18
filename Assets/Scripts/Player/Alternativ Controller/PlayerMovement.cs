@@ -27,15 +27,8 @@ public class PlayerMovement : MonoBehaviour
     //Bewegt den Spieler je nach Input
     private void FixedUpdate()
     {
-        
-
         MovePlayer();
-        //Rotat();
         Roatetion();
-
-
-
-
     }
 
     private void Roatetion()
@@ -72,12 +65,6 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    //private void  Rotat()
-    //{
-    //    Vector3 dir = new Vector3(moveDirection.x, 0f, moveDirection.y);
-    //    Quaternion lookRotation = Quaternion.LookRotation(new Vector3(dir.x,0,dir.z));
-    //    transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, 5 * Time.deltaTime);
-    //}
 }
 
    
