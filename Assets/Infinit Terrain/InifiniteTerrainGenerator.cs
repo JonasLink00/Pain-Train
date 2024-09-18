@@ -5,7 +5,7 @@ public class InifiniteTerrainGenerator : MonoBehaviour
 {
     public GameObject[] terrainTiles;
     public Transform player;
-    public int tileSize = 100;
+    public int tileSize = 1000;
     public int tileVisibleInView = 4;
 
     private Vector3 lastPlayerPosition;

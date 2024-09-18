@@ -10,16 +10,22 @@ public class MeshGenerator : MonoBehaviour
     Vector3[] vertices;
     int[] triangles;
 
-    [SerializeField]private int xSize = 20;
+    [SerializeField] private int xSize = 20;
     [SerializeField] private int zSize = 20;
     
     [SerializeField] private float NoiseX = 0.3f;
     [SerializeField] private float NoiseZ = 0.3f;
     [SerializeField] private float NoiseY = 2f;
 
+    private float OffsetX = 0f;
     private float OffsetY = 0f;
     [SerializeField] private float OffsetSpeed = 0.05f;
 
+    [SerializeField] private float UV = 0.25f;
+
+    [SerializeField] MovePlayer capsle;
+
+    Vector2[] uv;
     void Update()
     {
         mesh = new Mesh();
@@ -29,12 +35,15 @@ public class MeshGenerator : MonoBehaviour
         UpdateMesh();
 
         //moves the Noise over the mesh
-        OffsetY = OffsetY+= OffsetSpeed;
+        OffsetY = OffsetY += OffsetSpeed;
+        
+
     }
 
     void CreateShape()
     {
         vertices = new Vector3[ (xSize + 1) * (zSize + 1) ];
+        uv = new Vector2[(xSize + 1) * (zSize + 1)];
 
         int i = 0;
         for(int z = 0; z <= zSize; z++)
@@ -43,6 +52,7 @@ public class MeshGenerator : MonoBehaviour
             {
                 float y = Mathf.PerlinNoise(x * NoiseX, z * NoiseZ + OffsetY) * NoiseY;
                 vertices[i] = new Vector3(x, y, z);
+                uv[i] = new Vector2(x,y) * UV;
                 i++;
             }
         }
@@ -77,6 +87,8 @@ public class MeshGenerator : MonoBehaviour
 
         mesh.vertices = vertices;
         mesh.triangles = triangles;
+
+        mesh.uv = uv;
 
         mesh.RecalculateNormals();
     }
