@@ -5,18 +5,18 @@ public class InifiniteTerrainGenerator : MonoBehaviour
 {
     public GameObject[] terrainTiles;
     public Transform player;
-    public int tileSize = 1000;
-    public int tileVisibleInView = 4;
+    public int tileSize = 20;
+    public int tileVisibleInView = 1;
 
     private Vector3 lastPlayerPosition;
     private Dictionary<Vector2, GameObject> terrainDictionary = new Dictionary<Vector2, GameObject>();
 
-    private void Start()
-    {
-        lastPlayerPosition = player.position;
-        UpdateTerrain();
+    //private void Start()
+    //{
+    //    lastPlayerPosition = player.position;
+    //    UpdateTerrain();
 
-    }
+    //}
 
     private void Update()
     {
