@@ -314,11 +314,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
---- !u!1 &1436852924 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6296545221812911394, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
-  m_PrefabInstance: {fileID: 280676726549307491}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1706118710
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,10 +344,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terrainTiles:
-  - {fileID: 1436852924}
+  - {fileID: 6296545221812911394, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
   player: {fileID: 370394470}
-  tileSize: 1
-  tileVisibleInView: 4
+  tileSize: 20
+  tileVisibleInView: 1
 --- !u!4 &1706118712
 Transform:
   m_ObjectHideFlags: 0
@@ -382,7 +377,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6296545221812911394, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6978071777868333262, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -424,10 +419,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8166020969223922970, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8cb6de36ebd0bbc428dcfb235c12de2a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

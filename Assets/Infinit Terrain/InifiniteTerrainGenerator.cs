@@ -3,13 +3,14 @@ using UnityEngine;
 
 public class InifiniteTerrainGenerator : MonoBehaviour
 {
-    public GameObject[] terrainTiles;
-    public Transform player;
-    public int tileSize = 1000;
-    public int tileVisibleInView = 4;
+    public GameObject[] terrainTiles; // Array off Terrain-Prefabs
+    public Transform player; // Player Referenz
+    public int tileSize = 20; // Size of the Tiles
+    public int tileVisibleInView = 1; // how many times are visible 
 
     private Vector3 lastPlayerPosition;
-    private Dictionary<Vector2, GameObject> terrainDictionary = new Dictionary<Vector2, GameObject>();
+    private Dictionary<Vector2, GameObject> activeTiles = new Dictionary<Vector2, GameObject>(); // aktive tiles
+    private Queue<GameObject> tilePool = new Queue<GameObject>(); // pool of tiles
 
     private void Start()
     {
@@ -18,9 +19,10 @@ public class InifiniteTerrainGenerator : MonoBehaviour
 
     }
 
+
     private void Update()
     {
-        if(Vector3.Distance(player.position, lastPlayerPosition) > tileSize)
+        if (Vector3.Distance(player.position, lastPlayerPosition) > tileSize)
         {
             lastPlayerPosition = player.position;
             UpdateTerrain();
@@ -28,22 +30,82 @@ public class InifiniteTerrainGenerator : MonoBehaviour
         }
     }
 
+    //void UpdateTerrain()
+    //{
+    //    int playerTileX = Mathf.FloorToInt(player.position.x / tileSize);
+    //    int playerTileZ = Mathf.FloorToInt(player.position.z / tileSize);
+
+    //    for (int x = playerTileX - tileVisibleInView; x <= playerTileX + tileVisibleInView; x++)
+    //    {
+    //        for (int z = playerTileZ - tileVisibleInView; z <= playerTileZ + tileVisibleInView; z++)
+    //        {
+    //            Vector2 tilePos = new Vector2(x, z);
+    //            if(!terrainDictionary.ContainsKey(tilePos))
+    //            {
+    //                GameObject tile = Instantiate(terrainTiles[Random.Range(0, terrainTiles.Length)], new Vector3(x * tileSize,0,z * tileSize), Quaternion.identity); 
+    //                terrainDictionary[tilePos] = tile;
+    //            }
+    //        }
+    //    }
+    //}
+
     void UpdateTerrain()
     {
+        // calculate the grid based on player position 
         int playerTileX = Mathf.FloorToInt(player.position.x / tileSize);
         int playerTileZ = Mathf.FloorToInt(player.position.z / tileSize);
+
+        //marke all tiles as "not used"
+        List<Vector2> tilesToRemove = new List<Vector2>();
+
+        foreach (var tile in activeTiles)
+        {
+            tilesToRemove.Add(tile.Key);
+        }
+
+        //make or push tiles in vision
 
         for (int x = playerTileX - tileVisibleInView; x <= playerTileX + tileVisibleInView; x++)
         {
             for (int z = playerTileZ - tileVisibleInView; z <= playerTileZ + tileVisibleInView; z++)
             {
-                Vector2 tilePos = new Vector2(x, z);
-                if(!terrainDictionary.ContainsKey(tilePos))
+                Vector2 tilepos = new Vector2(x, z);
+
+                if(activeTiles.ContainsKey(tilepos))
                 {
-                    GameObject tile = Instantiate(terrainTiles[Random.Range(0, terrainTiles.Length)], new Vector3(x * tileSize,0,z * tileSize), Quaternion.identity); 
-                    terrainDictionary[tilePos] = tile;
+                    //tile is on position, don´t destroy
+                    tilesToRemove.Remove(tilepos);
+                }
+                else
+                {
+                    //recycle or create tile
+                    GameObject tile;
+                    if(tilePool.Count > 0)
+                    {
+                        //recycle tile
+                        tile = tilePool.Dequeue();
+                        tile.transform.position = new Vector3(x * tileSize, 0, z * tileSize);
+                        tile.SetActive(true);
+                    }
+                    else
+                    {
+                        //create tile
+                        tile = Instantiate(terrainTiles[Random.Range(0, terrainTiles.Length)], new Vector3(x * tileSize, 0, z * tileSize), Quaternion.identity);
+                    }
+
+                    activeTiles[tilepos] = tile;
                 }
             }
+
+        }
+
+        //remove all tiles out of range 
+        foreach(Vector2 pos in tilesToRemove)
+        {
+            GameObject tileToRemove = activeTiles[pos];
+            tileToRemove.SetActive(false); //deaktivate tile
+            activeTiles.Remove(pos);
+            tilePool.Enqueue(tileToRemove); //put tile in pool
         }
     }
 }
