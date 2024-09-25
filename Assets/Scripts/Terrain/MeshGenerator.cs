@@ -23,7 +23,6 @@ public class MeshGenerator : MonoBehaviour
 
     [SerializeField] private float UV = 0.25f;
 
-    [SerializeField] MovePlayer capsle;
 
     Vector2[] uv;
     void Update()
