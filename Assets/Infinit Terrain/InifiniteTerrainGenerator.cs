@@ -5,7 +5,7 @@ public class InifiniteTerrainGenerator : MonoBehaviour
 {
     public GameObject[] terrainTiles; // Array off Terrain-Prefabs
     public Transform player; // Player Referenz
-    public int tileSize = 20; // Size of the Tiles
+    public int tileSize = 10; // Size of the Tiles
     public int tileVisibleInView = 1; // how many times are visible 
 
     private Vector3 lastPlayerPosition;
@@ -19,7 +19,7 @@ public class InifiniteTerrainGenerator : MonoBehaviour
 
     }
 
-
+    
     private void Update()
     {
         if (Vector3.Distance(player.position, lastPlayerPosition) > tileSize)

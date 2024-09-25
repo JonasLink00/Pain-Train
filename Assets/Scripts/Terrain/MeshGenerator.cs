@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter))]
@@ -17,13 +18,15 @@ public class MeshGenerator : MonoBehaviour
     [SerializeField] private float NoiseZ = 0.3f;
     [SerializeField] private float NoiseY = 2f;
 
-    private float OffsetX = 0f;
-    private float OffsetY = 0f;
+    [SerializeField] private float OffsetX = 0.01f;
+    [SerializeField] private float OffsetY = 0.01f;
     [SerializeField] private float OffsetSpeed = 0.05f;
 
     [SerializeField] private float UV = 0.25f;
 
-    [SerializeField] MovePlayer capsle;
+    [SerializeField] bool infinitTerrain = false;
+
+    private Vector3 meshGlobalPosition;
 
     Vector2[] uv;
     void Update()
@@ -34,8 +37,12 @@ public class MeshGenerator : MonoBehaviour
         CreateShape();
         UpdateMesh();
 
-        //moves the Noise over the mesh
-        OffsetY = OffsetY += OffsetSpeed;
+        if ( !infinitTerrain )
+        {
+            //moves the Noise over the mesh
+            //OffsetY = OffsetY += OffsetSpeed;
+        }
+
         
 
     }
@@ -45,17 +52,38 @@ public class MeshGenerator : MonoBehaviour
         vertices = new Vector3[ (xSize + 1) * (zSize + 1) ];
         uv = new Vector2[(xSize + 1) * (zSize + 1)];
 
-        int i = 0;
-        for(int z = 0; z <= zSize; z++)
+        if ( !infinitTerrain )
         {
-            for(int x = 0; x <= xSize; x++)
+            int i = 0;
+            for (int z = 0; z <= zSize; z++)
             {
-                float y = Mathf.PerlinNoise(x * NoiseX, z * NoiseZ + OffsetY) * NoiseY;
-                vertices[i] = new Vector3(x, y, z);
-                uv[i] = new Vector2(x,y) * UV;
-                i++;
+                for (int x = 0; x <= xSize; x++)
+                {
+                    float y = Mathf.PerlinNoise(x * NoiseX, z * NoiseZ + OffsetY) * NoiseY;
+                    vertices[i] = new Vector3(x, y, z);
+                    uv[i] = new Vector2(x, y) * UV;
+                    i++;
+                }
             }
         }
+        else
+        {
+            Vector3 meshGlobalPosition = gameObject.transform.TransformDirection(gameObject.transform.position);
+
+            int i = 0;
+            for (int z = 0; z <= zSize; z++)
+            {
+                for (int x = 0; x <= xSize; x++)
+                {
+                    float y = Mathf.PerlinNoise(x * NoiseX + (OffsetX * meshGlobalPosition.x), z * NoiseZ + (OffsetY * meshGlobalPosition.z)) * NoiseY;
+                    vertices[i] = new Vector3(x, y, z);
+                    uv[i] = new Vector2(x, y) * UV;
+                    i++;
+                }
+                Debug.Log(meshGlobalPosition);
+            }
+        }
+        
 
         triangles = new int[xSize*zSize*6];
 
