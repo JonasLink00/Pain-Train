@@ -14,12 +14,12 @@ public class MeshGenerator : MonoBehaviour
     [SerializeField] private int xSize = 20;
     [SerializeField] private int zSize = 20;
     
-    [SerializeField] private float NoiseX = 0.3f;
-    [SerializeField] private float NoiseZ = 0.3f;
-    [SerializeField] private float NoiseY = 2f;
+    [SerializeField] private float NoiseScaleX = 0.3f;
+    [SerializeField] private float NoiseScaleZ = 0.3f;
+    [SerializeField] private float NoiseAmpletudeY = 2f;
 
-    [SerializeField] private float OffsetX = 0.01f;
-    [SerializeField] private float OffsetY = 0.01f;
+    [SerializeField] private float OffsetX = 1f;
+    [SerializeField] private float OffsetZ = 1f;
     [SerializeField] private float OffsetSpeed = 0.05f;
 
     [SerializeField] private float UV = 0.25f;
@@ -29,18 +29,23 @@ public class MeshGenerator : MonoBehaviour
     private Vector3 meshGlobalPosition;
 
     Vector2[] uv;
-    void Update()
+
+    private void Start()
     {
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
 
         CreateShape();
         UpdateMesh();
+    }
+    void Update()
+    {
+       
 
         if ( !infinitTerrain )
         {
             //moves the Noise over the mesh
-            //OffsetY = OffsetY += OffsetSpeed;
+            OffsetZ = OffsetZ += OffsetSpeed;
         }
 
         
@@ -59,7 +64,7 @@ public class MeshGenerator : MonoBehaviour
             {
                 for (int x = 0; x <= xSize; x++)
                 {
-                    float y = Mathf.PerlinNoise(x * NoiseX, z * NoiseZ + OffsetY) * NoiseY;
+                    float y = Mathf.PerlinNoise(x * NoiseScaleX, z * NoiseScaleZ + OffsetZ) * NoiseAmpletudeY;
                     vertices[i] = new Vector3(x, y, z);
                     uv[i] = new Vector2(x, y) * UV;
                     i++;
@@ -75,12 +80,12 @@ public class MeshGenerator : MonoBehaviour
             {
                 for (int x = 0; x <= xSize; x++)
                 {
-                    float y = Mathf.PerlinNoise(x * NoiseX + (OffsetX * meshGlobalPosition.x), z * NoiseZ + (OffsetY * meshGlobalPosition.z)) * NoiseY;
+                    float y = Mathf.PerlinNoise((x + OffsetX * meshGlobalPosition.x) * NoiseScaleX, (z + OffsetZ * meshGlobalPosition.z) * NoiseScaleZ) * NoiseAmpletudeY;
                     vertices[i] = new Vector3(x, y, z);
                     uv[i] = new Vector2(x, y) * UV;
                     i++;
+
                 }
-                Debug.Log(meshGlobalPosition);
             }
         }
         

@@ -331,7 +331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1706118711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,12 +409,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6296545221812911394, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6478575444472271184, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
-      propertyPath: mesh
-      value: 
-      objectReference: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 6978071777868333262, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -454,10 +450,6 @@ PrefabInstance:
     - target: {fileID: 6978071777868333262, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8166020969223922970, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
