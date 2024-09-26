@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
     <Compile Include="Assets\Infinit Terrain\InifiniteTerrainGenerator.cs" />
     <Compile Include="Assets\Scripts\Player\Animations.cs" />
+    <Compile Include="Assets\Infinit Terrain\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\Player\Alternativ Controller\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Wagon\CameraShake.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemySearchWorkState.cs" />
