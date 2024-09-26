@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -5,6 +6,7 @@ public class EnemyAttackState : EnemyBaseState
 {
     public NavMeshAgent agent;
     public TrainManager trainManager;
+    private PlayerInput player;
 
     Animator enemyAnimator;
 
@@ -33,7 +35,7 @@ public class EnemyAttackState : EnemyBaseState
     {
         //trigger works only one time
         trainManager.Playerspotted();
-
+        
         controller.EnemyAttackAnimation();
     }
 

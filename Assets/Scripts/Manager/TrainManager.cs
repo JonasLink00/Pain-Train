@@ -55,7 +55,7 @@ public class TrainManager : MonoBehaviour
     public IEnumerator TrainShake()
     {
         checkShake = true;
-        Debug.Log("Shake?");
+        //Debug.Log("Shake?");
 
         int ShakeChance = Random.Range(0, 5);
         
@@ -64,7 +64,7 @@ public class TrainManager : MonoBehaviour
 
         if (ShakeChance == 4)
         {
-            Debug.Log("Shake!");
+            //Debug.Log("Shake!");
             Shake_duration = Random.Range(1, 4);
             Shake_strength = Random.Range(1, 5);
 

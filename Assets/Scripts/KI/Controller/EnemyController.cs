@@ -173,19 +173,19 @@ public class EnemyController : BaseController
     {
         if (isWorkingEnemy && idleTimer <=0)
         {
-            Debug.Log("Walking true");
+            //Debug.Log("Walking true");
 
             enemyAnimator.SetBool(WalkString, true);
         }
         else if (!isWorkingEnemy && trigger.GetAttacked)
         {
-            Debug.Log("Walking true");
+           // Debug.Log("Walking true");
 
             enemyAnimator.SetBool(WalkString, true);
         }
         else
         {
-            Debug.Log("Walking false");
+           // Debug.Log("Walking false");
 
             enemyAnimator.SetBool(WalkString, false);
         }
@@ -205,7 +205,7 @@ public class EnemyController : BaseController
     {
         if(Work == 0)
         {
-            Debug.Log("Working false");
+            //Debug.Log("Working false");
 
             enemyAnimator.SetBool(WorkString, false);
         }
@@ -217,7 +217,7 @@ public class EnemyController : BaseController
     private IEnumerator FreightCheck()
     {
         freightCheck = true;
-        Debug.Log("Working true");
+        //Debug.Log("Working true");
 
         enemyAnimator.SetBool(WorkString, true);
         yield return new WaitForSeconds(0.5f);
@@ -230,7 +230,7 @@ public class EnemyController : BaseController
         {
             if(!AttackAnimation)
             {
-                Debug.Log("Attacking true");
+                //Debug.Log("Attacking true");
                 enemyAnimator.SetBool(Attacking, true);
                 AttackAnimation = true;
             }
@@ -247,7 +247,7 @@ public class EnemyController : BaseController
         }
         else if (agent.remainingDistance >= 0.2f)
         {
-            Debug.Log("Attacking false");
+            //Debug.Log("Attacking false");
 
             enemyAnimator.SetBool(Attacking, false);
             AttackAnimation = false;
@@ -260,13 +260,13 @@ public class EnemyController : BaseController
 
         if(Random.Range(0,2) >= 1)
         {
-            Debug.Log("RightAttack true");
+           // Debug.Log("RightAttack true");
             enemyAnimator.SetBool(rightPunch, true);
 
         }
         else
         {
-            Debug.Log("LeftAttack true");
+           // Debug.Log("LeftAttack true");
             enemyAnimator.SetBool(leftPunch, true);
         }
 
