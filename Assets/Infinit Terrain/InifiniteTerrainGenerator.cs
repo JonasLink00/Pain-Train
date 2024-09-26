@@ -28,10 +28,9 @@ public class InifiniteTerrainGenerator : MonoBehaviour
         if (Vector3.Distance(player.position, lastPlayerPosition) > tileSize)
         {
             lastPlayerPosition = player.position;
-            //meshgenerator.CreateShape();
-            //meshgenerator.UpdateMesh();
             UpdateTerrain();
             
+            //meshgenerator.UpdateMesh();
 
         }
     }

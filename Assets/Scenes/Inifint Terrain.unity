@@ -295,7 +295,7 @@ Transform:
   m_GameObject: {fileID: 370394467}
   serializedVersion: 2
   m_LocalRotation: {x: 0.22256956, y: 0, z: 0, w: 0.9749168}
-  m_LocalPosition: {x: 0, y: 3.14, z: -10}
+  m_LocalPosition: {x: 0, y: 5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -347,7 +347,7 @@ MonoBehaviour:
   - {fileID: 6296545221812911394, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
   player: {fileID: 370394470}
   tileSize: 8
-  tileVisibleInView: 2
+  tileVisibleInView: 6
 --- !u!4 &1706118712
 Transform:
   m_ObjectHideFlags: 0
@@ -374,10 +374,6 @@ PrefabInstance:
     - target: {fileID: 6296545221812911394, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
       propertyPath: m_Name
       value: Plane
-      objectReference: {fileID: 0}
-    - target: {fileID: 6296545221812911394, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6978071777868333262, guid: 0afc877045ade2445acd3ab0bc04aefe, type: 3}
       propertyPath: m_LocalPosition.x
