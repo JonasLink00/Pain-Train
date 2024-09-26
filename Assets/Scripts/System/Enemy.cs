@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour, IAttackable, ICanDie
 
         strength.Attack(attackable);
 
+
     }
 
    
