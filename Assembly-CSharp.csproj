@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\System\ICanDie.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemyWalkState.cs" />
     <Compile Include="Assets\Scripts\Wagon\Freight\shatteredBox.cs" />
+    <Compile Include="Assets\Infinit Terrain\TrainMovement.cs" />
     <Compile Include="Assets\Scripts\Wagon\Freight\Freight.cs" />
     <Compile Include="Assets\Scripts\KI\Controller\EnemyController.cs" />
     <Compile Include="Assets\Scripts\System\Strength.cs" />
@@ -84,7 +85,6 @@
     <Compile Include="Assets\Scripts\Player\PlayerInput.cs" />
     <Compile Include="Assets\Infinit Terrain\InifiniteTerrainGenerator.cs" />
     <Compile Include="Assets\Scripts\Player\Animations.cs" />
-    <Compile Include="Assets\Infinit Terrain\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\Player\Alternativ Controller\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Wagon\CameraShake.cs" />
     <Compile Include="Assets\Scripts\KI\KIStates\EnemySearchWorkState.cs" />
