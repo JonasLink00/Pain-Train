@@ -12,11 +12,14 @@ public class InifiniteTerrainGenerator : MonoBehaviour
     private Dictionary<Vector2, GameObject> activeTiles = new Dictionary<Vector2, GameObject>(); // aktive tiles
     private Queue<GameObject> tilePool = new Queue<GameObject>(); // pool of tiles
 
+    MeshGenerator meshgenerator;
+
     private void Start()
     {
         lastPlayerPosition = player.position;
         UpdateTerrain();
 
+        meshgenerator = FindObjectOfType<MeshGenerator>();
     }
 
     
@@ -25,7 +28,10 @@ public class InifiniteTerrainGenerator : MonoBehaviour
         if (Vector3.Distance(player.position, lastPlayerPosition) > tileSize)
         {
             lastPlayerPosition = player.position;
+            //meshgenerator.CreateShape();
+            //meshgenerator.UpdateMesh();
             UpdateTerrain();
+            
 
         }
     }

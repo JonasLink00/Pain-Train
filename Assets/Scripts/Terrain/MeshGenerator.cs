@@ -13,7 +13,7 @@ public class MeshGenerator : MonoBehaviour
 
     [SerializeField] private int xSize = 20;
     [SerializeField] private int zSize = 20;
-    
+
     [SerializeField] private float NoiseScaleX = 0.3f;
     [SerializeField] private float NoiseScaleZ = 0.3f;
     [SerializeField] private float NoiseAmpletudeY = 2f;
@@ -40,24 +40,28 @@ public class MeshGenerator : MonoBehaviour
     }
     void Update()
     {
-       
 
-        if ( !infinitTerrain )
+
+        if (!infinitTerrain)
         {
+            CreateShape();
+            UpdateMesh();
             //moves the Noise over the mesh
             OffsetZ = OffsetZ += OffsetSpeed;
         }
+        CreateShape();
+        UpdateMesh();
 
-        
+
 
     }
 
-    void CreateShape()
+    public void CreateShape()
     {
-        vertices = new Vector3[ (xSize + 1) * (zSize + 1) ];
+        vertices = new Vector3[(xSize + 1) * (zSize + 1)];
         uv = new Vector2[(xSize + 1) * (zSize + 1)];
 
-        if ( !infinitTerrain )
+        if (!infinitTerrain)
         {
             int i = 0;
             for (int z = 0; z <= zSize; z++)
@@ -87,15 +91,16 @@ public class MeshGenerator : MonoBehaviour
 
                 }
             }
+            //Debug.Log("Change Offset");
         }
-        
 
-        triangles = new int[xSize*zSize*6];
+
+        triangles = new int[xSize * zSize * 6];
 
         int vert = 0;
         int tris = 0;
 
-        for (int z = 0;z < zSize; z++)
+        for (int z = 0; z < zSize; z++)
         {
             for (int x = 0; x < xSize; x++)
             {
@@ -111,10 +116,10 @@ public class MeshGenerator : MonoBehaviour
             }
             vert++;
         }
-        
+
     }
-    
-    void UpdateMesh()
+
+    public void UpdateMesh()
     {
         mesh.Clear();
 
@@ -136,8 +141,8 @@ public class MeshGenerator : MonoBehaviour
     //    }
     //}
 
-   
 
-   
-    
+
+
+
 }
