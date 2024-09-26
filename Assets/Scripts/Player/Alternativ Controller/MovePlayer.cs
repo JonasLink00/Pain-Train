@@ -16,7 +16,7 @@ public class MovePlayer : MonoBehaviour
 
         transform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
 
-        //if(moveDirection != Vector3.zero)
+        //if (moveDirection != Vector3.zero)
         //{
         //    Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
 
