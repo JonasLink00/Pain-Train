@@ -98,8 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xSize: 8
   zSize: 8
-  NoiseScaleX: 0.3
-  NoiseScaleZ: 0.3
+  NoiseScaleX: 0.12
+  NoiseScaleZ: 0.5
   NoiseAmpletudeY: 4
   OffsetX: 1
   OffsetZ: 1
