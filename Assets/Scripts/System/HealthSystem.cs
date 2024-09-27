@@ -16,7 +16,7 @@ public abstract class HealthSystem : MonoBehaviour
         if (currendHealth <= 0) 
         {
             Debug.Log("You Died");
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
             //OnZeroHealth.Invoke();
         }
     }

@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class InifiniteTerrainGenerator : MonoBehaviour
 {
-    public GameObject[] terrainTiles; // Array off Terrain-Prefabs
-    public Transform player; // Player Referenz
-    public int tileSize = 10; // Size of the Tiles
-    public int tileVisibleInView = 1; // how many times are visible 
+    [SerializeField] private GameObject[] terrainTiles; // Array off Terrain-Prefabs
+    [SerializeField] private Transform player; // Player Referenz
+    [SerializeField] private int tileSize = 10; // Size of the Tiles
+    [SerializeField] private int tileVisibleInView = 1; // how many times are visible 
 
     private Vector3 lastPlayerPosition;
     private Dictionary<Vector2, GameObject> activeTiles = new Dictionary<Vector2, GameObject>(); // aktive tiles

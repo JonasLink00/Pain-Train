@@ -3,6 +3,11 @@ using UnityEngine;
 public class Health : HealthSystem
 {
     public int MaxHealth;
+
+    private void Start()
+    {
+        currendHealth = MaxHealth;
+    }
     public override void IncreaseHealth(int amount)
     {
         currendHealth = Mathf.Clamp(currendHealth + amount, 1, MaxHealth);
