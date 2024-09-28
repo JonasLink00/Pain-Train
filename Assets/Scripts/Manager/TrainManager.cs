@@ -7,6 +7,9 @@ public class TrainManager : MonoBehaviour
     [SerializeField] private PlayerInput player;
     [SerializeField] private WagonTrigger trigger;
     [SerializeField] private EnemyController WorkingEnemy;
+    [SerializeField] private EnemyController WorkingEnemy01;
+    [SerializeField] private EnemyController WorkingEnemy02;
+
     [SerializeField] private EnemyController PassangerEnemy;
     [SerializeField] private AudioSource TrainSound;
     [SerializeField] private AudioSource TrainShakeSound;
@@ -34,6 +37,14 @@ public class TrainManager : MonoBehaviour
         if (WorkingEnemy.gameObject.active == true)
         {
             WorkingEnemy.agent.destination = player.transform.position;
+        }
+        if (WorkingEnemy01.gameObject.active == true)
+        {
+            WorkingEnemy01.agent.destination = player.transform.position;
+        }
+        if (WorkingEnemy02.gameObject.active == true)
+        {
+            WorkingEnemy02.agent.destination = player.transform.position;
         }
         if (PassangerEnemy.gameObject.active == true)
         {

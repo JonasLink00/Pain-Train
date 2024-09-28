@@ -12,14 +12,12 @@ public class InifiniteTerrainGenerator : MonoBehaviour
     private Dictionary<Vector2, GameObject> activeTiles = new Dictionary<Vector2, GameObject>(); // aktive tiles
     private Queue<GameObject> tilePool = new Queue<GameObject>(); // pool of tiles
 
-    MeshGenerator meshgenerator;
+   
 
     private void Start()
     {
         lastPlayerPosition = player.position;
         UpdateTerrain();
-
-        meshgenerator = FindObjectOfType<MeshGenerator>();
     }
 
     
@@ -29,30 +27,10 @@ public class InifiniteTerrainGenerator : MonoBehaviour
         {
             lastPlayerPosition = player.position;
             UpdateTerrain();
-            
-            //meshgenerator.UpdateMesh();
-
         }
     }
 
-    //void UpdateTerrain()
-    //{
-    //    int playerTileX = Mathf.FloorToInt(player.position.x / tileSize);
-    //    int playerTileZ = Mathf.FloorToInt(player.position.z / tileSize);
-
-    //    for (int x = playerTileX - tileVisibleInView; x <= playerTileX + tileVisibleInView; x++)
-    //    {
-    //        for (int z = playerTileZ - tileVisibleInView; z <= playerTileZ + tileVisibleInView; z++)
-    //        {
-    //            Vector2 tilePos = new Vector2(x, z);
-    //            if(!terrainDictionary.ContainsKey(tilePos))
-    //            {
-    //                GameObject tile = Instantiate(terrainTiles[Random.Range(0, terrainTiles.Length)], new Vector3(x * tileSize,0,z * tileSize), Quaternion.identity); 
-    //                terrainDictionary[tilePos] = tile;
-    //            }
-    //        }
-    //    }
-    //}
+    
 
     void UpdateTerrain()
     {
